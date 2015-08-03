@@ -114,7 +114,7 @@ margin on the iframe, cause it breaks stuff. */
 .blog-title { margin: 10px 0 10px 0; font-size: 5rem; letter-spacing: -1px; font-weight: bold; font-family: 'Open Sans', sans-serif; text-shadow: 0 1px 6px rgba(0,0,0,0.1); }
 .blog-description { margin: 0; font-size: 1.8rem; line-height: 1.5em; font-weight: 300; font-family: 'Noto Serif', serif; letter-spacing: 0; text-shadow: 0 1px 3px rgba(0,0,0,0.15); }
 /* Every post, on every page, gets this style on its <article> tag */
-.post { position: relative; width: 80%; max-width: 700px; margin: 4rem auto; padding-bottom: 4rem; border-bottom: #EBF2F6 1px solid; word-break: break-word; hyphens: auto; }
+.post { position: relative; width: 100%; max-width: 700px; margin: 2rem auto; word-break: break-word; }
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints.
 .post:after {
@@ -296,55 +296,93 @@ h4 { font-size: 2.3rem; }
 /* ==========================================================================
    11. Custom style - add custom css here
    ========================================================================== */
-   .logo{
+   .logo {
       font-size:1em;
       color:#2189f8;
       float: left;
    }
 
-   .nav{
-    color:#2189f8;
-    list-style: none;
-    padding-right:0;
-    display: inline-block;
-    position: relative;
-    padding-top: 1em;
+   .nav {
+      color:#2189f8;
+      list-style: none;
+      padding-right:0;
+      display: inline-block;
+      position: relative;
+      padding-top: 1em;
    }
 
-   .nav li{
-    display: inline;
-    padding-left: 2em;
+   .nav li {
+      display: inline;
+      padding-left: 2em;
    }
 
-   .nav li:first-of-type{
-    padding-left: 40em;
+   .nav li:first-of-type {
+      padding-left: 40em;
    }
 
-   #header-text{
-    width: 1366px;
-    display: inline-block;
+   #header-text {
+      width: 1366px;
+      display: inline-block;
    }
 
-   header{
-    text-align: center;
+   header {
+      text-align: center;
    }
 
-   .blog-title{
-    font-size: 48px;
-    color: rgb( 255, 255, 255 );
-    text-shadow: 0px 0px 5px rgb( 0, 0, 0 );
-    font-family: "FZLanTingHeiS-UL-GB";
-  }
-  .blog-description{
-    font-size: 24px;
-    font-family: "FZLanTingHeiS-UL-GB";
-    color: rgb( 255, 255, 255 );
-    text-shadow: 0px 0px 4px rgb( 0, 0, 0 );
-  }
-  .team-description{
-    width:60%;
-    margin: auto;
-  }
+   .blog-title {
+      font-size: 48px;
+      color: rgb( 255, 255, 255 );
+      text-shadow: 0px 0px 5px rgb( 0, 0, 0 );
+      font-family: "FZLanTingHeiS-UL-GB";
+   }
+
+   .blog-description {
+      font-size: 24px;
+      font-family: "FZLanTingHeiS-UL-GB";
+      color: rgb( 255, 255, 255 );
+      text-shadow: 0px 0px 4px rgb( 0, 0, 0 );
+   }
+
+   .team-description {
+      width:60%;
+      margin: auto;
+   }
+
+   .index-post {
+      width: 25%;
+      display: inline-block;
+      padding-right: 5em;
+      padding-left: 2em;
+   }
+
+   .latest-article {
+      width: 80%;
+      margin: auto;
+   }
+
+   header.post-header {
+      text-align: left;
+   }
+
+   .section-title {
+      text-align: center;
+   }
+
+   .project-section {
+      background-color: #d9dbe0;
+      display: inline-block;
+      height: 8em;
+      width: 20%;
+      margin-bottom: 1em;
+   }
+
+   .project-show {
+      text-align: center;
+   }
+
+   ::selection{
+      background:#2189f8;
+   }
 /* ==========================================================================
    End of file.
    ========================================================================== */
