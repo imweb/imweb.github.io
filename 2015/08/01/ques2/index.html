@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Ques前端组件化体系（二） | 腾讯IMWEB团队</title>
+  <meta name="description" content="Front-end team in tencent,looking forward to the future." />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="author" content="IMWEB">
+  <link rel="icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
+  <meta name="generator" content="腾讯IMWEB团队">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header>
+	<div id ="header-text">
+		<p class="logo"> <a class="blog-logo" href="/"><img src="/img/logo.png" alt="Blog Logo"/></a> </p>
+		<ul class="nav">
+			<li><a href="/">首页</a></li>
+			<li><a href="/member">成员墙</a></li>
+			<li><a href="http://imweb.io/" target="_blank">社区</a></li>
+			<li><a href="/rule">团队规范</a></li>
+		</ul>
+	</div>
+	<div class="site-head"  data-ibg-bg="/img/banner.png" >
+	    <div class="vertical">
+	        <div class="site-head-content inner">
+	            <h1 class="blog-title">腾讯IMWEB团队</h1>
+	            <h2 class="blog-description">Front-end team in tencent,looking forward to the future.</h2>
+		        <h2 class="blog-description"><button id="showMenu">Learn More</button>
+		        <a href="https://github.com/imweb" target="_blank"><button>View github</button></a></h2>
+	        </div>
+	    </div>
+    <div>
+</header>
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2015-08-01T08:35:29.000Z" itemprop="datePublished">
+          2015-08-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/工具建设/'>工具建设</a>
+    
+    
+</span>
+    <h4 class="post-title">Ques前端组件化体系（二）</h4>
+    <section class="post-content">
+      <p>紧接上文：<a href="http://imweb.io/topic/55abbc5a6ee095884b704c2e" target="_blank" rel="external">http://imweb.io/topic/55abbc5a6ee095884b704c2e</a><br>组件嵌套<br>当组件可以嵌套，组件件可以拆成较小的颗粒，使得复用性大大提升。<br>下面我们是一个codeclick组件，其用途是高亮展示代码片段，点击代码弹出dialog，也就是说我们准备嵌套上面做出来的third-code和dialog组件：<br>定义<br>CSS文件：<br>/<strong> 可以给组件定义一些特殊样式，但为了简单我们什么也不做 </strong>/<br>模版文件：</p>
+<p><div><br>    <third-code q-ref="code"><br>        <content></content><br>    </third-code><br>    <dialog q-ref="dialog"><br>        <header>欢迎使用Ques</header><br>        <article>你点击了代码</article><br>    </dialog><br></div><br>Javascript文件：<br>var $ = require(‘jquery’);</p>
+<p>module.exports = {<br>    data: {},<br>    ready: function () {<br>        var code = this.$.code,<br>            dialog = this.$.dialog;<br>        // 点击代码，弹出dialog<br>        $(code.el).on(‘click’, function () {<br>            dialog.show();<br>        });<br>    }<br>};</p>
+
+    </section>
+  </article>
+  <!-- 成员墙放置 -->
+
+		<div class="container">
+			<ul class="grid cs-style-4">
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div><!-- /container -->
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">腾讯IMWEB团队</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/jquery.interactive_bg.js"></script>
+<script src="/js/modernizr.custom.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="http://imweb.io"><span>社区</span></a>
+
+          <a class="icon-wiki"  href="https://github.com/imweb"><span>github</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>

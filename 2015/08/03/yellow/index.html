@@ -4,13 +4,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>yellow | 腾讯IMWEB团队</title>
+  <title>animation动画实践 | 腾讯IMWEB团队</title>
   <meta name="description" content="Front-end team in tencent,looking forward to the future." />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
+  <meta name="author" content="IMWEB">
+  <link rel="icon" href="/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="/css/screen.css" />
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
   <meta name="generator" content="腾讯IMWEB团队">
 
   
@@ -33,14 +37,13 @@
 	<div id ="header-text">
 		<p class="logo"> <a class="blog-logo" href="/"><img src="/img/logo.png" alt="Blog Logo"/></a> </p>
 		<ul class="nav">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">成员墙</a></li>
-			<li><a href="#">社区</a></li>
-			<li><a href="#">团队规范</a></li>
-			<li><a href="#">加入我们</a></li>
+			<li><a href="/">首页</a></li>
+			<li><a href="/member">成员墙</a></li>
+			<li><a href="http://imweb.io/" target="_blank">社区</a></li>
+			<li><a href="/rule">团队规范</a></li>
 		</ul>
 	</div>
-	<div class="site-head"  style="background: #24282b url(/img/banner.png) 0 -20%" >
+	<div class="site-head"  data-ibg-bg="/img/banner.png" >
 	    <div class="vertical">
 	        <div class="site-head-content inner">
 	            <h1 class="blog-title">腾讯IMWEB团队</h1>
@@ -60,59 +63,225 @@
           2015-08-03
       </time>
     
+    
+    | 
+    <a href='/tags/CSS-重构/'>CSS/重构</a>
+    
+    
 </span>
-    <h1 class="post-title">yellow</h1>
+    <h4 class="post-title">animation动画实践</h4>
     <section class="post-content">
-      <p>《降落伞》专辑 (1999年–2001年)[编辑]</p>
-<p>《Yellow》<br>菜单0:00<br>《Yellow》是《降落伞》 (2000) 的第二张单曲，同时也是酷玩乐队首张挤身英国单曲排行榜前十名的热门歌曲。<br>播放此文件时有问题？请参阅媒体帮助。<br>1999年3月，酷玩乐队投入首张专辑的制作工作，由肯·尼尔森担任制作人，于洛克费德录音室展开。期间他们也参与了NME巡回演唱会的演出，表现可圈可点、颇有后起之秀的气势[20]。在接连发行了三张榜上无名的EP后，2000年3月，酷玩乐队终于以《Shiver》单曲首度以第35名之姿打入英国单曲排行榜[21]。2000年6月成了酷玩乐队的转捩点：他们开始领衔巡演，其中包括在格拉斯顿伯里音乐季的表演。酷玩乐队同时发行了突破性的单曲《Yellow》[22]，并以此曲获英国单曲排行榜第四名佳绩，乐队知名度亦因而骤增[22]。</p>
-<p>2000年7月，酷玩乐队发行了他们首张正式专辑《降落伞》，占据了英国专辑排行榜的冠军宝座[23]，歌曲《Yellow》和《Trouble》则大获英美电台的青睐[24]。帕洛风唱片原估计《降落伞》的销售量为40万，但到了圣诞节，光是英国便卖出了160万张专辑。2000年9月，《降落伞》获得水星音乐奖提名[25]。</p>
-<p>在欧洲市场取得成功后，酷玩乐队将目标转移至北美[26]，于2000年9月在当地发行《降落伞》专辑[27]。2001年初，酷玩乐队以加拿大温哥华的一场表演为起点，开始了一连串于美国俱乐部的巡回演出，并现身于周末夜现场、柯南·欧布莱恩深夜秀、大卫深夜秀等节目。尽管《降落伞》在美国只引起了短暂的热潮，该专辑仍拥有双白金唱片的销售量[28]。《降落伞》佳评如潮，并随后荣获2002年格莱美奖最佳非主流音乐专辑奖[29]。</p>
+      <p>由于业务关系，有幸参与腾讯课堂app下载页面制作，原则上ie8、9可表现为静态版本，而高级浏览则为动画版本。在这把一些重要思想和中间遇到的一些问题记录下，以供知识积累及讨论交流。<br>区分浏览器<br>既然要实现高级浏览器与低级浏览器不同效果，所以必要的区分下浏览器，使用js给body添加class<br>var lte9 = document.all &amp;&amp; !window.atob;</p>
+<p>if(lte9){<br>    //$(‘body’).addClass(‘lte9’);<br>    document.documentElement.className += ‘ lte9’<br>}else{<br>    //$(‘body’).addClass(‘modern’);<br>    document.documentElement.className += ‘ modern’<br>}<br>全屏元素布局<br>背景图片（这个是不兼容的，可以通过js来解决，这里因为图片本身很大，所以直接忽略不兼容，设置background-position: center，那样即使有超大的屏幕，也可以实现居中显示）：<br>background-size: cover;<br>由于是全屏设计，所以可能会遇到屏大屏小，元素参考点以中间为标准，向上下左右延展：<br>position: absoulte;<br>top: 50%;<br>left: 50%;<br>margin-left: npx;<br>margin-top: npx;<br>或者嵌套一层div，设置<br>display:table-cell;<br>vertical-align:midddle;<br>元素默认位置原则：<br>先按照psd稿设置所处位置，那样就不需要给lte9进行位置重置，高级浏览器再通过关键帧动画改变起点位置，注意动画中位置偏移应使用translate而不是top/left或margin值<br>进入动画<br>第一种是每次进入都有动画，第二种方案是只有第一次进入有动画，对于之后的滚动都是静态模式<br>如果采用第一种，我们把动画控制的class绑定在js切换的active上即可<br>如果采用第二种，就需要另起一个class，如这里用的on<br>动画元素一个个出现<br>因为动画元素得按照顺序一个个出现，所以在运动之前视觉上是看不见的。这里有两种方法处理：<br>默认设置动画元素的opacity为0，再给lte9的重置为1<br>默认不处理，给modern的设置opacity为0，这里采用第二种，给高级浏览器动画元素设置opacity为0<br>缩放动画<br>默认缩放动画统一采用scale，但是特殊情况除外<br>如果要保持某些像素不虚则不适合使用scale，因为在扩大的时候就会变虚，如波纹，如果通过border或box-shadow扩展出来的都比较粗且虚，所以使用width和height改变大小，通过translate改变位移来实现扩展动画<br>如果使用scale缩放背景图片也虚得一塌糊涂，所以放弃背景图片而采用img标签，设置img的width:100%;，scale父元素的时候，img也会响应的扩展，且不影响画质，第一屏的两层切换就是用了在scale的元素中使用了img，而非直接背景图<br>多个相当元素依次进入动画<br>通过设置animation-delay来依次进入动画，如流星，波纹圆圈<br>.meteor-list .meteor-item｛<br>    animation: meteoFlush 2.4s 0.12s linear infinite;<br>｝<br>.meteor-list .item–2{<br>    animation-delay: 1.3s;<br>}<br>.meteor-list .item–3{<br>    animation-delay: 0.8s;<br>}<br>infinite动画中间有空档<br>如流星划过，动画应该是持续的，中间可能隔段时间又重新开始，如动画时间为1.2s，而间隔时间为1.2s。就可以通过设置动画时间为2.4s，而关键帧的设置可以在50%的时候就到达运动结束的位置，也就是50%-100%这段时间其实就是空出来的间隔时间。<br>.meteor-list .meteor-item｛<br>    animation: meteoFlush 2.4s 0.12s linear infinite;<br>｝</p>
+<p><a href="/user/-webkit-keyframes"><a href="/user/-webkit-keyframes">@-webkit-keyframes</a></a> meteoFlush{<br>    0%{<br>        opacity: 0;<br>        transform: translate3d(55px, -35px, 0);<br>    }<br>    25%{<br>        opacity: 1;<br>    }<br>    50%, 100%{<br>        opacity: 0;<br>        transform: translate3d(-85px, 35px, 0);<br>    }<br>}<br>动画暂停<br>当进入第一屏的第二层时，流星动画暂停<br>.s-1-2-on .meteor-item {<br>  animation-play-state: paused;<br>}<br>多次动画<br>如“学习成就梦想”实现了三次动画，刚进入的时候是fade in动画，滚动进入第二层的时候是缩小动画，往回滚是放大动画<br>抓住最终结束状态，并设置为默认的css，这里最终结束状态有两个，一个是第一层的时候大小为原始大小，一个是第二层的时候大小为一半大小。<br>.s-1 .s-slogan {<br>  position: absolute;<br>  width: 588px;<br>  height: 93px;<br>  top: 50%;<br>  left: 50%;<br>  margin-left: -294px;<br>  margin-top: -230px;<br>  z-index: 20;<br>  opacity: 1;<br>}</p>
+<p>.s-1-2-on .s-slogan {<br>  transform: scale(.5);<br>  transform-origin: center bottom;<br>  opacity: 1;<br>}<br>动画的实现通过class来控制，如刚进入的fade in动画，父元素追加classs-1-1-on<br>.s-1-1-on .s-slogan {<br>  animation: fadeIn 1.3s 1.1s cubic-bezier(.67,.01,.38,1) forwards;<br>}<br>进入第二层的时候，父元素追加classs-1-2-on in，离开的时候先把in换成out，再动画结束之后删除追加的s-1-2-on out<br>.s-1-2-on.in .s-slogan{<br>    animation: ttShrink 1s forwards;<br>}<br>.s-1-2-on.out .s-slogan{<br>    animation: ttShrink 1s reverse forwards;<br>}</p>
+<p><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes">@keyframes</a></a></a></a> ttShrink{<br>    0%{<br>        transform: scale(1);<br>    }<br>    100%{<br>        transform: scale(.5);<br>    }<br>}<br>反向动画<br>见上面的in和out，注意正向和反向动画得把动画分别绑定在两个不同的class，而默认的class只负责设置为正向动画结束后停留的位置。<br>延迟动画<br>延迟的动画如果第一帧的透明度不是从0开始，得重新添加一个关键帧，不然会出现一个半透明的在等着动画。如：<br>.s-2.on .s-img-msg{<br>    animation: msgShow 0.2s 1s both;<br>}<br><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes">@keyframes</a></a></a></a> msgShow{<br>    0%{<br>        opacity: 0;<br>        transform: scale(0.5);<br>    }<br>    1%{<br>        opacity: 0.5;<br>        -webkit-transform: scale(0.5);<br>    }<br>    100%{<br>        opacity: 1;<br>        transform: scale(1);<br>    }<br>}<br>因为opacity从0.5开始，而动画是延迟在1s后执行，所以如果不特殊处理，就意味着在opacity:0.5;的时候，会持续1s等待。这里将0%设置为opacity:0;，而把实际关键帧0.5放在了1%<br>多个动画结合于同一元素<br>第三屏对话框的动画，fade in和width动画结合<br>.on .chat-item–1 .item-text{<br>    animation-name: fadeIn, sizeExpanded1;<br>}<br><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes">@keyframes</a></a></a></a> fadeIn{<br>    0%{<br>        opacity: 0;<br>    }<br>    100%{<br>        opacity: 1;<br>    }<br>}<br><a href="/user/-webkit-keyframes"><a href="/user/-webkit-keyframes">@-webkit-keyframes</a></a> sizeExpanded1 {<br>    0% {<br>        height: 0;<br>        width: 0;<br>    }<br>    100% {<br>        height: 85px;<br>        width: 408px;<br>    }<br>}<br>多帧动画，通过多帧控制实现弹簧效果<br>可通过关键帧来控制<br><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes"><a href="/user/keyframes">@keyframes</a></a></a></a> qrFlip{<br>    0%{<br>        opacity: 0;<br>        transform: rotateX(50deg);<br>    }<br>    70%{<br>        transform: rotateX(-10deg);<br>    }<br>    80%{<br>        transform: rotateX(6deg);<br>    }<br>    90%{<br>        transform: rotateX(-4deg);<br>    }<br>    95%{<br>        transform: rotateX(2deg);<br>    }<br>    100%{<br>        opacity: 1;<br>        transform: rotateX(0);<br>    }<br>}<br>最后，对于lte9其实也可以采用js来实现动画，这里就不作讨论了。总之，css3动画是个比较丰富的课题，只有一步步去探索，才会实现更大的可能。</p>
 
     </section>
-    <footer class="post-footer">
-      <section class="author">
-    <h4>John Doe</h4>
-    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
-</section>
-      <section class="share">
-    <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=/imwebtest.github.io/2015/08/03/yellow/" target="_blank">
-        <span class="hidden">weibo</span>
-    </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=/imwebtest.github.io/2015/08/03/yellow/"
-       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
-    </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/imwebtest.github.io/2015/08/03/yellow/"
-       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-        <span class="hidden">Facebook</span>
-    </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/imwebtest.github.io/2015/08/03/yellow/"
-       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-        <span class="hidden">Google+</span>
-    </a>
-</section>
-
-    </footer>
   </article>
-  <nav class="pagination" role="pagination">
-    
-    <a class="newer-posts" href="/2015/08/03/coldplay/">
-        ← coldplay
-    </a>
-    
-    <span class="icon-logo">•</span>
-    
-    <a class="older-posts" href="/2015/08/03/test/">
-        酷玩乐队 →
-    </a>
-    
-</nav>
+  <!-- 成员墙放置 -->
 
-  <div id="comment" class="comments-area">
-    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
-    
-</div>
+		<div class="container">
+			<ul class="grid cs-style-4">
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div><!-- /container -->
 
 </main>
 
@@ -131,6 +300,8 @@
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
 <script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/jquery.interactive_bg.js"></script>
+<script src="/js/modernizr.custom.js"></script>
 
 
 
@@ -143,15 +314,9 @@
 
           <a class="icon-home"  href="/"><span>Home</span></a>
 
-          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+          <a class="icon-news"  href="http://imweb.io"><span>社区</span></a>
 
-          <a class="icon-image"  href="/images"><span>Images</span></a>
-
-          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
-
-          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
-
-          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+          <a class="icon-wiki"  href="https://github.com/imweb"><span>github</span></a>
 
 </nav>
 
