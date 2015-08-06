@@ -83,7 +83,7 @@
         <p>
         
           本文从新人角度讲一讲对angular中MVVM模式的理解，以及angular特性的源码实现。
-MVVM核心原理MVVM模式是Model-View-ViewMode（模型-视图-视图模型）模式的简称，其最早出现在微软的WPF和Silverlight框架中。MVVM模式利用框架内置的双向绑定技术对MVP（Model-View-Presenter）模式的变型，引入了专门的ViewModel（视图模型）来实现View和Model的粘合，让Vie
+MVVM核心原理MVVM模式是Model-View-ViewMode（模型-视图-视图模型）模式的简称，其最早出现在微软的WPF和Silverlight框架中。MVVM模式利用框架内置的
         
         </p>
         
@@ -112,7 +112,7 @@ MVVM核心原理MVVM模式是Model-View-ViewMode（模型-视图-视图模型）
       <section class="post-excerpt">
         <p>
         
-          一般来说，有重构的团队，工作流程是这样的：设计师出稿 &gt; 重构转静态页面 &gt; jser拉取数据实现交互等 …这样我们总是有静态页面在备份的，下次遇到修改什么的或者换一个人，还是可以由这个简单的静态页面熟悉下html结构。而没有重构或一个人一条龙服务的，那就是：设计师出稿 &gt; 边写页面边拉取数据实现交互…这种模式下，是不存在静态页面备份的，如果碰到修改什么或者换人，那看到的直接就是源代码中的各种逻辑判断，如果是你自己写的
+          一般来说，有重构的团队，工作流程是这样的：设计师出稿 &gt; 重构转静态页面 &gt; jser拉取数据实现交互等 …这样我们总是有静态页面在备份的，下次遇到修改什么的或者换一个人，还是可以由这个简单的静态页面熟悉下html结构。而没有重构或一个人一条龙服务的，那就是：设计师出
         
         </p>
         
@@ -141,8 +141,7 @@ MVVM核心原理MVVM模式是Model-View-ViewMode（模型-视图-视图模型）
       <section class="post-excerpt">
         <p>
         
-          由于业务关系，有幸参与腾讯课堂app下载页面制作，原则上ie8、9可表现为静态版本，而高级浏览则为动画版本。在这把一些重要思想和中间遇到的一些问题记录下，以供知识积累及讨论交流。区分浏览器既然要实现高级浏览器与低级浏览器不同效果，所以必要的区分下浏览器，使用js给body添加classvar lte9 = document.all &amp;&amp; !window.atob;
-if(lte9){    //$(‘body’).add
+          由于业务关系，有幸参与腾讯课堂app下载页面制作，原则上ie8、9可表现为静态版本，而高级浏览则为动画版本。在这把一些重要思想和中间遇到的一些问题记录下，以供知识积累及讨论交流。区分浏览器既然要实现高级浏览器与低级浏览器不同效果，所以必要的区分下浏览器，使用js给body添加cl
         
         </p>
         
@@ -171,7 +170,7 @@ if(lte9){    //$(‘body’).add
       <section class="post-excerpt">
         <p>
         
-          有人说，前端的界限就在浏览器那儿。无论你触发了多少bug，最多导致浏览器崩溃，对系统影响不到哪去。 这就像二次元各种炫酷的毁灭世界，都不会导致三次元的世界末日。 然而，作为一个前端，我发现是有方式打开次元大门的…这个实验脑洞较大，动机无聊，但某种意义上反映了一些安全问题。 想象一下，有天你在家里上网，吃着火锅还唱着歌，点开一个链接，电脑突然就蓝屏了！想想还真有点小激动。起因故事得从localStorage说起。html5的本地存储，相信
+          有人说，前端的界限就在浏览器那儿。无论你触发了多少bug，最多导致浏览器崩溃，对系统影响不到哪去。 这就像二次元各种炫酷的毁灭世界，都不会导致三次元的世界末日。 然而，作为一个前端，我发现是有方式打开次元大门的…这个实验脑洞较大，动机无聊，但某种意义上反映了一些安全问题。 想象一
         
         </p>
         
@@ -200,7 +199,7 @@ if(lte9){    //$(‘body’).add
       <section class="post-excerpt">
         <p>
         
-          Ques是一套组件化系统，解决如何定义、嵌套、扩展、使用组件。 项目地址：https://github.com/miniflycn/Ques传统开发模式的痛点无法方便的引用一个组件，需要分别引用其Javascript、Template、CSS文件我们期望能以MV的方式去写代码，结果发现只有Javascript是MVUI库打包成一坨(类似Bootstrap)，但是实际上UI库伴随产品迭代在反复变更，每次打开网站，用户依然反复下载UI库CS
+          Ques是一套组件化系统，解决如何定义、嵌套、扩展、使用组件。 项目地址：https://github.com/miniflycn/Ques传统开发模式的痛点无法方便的引用一个组件，需要分别引用其Javascript、Template、CSS文件我们期望能以MV的方式去写代码，结
         
         </p>
         
@@ -229,8 +228,7 @@ if(lte9){    //$(‘body’).add
       <section class="post-excerpt">
         <p>
         
-          紧接上文：http://imweb.io/topic/55abbc5a6ee095884b704c2e组件嵌套当组件可以嵌套，组件件可以拆成较小的颗粒，使得复用性大大提升。下面我们是一个codeclick组件，其用途是高亮展示代码片段，点击代码弹出dialog，也就是说我们准备嵌套上面做出来的third-code和dialog组件：定义CSS文件：/ 可以给组件定义一些特殊样式，但为了简单我们什么也不做 /模版文件：
-         
+          紧接上文：http://imweb.io/topic/55abbc5a6ee095884b704c2e组件嵌套当组件可以嵌套，组件件可以拆成较小的颗粒，使得复用性大大提升。下面我们是一个codeclick组件，其用途是高亮展示代码片段，点击代码弹出dialog，也就是说我们准备嵌
         
         </p>
         
@@ -265,11 +263,9 @@ if(lte9){    //$(‘body’).add
 <footer class="site-footer">
   
   <div class="inner">
-     <section class="copyright">All content copyright <a href="/">腾讯IMWEB团队</a> &copy; 2014 &bull; All rights reserved.</section>
-     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+     <section class="copyright">All content copyright <a href="/">腾讯IMWEB团队</a> &copy; 2015 &bull; All rights reserved.</section>
   </div>
 </footer>
-
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
