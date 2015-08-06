@@ -59,7 +59,7 @@ h3 { font-size: 3.2rem; }
 h4 { font-size: 2.4rem; }
 h5 { font-size: 1.8rem; }
 h6 { font-size: 1.4rem; }
-a { color: #1F85C8; text-decoration: none; transition: color ease 0.3s; outline: none; }
+a { color: #000; text-decoration: none; transition: color ease 0.3s; outline: none; }
 a:hover, a:focus { color: #3498DB; outline: none; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #50585D; }
 p, ul, ol, dl { margin: 1.6em 0; }
@@ -349,9 +349,8 @@ h4 { font-size: 2.3rem; }
    }
 
    .index-post {
-      width: 25%;
-      display: inline-block;
-      padding-right: 5em;
+      width: 30%;
+      display: inline-table;
       padding-left: 2em;
    }
 
@@ -369,10 +368,10 @@ h4 { font-size: 2.3rem; }
    }
 
    .project-section {
-      background-color: #d9dbe0;
+      background-color: #e8e8e8;
       display: inline-block;
       height: 8em;
-      width: 20%;
+      width: 24%;
       margin-bottom: 1em;
    }
 
@@ -383,6 +382,75 @@ h4 { font-size: 2.3rem; }
    ::selection{
       background:#2189f8;
    }
+
+   .ibg-bg{
+      display: table-cell;
+   }
+
+   .vertical{
+
+   }
+
+ 
+   h5.post-title{
+      padding-top: 0.6em;
+      font-size: 1.2em;
+   }
+
+   .site-footer{
+      margin: 0;
+   }
+
+   #memberWall{
+      text-align: center;
+   }
+
+   .member-row{
+     display: inline;
+   }
+
+   .member{
+      background-color: #eee;
+      width: 250px;
+      height: 250px;
+      display: inline-block;
+      margin-right: 1em;
+   }
+
+   .memberWall{
+      width: 100%;
+      display: inline-block;
+   }
+
+   .post-meta{
+      display: none;
+   }
+
+   .post-content{
+      width: 80%;
+      padding-left: 20em;
+   }
+
+   .post{
+      max-width: 100%;
+   }
+
+   h3{
+      font-size: 2em;
+   }
+
+   .project-description{
+      color: #9c9c9c;
+   }
+
+   .post-excerpt p{
+      font-size: 0.8em;
+   }
+
+   .member-name{
+      font-size: 1.5em;
+   }
+
 /* ==========================================================================
    End of file.
    ========================================================================== */
