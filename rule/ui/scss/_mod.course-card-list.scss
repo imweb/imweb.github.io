@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+// 课程卡片大小保持不变，如不同页面可以调整卡片之间的间距，
+// 改变间距通过父元素的class来设置，可参考下面的.course-card-list-9-wrap,.course-card-list-aside-wrap,.course-card-list-multi-wrap
+
+// ul.course-card-list
+//     li.course-card-item(.now) //如果正在上课追加class now
+//         a.item-img-link
+//             img.item-img
+//             i.icon-font.i-lu //if 录播课icon
+//             i.icon-try-listen{免费试听} //if 免费试听icon
+//         a.item-now-link{正在上课} + i.icon-font.i-v-right //if 正在上课
+//         a.item-activity > img //if 活动图标
+//         h4.item-tt
+//             a.item-tt-link[title]
+//         // if 需要这行
+//         .item-line
+//             // if 非正在上课
+//             span.line-cell.item-time > i.icon-font.i-time + {text} 
+//             // else 正在上课
+//             span.line-cell.item-time.item-time--now{正在上课} 
+//             // end if
+//             span.line-cell.item-user > i.icon-font.i-user + {text}
+//             span.line-cell.item-star-num > i.icon-font.i-star-border + {text}
+//         // end if 
+//         .item-line
+//             span.line-cell.item-price(.free) //如果免费追加class free，
+//             i.icon-sep //if 右边还有内容追加隔开"|"标识
+//             span.item-source > a.item-source-link[title] //if 来源链接
+
+
+// course-card-item
+.course-card-item{
+    float: left;
+    width: 220px;
+    padding: 7px;
+    border: 1px solid transparent;
+    position: relative;
+    &:hover{
+        border-color: #ddd;
+        box-shadow: 0 1px 1px #ECECEC;
+    }
+    &.now{
+        .item-now-link{
+            display: none;
+        }
+        &:hover{
+            .item-now-link{
+                display: block;
+                position: absolute;
+                width: 220px;
+                height: 124px;
+                line-height: 124px;
+                margin-top: -132px; // 124px + 8px
+                text-align: center;
+                font-size: 16px;
+                color: #fff;
+                @include background-rgba;
+                z-index: 2;
+                .i-v-right{
+                    font-size: 24px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -12px;
+                }
+            }
+        }
+    }
+    
+    .item-img-link{
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        .item-img{
+            width: 220px;
+            height: 124px;
+        }
+    }
+    .item-activity{
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        right: 12px;
+        margin-top: -132px; // 124px + 8px
+        >img{
+            width: 60px;
+            height: 30px;
+        }
+    }
+    .item-tt{
+        @extend %ellipsis;
+        font-size: 14px;
+    }
+    .item-tt-link{
+        color: #333;
+        &:hover{
+            color: #62B4F7;
+        }
+    }
+    .item-line{
+        overflow: hidden;
+        margin-top: 3px;
+        height: 21px;
+        .line-cell{
+            float: left;
+            margin-left: 10px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .line-cell--sep{
+            margin-right: 21px;
+            position: relative;
+            &:after{
+                content: "";
+                width: 1px;
+                height: 12px;
+                background: #ddd;
+                position: absolute;
+                top: 50%;
+                right: -10px;
+                margin-top: -6px;
+            }
+        }
+        .icon-sep{
+            float: left;
+            margin: 4px 10px 0;
+        }
+        .item-time,
+        .item-user,
+        .item-star-num{
+            color: #999;
+            margin-left: 20px;
+        }
+        .item-time--now{
+            border: 1px solid #188eee;
+            border-radius: 3px;
+            text-align: center;
+            color: #188eee;
+            padding: 0 4px;
+            line-height: 19px;
+        }
+    }
+    .i-time,
+    .i-user-border,
+    .i-star-border{
+        display: inline-block;
+        vertical-align: -1px;
+        margin-right: 5px;
+    }
+    .i-time {
+        vertical-align: -2px;
+    }
+    .item-price{
+        color: #E85308;
+        &.free{
+            color: #5FB41B;
+        }
+    }
+    .item-source{
+        // overflow: hidden;
+        display: block;
+        color: #999;
+        @extend %ellipsis;
+        .item-source-link{
+            color: #999;
+            &:hover{
+                color: #62B4F7;
+            }
+        }
+    }
+}
+
+// course-card-list
+.course-card-list{
+    font-size: 14px;
+    @extend %clearfix;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+// 首页的课程卡片 & 1200px的课程卡片
+.mod-catalog-box__content{
+    .course-card-list{
+        margin-top: -9px;
+    }
+}
+
+.course-card-list-9-wrap{
+    .course-card-list{
+        margin-left: -17px;
+        .course-card-item{
+            margin-left: 9px;
+        }
+    }
+}
+.course-card-list-960-wrap{
+    .course-card-list{
+        margin-left: -18px;
+        .course-card-item{
+            margin-left: 10px;
+        }
+    }
+}
+// 多行的课程卡片，用于课程列表页，设置item的垂直间距
+.course-card-list-multi-wrap{
+    .course-card-list{
+        .course-card-item{
+            margin-bottom: 20px;
+        }
+    }
+}
+// 边栏的课程卡片
+.course-card-list-aside-wrap{
+    .course-card-list{
+        margin-left: 0;
+        margin-right: 0;
+        .course-card-item{
+            margin-top: 20px;
+            padding-left: 9px;
+            padding-bottom: 9px;
+        }
+    }
+}
+
+// 首页分类里面的课程卡片，三个一行，共两行，特殊化
+.mod-catalog-box__content-bd{
+    .course-card-list{
+        float: left;
+        padding-left: 8px;
+        width: 738px;
+        margin: -18px 0 0;
+        .course-card-item{
+            margin-top: 9px;
+        }
+    }
+}
+
+// 视频播放结束推荐课程
+.video-over-recommend{
+    .course-card-list{
+        margin: 0;
+    }
+    .course-card-item{
+        padding: 0 0 7px;
+        background: #1f1f1f;
+        color: #5f5f5f;
+        margin-left: 14px;
+        border: 0;
+        box-shadow: none;
+        &:first-child{
+            margin-left: 7px;
+        }
+        &:hover{
+            background-color: #333;
+        }
+        .item-tt,
+        .item-line{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        a{
+            color: #999;
+            &:hover{
+                color: #fff;
+            }
+        }
+        .item-activity{
+            right: 5px;
+        }
+    }
+}

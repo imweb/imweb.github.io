@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+@import "../../common/css/helper/helper";
+@import "../../common/css/base/base";
+@import "mod.course-card-list";
+@import "mod.drop-down";
+@import "mod.steps";
+body{
+	padding: 80px 0 0;
+}
+.i-lu{
+	background: url(../img/bg/index-sprite.png) no-repeat -60px -400px;
+}
+.top-nav{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 40px;
+	line-height: 40px;
+	background: #333;
+	z-index: $zIndexHeader;
+}
+.nav-list{
+	text-align: center;
+	a{
+		color: #fff;
+		padding: 0 10px;
+		margin-right: 20px;
+	}
+}
+.h-level-3{
+	line-height: 2;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.instruction{
+	margin-bottom: 10px;
+}
+
+.color-list{
+	li{
+		display: inline-block;
+		margin: 0 15px 15px 0;
+		width: 180px;
+		span{
+			display: block;
+			line-height: 26px;
+		}
+		.color-block{
+			height: 20px;
+		}
+	}
+}
+.teacher-list{
+	overflow: hidden;
+	margin-right: -80px;
+	.teacher-item{
+		float: left;
+		width: 360px;
+		margin-right: 80px;
+		margin-bottom: 40px;
+		.img-left{
+			float: left;
+			margin-right: 20px;
+		}
+		.img-left,
+		.img-left img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+		}
+		.text-tt{
+			@extend %ellipsis;
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.text-intro{
+			max-height: 63px;
+			overflow: hidden;
+		}
+	}
+}

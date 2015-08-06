@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// steps
+// 默认为三步
+// .steps-nav--forth表示四步，.steps-nav--fifth表示五步
+//-----------------------------------------------------
+
+// ul.step-nav //四步追加class steps-nav--forth
+//     li //if 最后一个添加class last，当前状态添加class active
+//         .steps-num+{text}
+
+
+.steps-nav{
+    @extend %clearfix;
+    height: 60px;
+    font-size: 16px;
+    padding-left: 30px;
+    li{
+        float: left;
+        width: 33.3%;
+        line-height: 46px;
+        height: 46px;
+        margin-top: 7px;
+        background: $grayF;
+        position: relative;
+        color: #999;
+        box-sizing: border-box;
+        padding-left: 50px;
+        .steps-num{
+            position: absolute;
+            top: -7px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: url(../img/bg/steps-bg.png) no-repeat;
+            color: transparent;
+            font-size: 0;
+            text-align: center;
+            line-height: 58px;
+
+            @extend %i-right;
+            &:before{
+                @extend %icon-font;
+                font-size: 32px;
+                color: #999;
+                line-height: 60px;
+            }
+        }
+        &.active{
+            background: #167ed9;
+            color: #fff;
+            .steps-num{
+                color: #fff;
+                font-size: 30px;
+                background-position: 0 -65px;
+                &:before{
+                    display: none;
+                }
+            }
+            ~ li{
+                .steps-num{
+                    color: #999;
+                    font-size: 30px;
+                    &:before{
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+        &.last{
+            &:after{
+                content: "";
+                width: 24px;
+                height: 47px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url(../img/bg/steps-bg.png) no-repeat 0 -136px;
+            }
+            &.active{
+                &:after{
+                    background-position: -36px -136px;
+                } 
+            }
+        }
+    }
+}
+.steps-nav--forth{
+    li{
+        width: 25%;
+    }
+}
+.steps-nav--fifth{
+    li{
+        width: 20%;
+    }
+}
