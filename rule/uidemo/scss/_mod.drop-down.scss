@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+// 
+.drop-down{
+	position: relative;
+	display: inline-block;
+	.drop-down-tt{
+		padding-right: 10px;
+		&:after{
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -2px;
+			border-top: 4px solid;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			transition: transform .3s;
+			overflow: hidden;
+		}
+	}
+	&:hover{
+		.drop-down-tt:after{
+			transform: rotate(180deg);
+		}
+		.drop-down-list{
+			display: block;
+			animation: fadeIn 0.3s;
+		}
+	}
+	
+}
+
+// list 默认为链接跳转
+.drop-down-list{
+	display: none;
+	position: absolute;
+    top: 100%;
+    right: 0;
+    border: 1px solid $colorBorder;
+    background-color: #fff;
+    min-width: 100px;
+    text-align: center;
+    z-index: $zIndexPopup;
+	li{
+		line-height: 30px;
+		cursor: pointer;
+		&:first-child{
+			border-top: none;
+		}
+		&:hover{
+			color: $colorLink;
+			background-color: $grayF;
+		}
+		a{
+			display: block;
+			padding: 0 10px;
+			color: #333;
+			&:hover{
+				color: $colorLink;
+			}
+		}
+	}
+}
+// 如果为操作命令，无需a链接
+.drop-down-list--oper{
+	li{
+		padding: 0 10px;
+	}
+}

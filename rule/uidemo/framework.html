@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection"content="telephone=no,email=no"/>
+    <title>基本布局-ui组件-腾讯课堂</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="l-max">
+<div class="top-nav">
+	<div class="inner-center">
+		<nav class="nav-list">
+			<a href="framework.html">基本布局</a>
+			<a href="index.html">基本样式</a>
+			<a href="js-ui.html">js交互</a>
+		</nav>
+	</div>
+</div>
+
+<div class="main">
+	<div class="inner-center">
+		<div class="article">
+			<p class="instruction"><a href="layout.html" target="_blank">布局demo</a></p>
+			<h2 class="guide-tt">区域划分</h2>
+			<p class="instruction">课堂大概分为如下几个区域，内容水平居中</p>
+			<div class="guide-bd">
+				<img src="img/src/framework.png" alt="布局拓扑图">
+			</div>
+			<div class="guide-bd"></div>
+			<h2 class="guide-tt">布局控制</h2>
+			<p class="instruction">通过在body上挂载class，来实现不同宽度或者边栏控制</p>
+			<div class="guide-bd">
+				<ul>
+					<li>body.l-min表示小宽度960px布局</li>
+					<li>body.l-max表示大宽度1200px布局</li>
+					<li>body.l-min.l-aside-left表示小宽度有左边栏布局，应用在个人中心管理</li>
+					<li>body.l-max.l-aside-left表示大宽度有左边栏布局，应用在机构管理</li>
+					<li>body.l-max.l-aside-right表示大宽度右边栏布局，应用在课程详细页</li>
+				</ul>
+			</div>
+			<h2 class="guide-tt">.inner-center</h2>
+			<p class="instruction">.inner-center应用于内容水平居中，如果body的class为l-min，则为960px水平居中；如为l-max，则为1200px水平居中</p>
+			<div class="guide-bd">
+				<pre>
+body.l-min(l-max,l-aside-left,l-aside-right)
+.header&gt;.inner-center
+.main&gt;.inner-center
+.footer&gt;.inner-center
+				</pre>
+			</div>
+			<h2 class="guide-tt">全屏类型</h2>
+			<p class="instruction">全屏类型采用<code>.section-name>.inner-center</code>布局，如：</p>
+			<div class="guide-bd">
+				<pre>
+.section-feature>.inner-center // 应用于课程详细页和任务详细页的header之下的全屏内容
+.section-postscript>.inner-center // 应用于课程详细页的课程推荐等footer之上的全屏内容
+				</pre>
+			</div>
+			<h2 class="guide-tt">section</h2>
+			<p class="instruction">直接指定特殊化，适用单一情况</p>
+			<div class="guide-bd">
+				<pre>
+.section-name>.inner-center
+    .section-tt
+    .section-bd					
+				</pre>
+			</div>
+			<p class="instruction">多个section并列，可以先定义一个公用的class，再追加一个特殊化class</p>
+			<div class="guide-bd">
+				<pre>
+.section-area.area--name>.inner-center
+    .section-tt
+    .section-bd					
+				</pre>
+			</div>
+			<p class="instruction">如果标题右侧有内容，可按照上面的方式扩展一层section-hd</p>
+			<div class="guide-bd">
+				<pre>
+.section-name>.inner-center
+    .section-hd // if 标题右侧有内容，嵌套一层hd
+        .section-tt
+        .hd-right // if 标题右侧内容
+    .section-bd					
+				</pre>
+			</div>
+			<h2 class="guide-tt">main</h2>
+			<p class="instruction">采用负margin布局，content-wrap为100%的宽度</p>
+			<div class="guide-bd">
+				<pre>
+.main>.inner-center.clearfix
+    .aside-left // if aside left
+    .content-wrap>.content
+    .aside-right // if aside right					
+				</pre>
+			</div>
+			<h2 class="guide-tt">aside</h2>
+			<div class="guide-bd"><pre>
+.aside-block.block--name
+    .block-tt
+    .block-bd
+
+// 或
+
+.aside-block.block--name
+    .block-hd // if 标题右侧有内容，嵌套一层hd
+        .block-tt 
+        .hd-right // if 标题右侧内容				
+			</pre></div>
+			<h2 class="guide-tt">content</h2>
+			<p class="instruction">content中如有明显的标题引导内容，请使用以下结构，如课程详细页的课程描述</p>
+			<p class="instruction">简洁版本</p>
+			<div class="guide-bd">
+				<pre>
+(.guide-tt+.guide-bd)*n	
+				</pre>
+			</div>
+			<p class="instruction">嵌套版本</p>
+			<div class="guide-bd">
+				<pre>
+.content-guide.guide--name
+    .guide-tt
+    .guide-bd
+
+// 或
+
+.content-guide.guide--name
+    .guide-hd
+        .guide-tt
+        .hd-right
+    .guide-bd					
+				</pre>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

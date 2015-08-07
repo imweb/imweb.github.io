@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection"content="telephone=no,email=no"/>
+    <title>ui组件-腾讯课堂</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="l-max">
+<div class="top-nav">
+	<div class="inner-center">
+		<nav class="nav-list">
+			<a href="framework.html">基本布局</a>
+			<a href="index.html">基本样式</a>
+			<a href="js-ui.html">js交互</a>
+		</nav>
+	</div>
+</div>
+
+<div class="main">
+	<div class="inner-center">
+		<div class="article">
+			<h2 class="guide-tt">颜色</h2>
+			<div class="guide-bd">
+				<h3 class="h-level-3">基本色</h3>
+				<ul class="color-list">
+					<li>
+						<span class="color-block" style="background-color: #666;"></span>
+						<span class="color-tt">灰色：#666</span>
+						<span class="color-variable">$gray6</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #999;"></span>
+						<span class="color-tt">灰色：#999</span>
+						<span class="color-variable">$gray9</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #ccc;"></span>
+						<span class="color-tt">灰色：#ccc</span>
+						<span class="color-variable">$grayC</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #f3f3f3;"></span>
+						<span class="color-tt">浅灰：#f3f3f3</span>
+						<span class="color-variable">$grayF</span>
+					</li>
+				</ul>
+				<ul class="color-list">
+					<li>
+						<span class="color-block" style="background-color: #039ae3;"></span>
+						<span class="color-tt">品牌色：#039ae3</span>
+						<span class="color-variable">$primary</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #3672a2;"></span>
+						<span class="color-tt">蓝色：#3672a2</span>
+						<span class="color-variable">$blue</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #daedfd;"></span>
+						<span class="color-tt">浅蓝：#daedfd</span>
+						<span class="color-variable">$blueLight</span>
+					</li>
+				</ul>
+				<ul class="color-list">
+					<li>
+						<span class="color-block" style="background-color: #e85308;"></span>
+						<span class="color-tt">橙色：#e85308</span>
+						<span class="color-variable">$orange</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #5fb41b;"></span>
+						<span class="color-tt">绿色：#5fb41b</span>
+						<span class="color-variable">$green</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #e80808;"></span>
+						<span class="color-tt">红色：#e80808</span>
+						<span class="color-variable">$red</span>
+					</li>
+				</ul>
+				<h3 class="h-level-3">功能色</h3>
+				<ul class="color-list">
+					<li>
+						<span class="color-block" style="background-color: #333;"></span>
+						<span class="color-tt">文本色：#333</span>
+						<span class="color-variable">$colorText</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #fff;"></span>
+						<span class="color-tt">背景色：#fff</span>
+						<span class="color-variable">$colorBg</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #e5e5e5;"></span>
+						<span class="color-tt">边框色：#e5e5e5</span>
+						<span class="color-variable">$colorBorder</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #039ae3;"></span>
+						<span class="color-tt">链接色：#039ae3</span>
+						<span class="color-variable">$colorLink</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #62b4f7;"></span>
+						<span class="color-tt">链接划过：#62b4f7</span>
+						<span class="color-variable">$colorLinkHover</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #999;"></span>
+						<span class="color-tt">Placeholder：#999</span>
+						<span class="color-variable">$colorPlaceholder</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #e80808;"></span>
+						<span class="color-tt">错误色：#e80808</span>
+						<span class="color-variable">$colorError</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #999;"></span>
+						<span class="color-tt">disabled文本：#999</span>
+						<span class="color-variable">nth($colorDisabled,1)</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #e3e3e3;"></span>
+						<span class="color-tt">disabled背景：#e3e3e3</span>
+						<span class="color-variable">nth($colorDisabled,2)</span>
+					</li>
+					<li>
+						<span class="color-block" style="background-color: #dbdbdb;"></span>
+						<span class="color-tt">disabled边框：#dbdbdb</span>
+						<span class="color-variable">nth($colorDisabled,3)</span>
+					</li>
+				</ul>
+			</div>
+			<h2 class="guide-tt">按钮</h2>
+			<p class="instruction">默认提供三种颜色按钮，分别为primary，defualt和weak，需要其他颜色需自定义；默认提供两种大小m(宽120高40)和s(左右padding为1em高30)</p>
+			<p class="instruction">scss提供了%btn-primary,%btn-default,%btn-weak,%btn-m,%btn-s可以使用</p>
+			<div class="guide-bd">
+				<h3 class="h-level-3">按钮颜色</h3>
+				<span class="btn-primary btn-m">.btn-primary</span>
+				<a class="btn-default btn-m">.btn-default</a>
+				<span class="btn-weak btn-m">.btn-weak</span>
+				<h3 class="h-level-3">按钮大小</h3>
+				<a class="btn-default btn-m">.btn-m</a>
+				<a class="btn-default btn-s">.btn-s</a>
+			</div>
+			<h2 class="guide-tt">表格</h2>
+			<div class="guide-bd">
+				<h3 class="h-level-3">后台数据展示(.tb-list)</h3>
+				<p class="instruction">表格的padding为10px，颜色部分涉及到边框色($colorBorder)，头部背景色($grayF)和鼠标划过的背景色(和边框色一样)</p>
+				<table class="tb-list">
+					<thead>
+						<tr>
+							<th class="th-col-name">col 1</th>
+							<th class="th-col-100">col 2</th>
+							<th class="th-col-200">col 3</th>
+							<th class="">col 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor </td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor </td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor </td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quas debitis </td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor </td>
+							<td>Lorem ipsum dolor sit amet.</td>
+							<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quas debitis perferendis aliquid asperiores libero nobis dolores. Ad, maxime, aliquam.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h2 class="guide-tt">表单</h2>
+			<div class="guide-bd">
+				<p class="instruction">form表单的基础class为form,如果label与输入框同行则追加class form--h。如toC则追加class form--c(默认为toB侧的输入框高度为30px，而toC的为40px)</p>
+				<p class="instruction">通过f-item上添加class表示状态,f-item--error（表示错误）,f-item--success（表示成功）,f-item--info（表示提示），如果一行有多个输入框，只表示一个输入框的错误状态可以在input上追加class text--error</p>
+				<p class="instruction">radio与checkbox有三种特殊状态，分别为.checked(选中), .disabled(不可选), checked.disabled(选中不可更改)</p>
+				<p class="instruction">select相关组件有两个状态，分别为.selecting(展开下拉框选择), .selected(已经选择了值)</p>
+				<form action="" class="form form--h">
+					<div class="f-item f-item--success">
+						<label class="f-label"><span class="f-required">*</span>课程名称<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<input type="text" class="f-text" data-name="name">
+							<div class="f-msg">
+								<i class="icon-msg"></i>
+								<p class="f-msg-text">名称正确</p>
+							</div>
+						</div>
+					</div>
+					<div class="f-item f-item--info">
+						<label class="f-label"><span class="f-required">*</span>封面</label>
+						<div class="f-field">
+							<div class="f-upload-wrap">
+								<div class="f-upload">
+									<div class="f-upload-replace">
+										<i class="f-upload-icon">+</i>
+										<span class="f-upload-text">点击上传图片</span>
+									</div>
+									<img class="f-upload-img" src="" alt="" width="222" height="125">
+									<div class="f-upload-again">重新上传图片</div>
+									<input type="file" class="f-file">
+								</div>
+								<div class="f-upload-intro">
+									<p class="f-des">图片要求 <a href="http://ke.qq.com/docs/cover-description.jpg" class="nor-link" target="_blank">点击查看课程封面模版规范</a> <br>尺寸大于1080*608 分辨率小于96dpi<br>大小小于2M<br>支持JPG/PNG/BMP等格式图片</p>
+									<div class="f-msg">
+										<i class="icon-msg"></i>
+										<p class="f-msg-text">请填写简介</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>课程定价<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-radio-list">
+								<label class="f-radio checked" data-name="feeType" data-value="0">
+									<i class="icon-radio"></i>
+									<span class="f-label-text">收费</span>
+								</label>
+								<label class="f-radio" data-name="feeType" data-value="1">
+									<i class="icon-radio"></i>
+									<span class="f-label-text">免费</span>
+								</label>
+								<label class="f-radio disabled" data-name="feeType" data-value="2">
+									<i class="icon-radio"></i>
+									<span class="f-label-text">禁用</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>checkbox<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-checkbox-list list--block">
+								<label class="f-checkbox checked" data-name="fav" data-value="爱好一">
+									<i class="icon-checkbox"></i>
+									<span class="f-label-text">爱好一</span>
+								</label>
+								<label class="f-checkbox" data-name="fav"  data-value="爱好二">
+									<i class="icon-checkbox"></i>
+									<span class="f-label-text">爱好二</span>
+								</label>
+								<label class="f-checkbox disabled" data-name="fav"  data-value="爱好三禁用">
+									<i class="icon-checkbox"></i>
+									<span class="f-label-text">爱好三禁用</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>类目<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-select f-ele-inline" data-name="type1" data-default="请选择分类">
+								<div class="f-value-wrap">
+									<div class="f-value">请选择分类</div>
+									<span class="f-select-icon"><i class="icon-arrow-down"></i></span>
+								</div>
+								<div class="f-select-dropdown">
+									<ul class="f-value-list">
+										<li data-value="1">语言学习1</li>
+										<li data-value="2">专业培训2</li>
+										<li data-value="3">兴趣爱好3</li>
+									</ul>
+								</div>
+							</div>
+							<div class="f-select" data-name="type2">
+								<div class="f-value-wrap">
+									<div class="f-value">请选择分类</div>
+									<span class="f-select-icon"><i class="icon-arrow-down"></i></span>
+								</div>
+								<div class="f-select-dropdown">
+									<ul class="f-value-list">
+										<li>语言学习</li>
+										<li>专业培训</li>
+										<li>兴趣爱好</li>
+									</ul>
+								</div>
+							</div>
+							<div class="f-multi-select">
+								<div class="f-value-wrap">
+									<div class="f-value">请选择分类</div>
+									<span class="f-select-icon"><i class="icon-arrow-down"></i></span>
+								</div>
+								<div class="f-select-dropdown">
+									<ul class="f-value-list">
+										<li class="f-value-all"><label class="f-checkbox"><i class="icon-checkbox"></i><span class="f-label-text">全部</span></label></li>
+										<li class="f-value-item"><label class="f-checkbox"><i class="icon-checkbox"></i><span class="f-label-text">语言学习</span></label></li>
+										<li class="f-value-item"><label class="f-checkbox"><i class="icon-checkbox"></i><span class="f-label-text">专业培训</span></label></li>
+										<li class="f-value-item"><label class="f-checkbox"><i class="icon-checkbox"></i><span class="f-label-text">兴趣爱好</span></label></li>
+									</ul>
+									<div class="f-value-btn"><span class="btn-default btn-s">确定</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>开课时间<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-date-wrap">
+								<input type="text" data-name="date" class="f-date" placeholder="2015-08-10" readonly="true">
+								<i class="icon-font i-calendar"></i>
+							</div>
+							<div class="f-select" data-name="hour">
+								<div class="f-value-wrap">
+									<div class="f-value">时</div>
+									<span class="f-select-icon"><i class="icon-arrow-down"></i></span>
+								</div>
+								<div class="f-select-dropdown">
+									<ul class="f-value-list">
+										<li data-value="1">1</li>
+										<li data-value="2">2</li>
+										<li data-value="3">3</li>
+										<li data-value="4">4</li>
+										<li data-value="5">5</li>
+										<li data-value="6">6</li>
+										<li data-value="7">7</li>
+										<li data-value="8">8</li>
+										<li data-value="9">9</li>
+										<li data-value="10">10</li>
+										<li data-value="11">11</li>
+										<li data-value="12">12</li>
+									</ul>
+								</div>
+							</div>
+							<div class="f-select f-select--scroll" data-name="minute">
+								<div class="f-value-wrap">
+									<div class="f-value">分</div>
+									<span class="f-select-icon"><i class="icon-arrow-down"></i></span>
+								</div>
+								<div class="f-select-dropdown f-select-dropdown--center">
+									<ul class="f-value-list" style="height:150px">
+										<li data-value="1">1</li>
+										<li data-value="2">2</li>
+										<li data-value="3">3</li>
+										<li data-value="4">4</li>
+										<li data-value="5">5</li>
+										<li data-value="6">6</li>
+										<li data-value="7">7</li>
+										<li data-value="8">8</li>
+										<li data-value="9">9</li>
+										<li data-value="10">10</li>
+										<li data-value="11">11</li>
+										<li data-value="12">12</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="f-item f-item--error">
+						<label class="f-label"><span class="f-required">*</span>报名咨询群<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-popup-select">
+								<div class="f-value-wrap">
+									<div class="f-value"></div>
+									<span class="placeholder">最多可选择5个群，请勿填写人员已满的QQ群</span>
+									<span class="f-select-icon"><i class="icon-font i-user-group"></i></span>
+								</div>
+							</div>
+							<div class="f-msg">
+								<i class="icon-msg"></i>
+								<p class="f-msg-text">请选择报名咨询群</p>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>咨询老师<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-popup-select selected">
+								<div class="f-value-wrap">
+									<div class="f-value">value1,value2</div>
+									<span class="placeholder">最多可选择5个群，请勿填写人员已满的QQ群</span>
+									<span class="f-select-icon"><i class="icon-font i-user"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="f-item f-item--info">
+						<label class="f-label"><span class="f-required">*</span>课程简介<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<textarea class="f-textarea"></textarea>
+							<div class="f-msg">
+								<i class="icon-msg"></i>
+								<p class="f-msg-text">请填写简介</p>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<label class="f-label"><span class="f-required">*</span>关联课程<span class="f-question">[<a href="#">?</a>]</span></label>
+						<div class="f-field">
+							<div class="f-popup-lines-select selected">
+								<div class="f-value-wrap">
+									<div class="f-value"></div>
+									<span class="placeholder">请选择关联课程</span>
+									<span class="f-select-icon"><i class="icon-font i-add"></i></span>
+								</div>
+								<ul class="f-value-list">
+									<li class="f-value-item">hsdkghgdgkg.jpg <span class="item-del">删除</span></li>
+									<li class="f-value-item">hsdkghgdgkg.jpg <span class="item-del">删除</span></li>
+									<li class="f-value-item">hsdkghgdgkg.jpg <span class="item-del">删除</span></li>
+									<li class="f-value-add">+ 继续关联课程</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="f-item">
+						<div class="f-field">
+							<span class="btn-default btn-m">提交</span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<h2 class="guide-tt">面包屑</h2>
+			<p class="instruction">h1那层可根据实际情况使用标签，如课程详细页用h1，列表页用span</p>
+			<p class="instruction">后面的两个flag筛选应用于全部课程过滤</p>
+			<div class="guide-bd">
+				<div class="breadcrumb">
+					<a class="breadcrumb-item" href="#">全部课程</a>
+					<i class="icon-font i-v-right"></i>
+					<a class="breadcrumb-item" href="#">语言学习</a>
+					<i class="icon-font i-v-right"></i>
+					<a class="breadcrumb-item" href="#">实用英语</a>
+					<i class="icon-font i-v-right"></i>
+					<a class="breadcrumb-item" href="#">英语口语</a>
+					<i class="icon-font i-v-right"></i>
+					<h1 class="breadcrumb-item item--tt">【精选】英语日常口语，简单实用接地气英语 邢帅教育</h1>
+					<i class="icon-font i-v-right"></i>
+					<span class="breadcrumb-item item--flag">创业兴趣用户<i class="flag-close">&times;</i></span>
+					<span class="breadcrumb-item item--flag">升值加薪<i class="flag-close">&times;</i></span>
+				</div>
+			</div>
+			<h2 class="guide-tt">课程卡片</h2>
+			<p class="instruction">图标：录播课图标，免费试听图标，活动图标</p>
+			<p class="instruction">正在上课鼠标划过蒙层遮盖图片</p>
+			<p class="instruction">正在上课的课程标记正在上课，今天的课程标记时间，其余的标记月日</p>
+			<p class="instruction">简略模式只有标题行和价格行</p>
+			<p class="instruction">代码具体说明参考mod.course-card-list.scss文件注释</p>
+			<div class="guide-bd">
+				<ul class="course-card-list">
+					<li class="course-card-item now">
+						<a href="#" target="_blank" class="item-img-link"><img src="http://10.url.cn/qqcourse_logo_rn/ajNVdqHZLLDtcLlmV6O6WPssXkcfXHeYtBHQMSIU9OwKs3EhSU1iboBaRcMuUgFdYsL3T04QMSsk/220" alt="HTML5+Android移动开发" title="HTML5+Android移动开发" class="item-img" width="220" height="124">   </a>
+						<a class="item-now-link" href="#" >正在上课<span class="icon-font i-v-right"></span></a>       
+						<h4 class="item-tt"><a href="#" target="_blank" class="item-tt-link" title="HTML5+Android移动开发">HTML5+Android移动开发</a></h4>
+						<div class="item-line">   
+							<span class="line-cell item-time item-time--now">正在上课</span>   
+							<span class="line-cell item-user"><i class="icon-font i-user-border"></i>2824 </span>
+							<span class="line-cell item-star-num"><i class="icon-font i-star-border"></i>4.9 </span>
+						</div>
+						<div class="item-line">
+							<span class="line-cell item-price free"> 免费 </span>  
+							<i class="icon-sep"></i>
+							<span class="item-source"><a href="#" target="_blank" class="item-source-link" title="课工场">课工场</a></span>  
+						</div>
+					</li>
+					<li class="course-card-item">
+						<a href="#" target="_blank" class="item-img-link"><img src="http://10.url.cn/qqcourse_logo_rn/ajNVdqHZLLDtcLlmV6O6WPssXkcfXHeYtBHQMSIU9OwKs3EhSU1iboBaRcMuUgFdYsL3T04QMSsk/220" alt="HTML5+Android移动开发" title="HTML5+Android移动开发" class="item-img" width="220" height="124"><i class="icon-font i-lu"></i></a>
+
+						<h4 class="item-tt"><a href="#" target="_blank" class="item-tt-link" title="HTML5+Android移动开发">HTML5+Android移动开发</a></h4>
+						<div class="item-line">   
+							<span class="line-cell item-time"><i class="icon-font i-time"></i>8月9日 </span> 
+							<span class="line-cell item-user"><i class="icon-font i-user-border"></i>2824 </span>
+							<span class="line-cell item-star-num"><i class="icon-font i-star-border"></i>4.9 </span>
+						</div>
+						<div class="item-line">
+							<span class="line-cell item-price">&yen;100.00</span>  
+							<i class="icon-sep"></i>
+							<span class="item-source"><a href="#" target="_blank" class="item-source-link" title="课工场">课工场</a></span>  
+						</div>
+					</li>
+					<li class="course-card-item">
+						<a href="#" target="_blank" class="item-img-link"><img src="http://10.url.cn/qqcourse_logo_rn/ajNVdqHZLLDtcLlmV6O6WPssXkcfXHeYtBHQMSIU9OwKs3EhSU1iboBaRcMuUgFdYsL3T04QMSsk/220" alt="HTML5+Android移动开发" title="HTML5+Android移动开发" class="item-img" width="220" height="124"><i class="icon-font i-lu"></i><i class="icon-try-listen"></i></a>
+
+						<h4 class="item-tt"><a href="#" target="_blank" class="item-tt-link" title="HTML5+Android移动开发">HTML5+Android移动开发</a></h4>
+						<div class="item-line">   
+							<span class="line-cell item-time"><i class="icon-font i-time"></i>19:00 </span>
+							<span class="line-cell item-user"><i class="icon-font i-user-border"></i>2824 </span>
+							<span class="line-cell item-star-num"><i class="icon-font i-star-border"></i>4.9 </span>
+						</div>
+						<div class="item-line">
+							<span class="line-cell item-price">&yen;100.00</span>  
+							<i class="icon-sep"></i>
+							<span class="item-source"><a href="#" target="_blank" class="item-source-link" title="课工场">课工场</a></span>  
+						</div>
+					</li>
+					<li class="course-card-item">
+						<a href="#" target="_blank" class="item-img-link"><img src="http://10.url.cn/qqcourse_logo_rn/ajNVdqHZLLDtcLlmV6O6WPssXkcfXHeYtBHQMSIU9OwKs3EhSU1iboBaRcMuUgFdYsL3T04QMSsk/220" alt="HTML5+Android移动开发" title="HTML5+Android移动开发" class="item-img" width="220" height="124"><i class="icon-font i-lu"></i></a>
+						<h4 class="item-tt"><a href="#" target="_blank" class="item-tt-link" title="HTML5+Android移动开发">HTML5+Android移动开发</a></h4>
+						<div class="item-line">
+							<span class="line-cell item-price">&yen;100.00</span>  
+							<i class="icon-sep"></i>
+							<span class="item-source"><a href="#" target="_blank" class="item-source-link" title="课工场">课工场</a></span>  
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h2 class="guide-tt">msg</h2>
+			<p class="instruction">可用于各种无数据提示，创建成功或失败，提示icon可换.i-info, .i-alert, .i-success</p>
+			<div class="guide-bd">
+				<div class="section-msg">
+					<div class="msg-inner">
+						<div class="icon-font i-msg-large i-alert"></div>
+						<div class="msg-text">
+							加载数据失败！！！
+							<span class="highlight"></span>
+							<a href="" class="nor-link">返回</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="guide-tt">分步表单</h2>
+			<div class="guide-bd">
+				<ul class="steps-nav steps-nav--third">
+					<li><span class="steps-num">1</span>填写课程信息</li>
+					<li class="active"><span class="steps-num">2</span>安排班级课程</li>
+					<li class="last"><span class="steps-num">3</span>提交审核</li>
+				</ul>
+			</div>
+			<h2 class="guide-tt">drop down</h2>
+			<div class="guide-bd" style="height: 150px;">
+				<div class="drop-down">
+					<span class="drop-down-tt">链接跳转</span>
+					<ul class="drop-down-list">
+						<li><a href="#">链接1</a></li>
+						<li><a href="#">链接2</a></li>
+						<li><a href="#">链接3</a></li>
+					</ul>
+				</div>
+			</div>
+			<h2 class="guide-tt">机构等级</h2>
+			<div class="guide-bd">
+				<i class="icon-agency-level"></i>
+				<i class="icon-agency-level level--3"></i>
+				<i class="icon-agency-level level--4"></i>
+				<i class="icon-agency-level level--5"></i>
+			</div>
+			<h2 class="guide-tt">老师列表</h2>
+			<div class="guide-bd">
+				<div class="teacher-list">
+					<div class="teacher-item">
+						<a href="#" class="img-left"><img src="http://placehold.it/100" alt=""></a>
+						<div class="text-right">
+							<h4 class="text-tt"><a class="tt-link" href="#">青山老师</a></h4>
+							<div class="text-intro">完美主义的彩妆师一枚。目前在南京，有一家彩妆工作室，主要做新娘跟妆以及彩妆教学。追求自然美感，热爱彩妆事业，希望能够让每一个女孩发现自己的美，找到属于自己的化妆方式；也希望能够帮助那些有一样梦想和目标的人。</div>
+						</div>
+					</div>
+					<div class="teacher-item">
+						<a href="#" class="img-left"><img src="http://placehold.it/100" alt=""></a>
+						<div class="text-right">
+							<h4 class="text-tt"><a class="tt-link" href="#">青山老师</a></h4>
+							<div class="text-intro">完美主义的彩妆师一枚。目前在南京，有一家彩妆工作室，主要做新娘跟妆以及彩妆教学。追求自然美感，热爱彩妆事业，希望能够让每一个女孩发现自己的美，找到属于自己的化妆方式；也希望能够帮助那些有一样梦想和目标的人。</div>
+						</div>
+					</div>
+					<div class="teacher-item">
+						<a href="#" class="img-left"><img src="http://placehold.it/100" alt=""></a>
+						<div class="text-right">
+							<h4 class="text-tt"><a class="tt-link" href="#">青山老师</a></h4>
+							<div class="text-intro">完美主义的彩妆师一枚。目前在南京，有一家彩妆工作室，主要做新娘跟妆以及彩妆教学。追求自然美感，热爱彩妆事业，希望能够让每一个女孩发现自己的美，找到属于自己的化妆方式；也希望能够帮助那些有一样梦想和目标的人。</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="guide-tt">分享</h2>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
