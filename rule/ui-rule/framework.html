@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>腾讯IMWEB团队</title>
+  <meta name="description" content="Front-end team in tencent,looking forward to the future." />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="author" content="IMWEB">
+  <link rel="icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
+  <meta name="generator" content="腾讯IMWEB团队">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header>
+	<div id ="header-text">
+		<p class="logo"> <a class="blog-logo" href="/"><img src="/img/logo.png" alt="Blog Logo"/></a> </p>
+		<ul class="nav">
+			<li><a href="/">首页</a></li>
+			<li><a href="/member">成员墙</a></li>
+			<li><a href="http://imweb.io/" target="_blank">社区</a></li>
+			<li><a href="/rule">团队规范</a></li>
+		</ul>
+	</div>
+	<div class="site-head"  data-ibg-bg="/img/banner.png" >
+	    <div class="vertical">
+	        <div class="site-head-content inner">
+	            <h1 class="blog-title">腾讯IMWEB团队</h1>
+	            <h2 class="blog-description">Front-end team in tencent,looking forward to the future.</h2>
+		        <h2 class="blog-description"><button id="showMenu">Learn More</button>
+		        <a href="https://github.com/imweb" target="_blank"><button>View github</button></a></h2>
+	        </div>
+	    </div>
+    <div>
+</header>
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2015-08-06T12:47:46.824Z" itemprop="datePublished">
+          2015-08-06
+      </time>
+    
+</span>
+    <h4 class="post-title"></h4>
+    <section class="post-content">
+      <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>基本布局-ui组件-腾讯课堂</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="l-max">
+<div class="top-nav">
+	<div class="inner-center">
+		<nav class="nav-list">
+			<a href="#">基本布局</a>
+			<a href="/rule/ui-rule/index.html">基本样式</a>
+			<a href="#">js交互</a>
+		</nav>
+	</div>
+</div>
+
+<div class="main">
+	<div class="inner-center">
+		<div class="article">
+			<p class="instruction"><a href="layout.html" target="_blank">布局demo</a></p>
+			<h2 class="guide-tt">区域划分</h2>
+			<p class="instruction">课堂大概分为如下几个区域，内容水平居中</p>
+			<div class="guide-bd">
+				<img src="img/src/framework.png" alt="布局拓扑图">
+			</div>
+			<div class="guide-bd"></div>
+			<h2 class="guide-tt">布局控制</h2>
+			<p class="instruction">通过在body上挂载class，来实现不同宽度或者边栏控制</p>
+			<div class="guide-bd">
+				<ul>
+					<li>body.l-min表示小宽度960px布局</li>
+					<li>body.l-max表示大宽度1200px布局</li>
+					<li>body.l-min.l-aside-left表示小宽度有左边栏布局，应用在个人中心管理</li>
+					<li>body.l-max.l-aside-left表示大宽度有左边栏布局，应用在机构管理</li>
+					<li>body.l-max.l-aside-right表示大宽度右边栏布局，应用在课程详细页</li>
+				</ul>
+			</div>
+			<h2 class="guide-tt">.inner-center</h2>
+			<p class="instruction">.inner-center应用于内容水平居中，如果body的class为l-min，则为960px水平居中；如为l-max，则为1200px水平居中</p>
+			<div class="guide-bd">
+				<pre>
+body.l-min(l-max,l-aside-left,l-aside-right)
+.header&gt;.inner-center
+.main&gt;.inner-center
+.footer&gt;.inner-center
+				</pre>
+			</div>
+			<h2 class="guide-tt">全屏类型</h2>
+			<p class="instruction">全屏类型采用<code>.section-name>.inner-center</code>布局，如：</p>
+			<div class="guide-bd">
+				<pre>
+.section-feature>.inner-center // 应用于课程详细页和任务详细页的header之下的全屏内容
+.section-postscript>.inner-center // 应用于课程详细页的课程推荐等footer之上的全屏内容
+				</pre>
+			</div>
+			<h2 class="guide-tt">section</h2>
+			<p class="instruction">直接指定特殊化，适用单一情况</p>
+			<div class="guide-bd">
+				<pre>
+.section-name>.inner-center
+    .section-tt
+    .section-bd					
+				</pre>
+			</div>
+			<p class="instruction">多个section并列，可以先定义一个公用的class，再追加一个特殊化class</p>
+			<div class="guide-bd">
+				<pre>
+.section-area.area--name>.inner-center
+    .section-tt
+    .section-bd					
+				</pre>
+			</div>
+			<p class="instruction">如果标题右侧有内容，可按照上面的方式扩展一层section-hd</p>
+			<div class="guide-bd">
+				<pre>
+.section-name>.inner-center
+    .section-hd // if 标题右侧有内容，嵌套一层hd
+        .section-tt
+        .hd-right // if 标题右侧内容
+    .section-bd					
+				</pre>
+			</div>
+			<h2 class="guide-tt">main</h2>
+			<p class="instruction">采用负margin布局，content-wrap为100%的宽度</p>
+			<div class="guide-bd">
+				<pre>
+.main>.inner-center.clearfix
+    .aside-left // if aside left
+    .content-wrap>.content
+    .aside-right // if aside right					
+				</pre>
+			</div>
+			<h2 class="guide-tt">aside</h2>
+			<div class="guide-bd"><pre>
+.aside-block.block--name
+    .block-tt
+    .block-bd
+
+// 或
+
+.aside-block.block--name
+    .block-hd // if 标题右侧有内容，嵌套一层hd
+        .block-tt 
+        .hd-right // if 标题右侧内容				
+			</pre></div>
+			<h2 class="guide-tt">content</h2>
+			<p class="instruction">content中如有明显的标题引导内容，请使用以下结构，如课程详细页的课程描述</p>
+			<p class="instruction">简洁版本</p>
+			<div class="guide-bd">
+				<pre>
+(.guide-tt+.guide-bd)*n	
+				</pre>
+			</div>
+			<p class="instruction">嵌套版本</p>
+			<div class="guide-bd">
+				<pre>
+.content-guide.guide--name
+    .guide-tt
+    .guide-bd
+
+// 或
+
+.content-guide.guide--name
+    .guide-hd
+        .guide-tt
+        .hd-right
+    .guide-bd					
+				</pre>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+    </section>
+  </article>
+  <!-- 成员墙放置 -->
+
+		<div class="container">
+			<ul class="grid cs-style-4">
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div><img src="/img/placeholder.png"></div>
+						<figcaption>
+							<h3 class="member-name">三个字</h3>
+							<span>要喂自己代言</span>
+							<a href="#">github</a>
+						</figcaption>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div><!-- /container -->
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">腾讯IMWEB团队</a> &copy; 2015 &bull; All rights reserved.</section>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/jquery.interactive_bg.js"></script>
+<script src="/js/modernizr.custom.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="http://imweb.io"><span>社区</span></a>
+
+          <a class="icon-wiki"  href="https://github.com/imweb"><span>github</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>
