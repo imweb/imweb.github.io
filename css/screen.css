@@ -317,7 +317,7 @@ h4 { font-size: 2.3rem; }
    }
 
    .nav li:first-of-type {
-      padding-left: 40em;
+      padding-left: 50em;
    }
 
    #header-text {
@@ -387,11 +387,6 @@ h4 { font-size: 2.3rem; }
    .ibg-bg{
       display: table-cell;
    }
-
-   .vertical{
-
-   }
-
  
    h5.post-title{
       padding-top: 0.6em;
@@ -449,6 +444,13 @@ h4 { font-size: 2.3rem; }
       font-size: 1.5em;
    }
 
+   .ds-thread{
+      margin: auto;
+      width: 50%;
+   }
+   .comment{
+      margin-left: 25%;
+   }
 /* ==========================================================================
    End of file.
    ========================================================================== */
