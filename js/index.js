@@ -10,8 +10,8 @@
     var latestTopics = function(topic){
         var link = "http://imweb.io/topic/" + topic._id;
 
-        var summary = "<p>" + topic.summary + "<p>";
-        summary = summary.replace(/<(?:.|\n)*?>/gm, '').substr(0, 140);
+        var summary = topic.summary;
+        summary = "<p>" + summary.replace(/<(?:.|\n)*?>/gm, '').substr(0, 140) + "</p>";
 
         var excerptLink = "<p><a href='" + link + "' class='excerpt-link'>Read More...</a></p>";
 
