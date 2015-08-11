@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /rule/ui
+Sitemap: http://imweb.github.io/sitemap.xml
