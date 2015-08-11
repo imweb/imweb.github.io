@@ -7,7 +7,7 @@
     "use strict";
     var topics = new Array(6);
     //调用imweb社区最新文章接口
-    latestTopics = function(topic){
+    var latestTopics = function(topic){
         var link = "http://imweb.io/topic/" + topic._id;
 
         var summary = "<p>" + topic.summary + "<p>";
