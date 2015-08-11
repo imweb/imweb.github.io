@@ -20,55 +20,56 @@
         var timeSpan = "<time datetime='" + time +"' itemprop='datePublished'>"+ timeShow + "</time>";
 
         var tab = topic.tab;
+        var tabName;
         switch (tab) {
             case "html":
-                tab = "HTML&HTML5";
+                tabName = "HTML&HTML5";
                 break;
             case "rebuild":
-                tab = "CSS/重构";
+                tabName = "CSS/重构";
                 break;
             case "network":
-                tab = "HTTP网络";
+                tabName = "HTTP网络";
                 break;
             case "secure":
-                tab = "Web安全";
+                tabName = "Web安全";
                 break;
             case "browser":
-                tab = "浏览器";
+                tabName = "浏览器";
                 break;
             case "debug":
-                tab = "调试";
+                tabName = "调试";
                 break;
             case "build":
-                tab = "构建工具";
+                tabName = "构建工具";
                 break;
             case "performance":
-                tab = "性能";
+                tabName = "性能";
                 break;
             case "lib":
-                tab = "前端库";
+                tabName = "前端库";
                 break;
             case "node":
-                tab = "nodeJS全栈";
+                tabName = "nodeJS全栈";
                 break;
             case "mobile":
-                tab = "移动开发";
+                tabName = "移动开发";
                 break;
             case "tools":
-                tab = "工具建设";
+                tabName = "工具建设";
                 break;
             case "op":
-                tab = "运营";
+                tabName = "运营";
                 break;
             case "frame":
-                tab = "基础库";
+                tabName = "基础库";
                 break;
             case "js":
-                tab = "javascript技术";
+                tabName = "javascript技术";
                 break;
         }
 
-        var tabLink = "<a href='http://imweb.io/tab/"+ tab  + "'>" + tab + "</a>";
+        var tabLink = "<a href='http://imweb.io/tab/"+ tab  + "'>" + tabName + "</a>";
 
         var postMeta = "<span class='post-meta'>" + timeSpan + " | " + tabLink + "</span>";
         var postTitle = "<h3 class='post-title'><a href='" +link +"'>" + topic.title + "</a></h3>";
