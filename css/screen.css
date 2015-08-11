@@ -355,6 +355,7 @@ h4 { font-size: 2.3rem; }
    }
 
    .latest-article {
+      text-align: center;
       width: 80%;
       margin: auto;
    }
@@ -441,6 +442,7 @@ h4 { font-size: 2.3rem; }
 
    .post-excerpt p{
       font-size: 0.8em;
+      text-align: left;
    }
 
    .member-name{
