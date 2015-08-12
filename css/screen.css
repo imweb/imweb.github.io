@@ -248,53 +248,9 @@ pre .chunk { color: #aaa }
 .tooltip:after { content: ""; border-width: 5px 5px 0 5px; border-style: solid; border-color: #50585D transparent; display: block; position: absolute; bottom: -4px; left: 50%; margin-left: -5px; z-index: 220; width: 0; }
 /* On hover, show the tooltip! */
 .subscribe:hover .tooltip { opacity: 1; top: -33px; }
-
+ 
 /* ==========================================================================
-   9. Media Queries - Smaller than 900px
-   ========================================================================== */
-
-@media only screen and (max-width: 900px) {
-blockquote { margin-left: 0; }
-.site-head { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: auto; min-height: 240px; padding: 15% 0; }
-.blog-title { font-size: 4rem; letter-spacing: -1px; }
-.blog-description { font-size: 1.7rem; line-height: 1.5em; }
-.post { font-size: 0.9em; line-height: 1.6em; }
-.post-template .post { padding-bottom: 1rem; }
-.post-template .post-header { padding: 40px 0; }
-h1 { font-size: 4.8rem; text-indent: -2px; }
-h2 { font-size: 4rem; }
-h3 { font-size: 3.2rem; }
-h4 { font-size: 2.4rem; }
-}
-
-/* ==========================================================================
-   10. Media Queries - Smaller than 500px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 500px) {
-.blog-logo img { max-height: 80px; }
-.inner,  .pagination { width: auto; margin-left: 16px; margin-right: 16px; }
-.post { width: auto; margin-left: 16px; margin-right: 16px; font-size: 0.8em; line-height: 1.6em; }
-.site-head { padding: 10% 0; }
-.blog-title { font-size: 3rem; }
-.blog-description { font-size: 1.5rem; }
-h1, h2 { font-size: 3rem; line-height: 1.1em; letter-spacing: -1px; }
-h3 { font-size: 2.8rem; }
-h4 { font-size: 2.3rem; }
-.post-template .post-header { padding: 30px 0; }
-.post-meta { font-size: 1.3rem; }
-.post-footer { padding: 4rem 0; text-align: center; }
-.post-footer .author { margin: 0 2rem 2rem 0; padding: 0 0 1.6rem 0; border-bottom: #EBF2F6 1px dashed; }
-.post-footer .share { position: static; width: auto; }
-.post-footer .share a { margin: 1.4rem 0.8rem 0 0.8rem; }
-.older-posts,  .newer-posts { position: static; margin: 10px 0; }
-.page-number { display: block; }
-.site-footer { margin-top: 6rem; font-size: 1.1rem; }
-}
-
-/* ==========================================================================
-   11. Custom style - add custom css here
+   9. Custom style - add custom css here
    ========================================================================== */
    .logo {
       font-size:1em;
@@ -317,7 +273,7 @@ h4 { font-size: 2.3rem; }
    }
 
    .nav li:first-of-type {
-      padding-left: 46em;
+      padding-left: 45em;
    }
 
    #header-text {
@@ -468,6 +424,72 @@ h4 { font-size: 2.3rem; }
     .blog-description{
       font-weight: 900;
     }
+
+    .project-show {
+      display: table;
+      margin: auto;
+    }
+
+    .project-section {
+      display: table-cell;
+      width: 15%;
+      border:1px solid #fff;
+    }
+
+    .fix-table {
+      display: table-caption;
+    }
+/* ==========================================================================
+   10. Media Queries - Smaller than 1024px
+   ========================================================================== */
+
+@media only screen and (max-width: 1024px) {
+.team-description { width: 85%; }
+.latest-article { width: 100%; }
+.post { font-size: 0.9em; line-height: 1.6em; }
+.post-template .post { padding-bottom: 1rem; }
+.post-template .post-header { padding: 40px 0; }
+.nav li:first-of-type { padding-left: 6.5em; }
+h1 { font-size: 4.8rem; text-indent: -2px; }
+h2 { font-size: 4rem; }
+h3 { font-size: 2.8rem; }
+h4 { font-size: 2.4rem; }
+}
+/* ==========================================================================
+   11. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+/*@media only screen and (max-width: 900px) {
+.blog-title { font-size: 4rem; letter-spacing: -1px; }
+.blog-description { font-size: 1.7rem; line-height: 1.5em; }
+.post { font-size: 0.9em; line-height: 1.6em; }
+.post-template .post { padding-bottom: 1rem; }
+.post-template .post-header { padding: 40px 0; }
+.nav li:first-of-type { padding-left: 6.5em; }
+h1 { font-size: 4.8rem; text-indent: -2px; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3.2rem; }
+h4 { font-size: 2.4rem; }
+}
+*/
+/* ==========================================================================
+   12. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 500px) {
+.blog-logo img { max-height: 5em; margin-left: 100%; }
+.inner,  .pagination { width: auto; margin-left: 16px; margin-right: 16px; }
+.post { width: auto; margin-left: 16px; margin-right: 16px; font-size: 0.8em; line-height: 1.6em; }
+.blog-title { font-size: 4rem; }
+.blog-description { font-size: 2rem; }
+.post-excerpt p { font-size: 1.2em; }
+.post-template .post-header { padding: 30px 0; }
+.post-footer { padding: 4rem 0; text-align: center; }
+.site-head { min-height:320px; }
+.site-footer { margin-top: 6rem; font-size: 1.1rem; }
+.project-section { display: block; width: 100%; }
+}
 /* ==========================================================================
    End of file.
    ========================================================================== */
