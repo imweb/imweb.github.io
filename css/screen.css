@@ -451,6 +451,23 @@ h4 { font-size: 2.3rem; }
    .comment{
       margin-left: 25%;
    }
+
+    .site-head {
+        display: inline-block;
+    }
+
+    .inner {
+      width: 100%;
+    }
+
+    .vertical {
+      display: block;
+      margin-top: 6.5em;
+    }
+
+    .blog-description{
+      font-weight: 900;
+    }
 /* ==========================================================================
    End of file.
    ========================================================================== */
