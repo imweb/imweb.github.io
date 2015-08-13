@@ -357,11 +357,7 @@ pre .chunk { color: #aaa }
    .member-name{
       font-size: 1.5em;
    }
-
-   .ds-thread{
-      margin: auto;
-      width: 50%;
-   }
+   
    .comment{
       margin-left: 25%;
    }
