@@ -111,7 +111,7 @@ margin on the iframe, cause it breaks stuff. */
 .blog-title { margin: 10px 0 10px 0; font-size: 5rem; letter-spacing: -1px; font-weight: bold; font-family: 'Open Sans', sans-serif; text-shadow: 0 1px 6px rgba(0,0,0,0.1); }
 .blog-description { margin: 0; font-size: 1.8rem; line-height: 1.5em; font-weight: 300; font-family: 'Noto Serif', serif; letter-spacing: 0; text-shadow: 0 1px 3px rgba(0,0,0,0.15); }
 /* Every post, on every page, gets this style on its <article> tag */
-.post { position: relative; width: 100%; max-width: 700px; margin: 2rem auto; word-break: break-word; }
+.post { position: relative; width: 50%; margin: 2rem auto; word-break: break-word; }
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints.
 .post:after {
@@ -340,36 +340,6 @@ pre .chunk { color: #aaa }
    .site-footer{
       margin: 0;
    }
-/*
-   #memberWall{
-      text-align: center;
-   }
-
-   .member-row{
-     display: inline;
-   }
-*/
-/*   .member{
-      background-color: #eee;
-      width: 250px;
-      height: 250px;
-      display: inline-block;
-      margin-right: 1em;
-   }
-
-   .memberWall{
-      width: 100%;
-      display: inline-block;
-   }
-   */
-   .post-content{
-      width: 80%;
-      padding-left: 20em;
-   }
-
-   .post{
-      max-width: 100%;
-   }
 
    h3{
       font-size: 2em;
@@ -396,45 +366,47 @@ pre .chunk { color: #aaa }
       margin-left: 25%;
    }
 
-    .site-head {
+   .site-head {
         display: inline-block;
     }
 
-    .inner {
+   .inner {
       width: 100%;
     }
 
-    .vertical {
+   .vertical {
       display: block;
       margin-top: 6.5em;
     }
 
-    .blog-description{
+  .blog-description{
       font-weight: 900;
     }
 
-    .project-show {
+   .project-show {
       display: table;
       margin: auto;
     }
 
-    .project-section {
+  .project-section {
       display: table-cell;
       width: 15%;
       border:1px solid #fff;
     }
 
-    .fix-table {
+  .fix-table {
       display: table-caption;
     }
 /* ==========================================================================
-   10. Media Queries - Smaller than 1024px
+   10. Media Queries - Smaller than 1300px
    ========================================================================== */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1300px) {
 .team-description { width: 85%; }
 .latest-article { width: 100%; }
-.post { font-size: 0.9em; line-height: 1.6em; }
+#header-nav { width: 92%; }
+.index-post { width: 40%; }
+.post { font-size: 0.9em; line-height: 1.6em; width: 80%; }
 .post-template .post { padding-bottom: 1rem; }
 .post-template .post-header { padding: 40px 0; }
 h1 { font-size: 4.8rem; text-indent: -2px; }
@@ -444,14 +416,15 @@ h4 { font-size: 2.4rem; }
 }
 
 /* ==========================================================================
-   11. Media Queries - Smaller than 500px
+   11. Media Queries - Smaller than 583px
    ========================================================================== */
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 583px) {
 .nav { display: inline-flex; padding-left: 0; margin: 0; }
 .logo { float: none; }
 #header-nav { width:100%; margin: 0; }
+#ds-thread { width: auto;}
 .post { width: auto; font-size: 0.8em; }
 .blog-title { font-size: 4rem; }
 .blog-description { font-size: 2rem; }
