@@ -17,9 +17,11 @@ https://github.com/moretwo/hexo-theme
 * 加入百度站长平台（SEO）
 * 加入多说评论
 * 提交sitemap到谷歌
+* 加入友情链接页面
 
 2015年8月12日：
 
 * 网站meta优化
 * 浏览器兼容
 * 多分辨率适配
+* 加入招聘页面
