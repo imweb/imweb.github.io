@@ -9,6 +9,21 @@
     <meta name="format-detection"content="telephone=no,email=no"/>
     <title>ui组件-腾讯课堂</title>
     <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+    .guide-tt {
+    	padding-top: 50px;
+    }
+	.title-nav {
+		position: fixed;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	.title-nav .active {
+		background-color: red;
+	}
+    </style>
 </head>
 <body class="l-max">
 <div class="top-nav">
@@ -24,7 +39,7 @@
 <div class="main">
 	<div class="inner-center">
 		<div class="article">
-			<h2 class="guide-tt">颜色</h2>
+			<h2 id="anch-color" class="guide-tt">颜色</h2>
 			<div class="guide-bd">
 				<h3 class="h-level-3">基本色</h3>
 				<ul class="color-list">
@@ -137,7 +152,7 @@
 					</li>
 				</ul>
 			</div>
-			<h2 class="guide-tt">按钮</h2>
+			<h2 id="anch-button" class="guide-tt">按钮</h2>
 			<p class="instruction">默认提供三种颜色按钮，分别为primary，defualt和weak，需要其他颜色需自定义；默认提供两种大小m(宽120高40)和s(左右padding为1em高30)</p>
 			<p class="instruction">scss提供了%btn-primary,%btn-default,%btn-weak,%btn-m,%btn-s可以使用</p>
 			<div class="guide-bd">
@@ -149,7 +164,7 @@
 				<a class="btn-default btn-m">.btn-m</a>
 				<a class="btn-default btn-s">.btn-s</a>
 			</div>
-			<h2 class="guide-tt">表格</h2>
+			<h2 id="anch-table" class="guide-tt">表格</h2>
 			<div class="guide-bd">
 				<h3 class="h-level-3">后台数据展示(.tb-list)</h3>
 				<p class="instruction">表格的padding为10px，颜色部分涉及到边框色($colorBorder)，头部背景色($grayF)和鼠标划过的背景色(和边框色一样)</p>
@@ -184,7 +199,7 @@
 					</tbody>
 				</table>
 			</div>
-			<h2 class="guide-tt">表单</h2>
+			<h2 id="anch-form" class="guide-tt">表单</h2>
 			<div class="guide-bd">
 				<p class="instruction">form表单的基础class为form,如果label与输入框同行则追加class form--h。如toC则追加class form--c(默认为toB侧的输入框高度为30px，而toC的为40px)</p>
 				<p class="instruction">通过f-item上添加class表示状态,f-item--error（表示错误）,f-item--success（表示成功）,f-item--info（表示提示），如果一行有多个输入框，只表示一个输入框的错误状态可以在input上追加class text--error</p>
@@ -425,7 +440,7 @@
 					</div>
 				</form>
 			</div>
-			<h2 class="guide-tt">面包屑</h2>
+			<h2 id="anch-breadcrumb" class="guide-tt">面包屑</h2>
 			<p class="instruction">h1那层可根据实际情况使用标签，如课程详细页用h1，列表页用span</p>
 			<p class="instruction">后面的两个flag筛选应用于全部课程过滤</p>
 			<div class="guide-bd">
@@ -444,7 +459,7 @@
 					<span class="breadcrumb-item item--flag">升值加薪<i class="flag-close">&times;</i></span>
 				</div>
 			</div>
-			<h2 class="guide-tt">课程卡片</h2>
+			<h2 id="anch-course-card" class="guide-tt">课程卡片</h2>
 			<p class="instruction">图标：录播课图标，免费试听图标，活动图标</p>
 			<p class="instruction">正在上课鼠标划过蒙层遮盖图片</p>
 			<p class="instruction">正在上课的课程标记正在上课，今天的课程标记时间，其余的标记月日</p>
@@ -508,7 +523,7 @@
 					</li>
 				</ul>
 			</div>
-			<h2 class="guide-tt">msg</h2>
+			<h2 id="anch-msg" class="guide-tt">msg</h2>
 			<p class="instruction">可用于各种无数据提示，创建成功或失败，提示icon可换.i-info, .i-alert, .i-success</p>
 			<div class="guide-bd">
 				<div class="section-msg">
@@ -522,7 +537,7 @@
 					</div>
 				</div>
 			</div>
-			<h2 class="guide-tt">分步表单</h2>
+			<h2 id="anch-steps-nav" class="guide-tt">分步表单</h2>
 			<div class="guide-bd">
 				<ul class="steps-nav steps-nav--third">
 					<li><span class="steps-num">1</span>填写课程信息</li>
@@ -530,7 +545,7 @@
 					<li class="last"><span class="steps-num">3</span>提交审核</li>
 				</ul>
 			</div>
-			<h2 class="guide-tt">drop down</h2>
+			<h2 id="anch-drop-down" class="guide-tt">drop down</h2>
 			<div class="guide-bd" style="height: 150px;">
 				<div class="drop-down">
 					<span class="drop-down-tt">链接跳转</span>
@@ -541,14 +556,14 @@
 					</ul>
 				</div>
 			</div>
-			<h2 class="guide-tt">机构等级</h2>
+			<h2 id="anch-agency-level" class="guide-tt">机构等级</h2>
 			<div class="guide-bd">
 				<i class="icon-agency-level"></i>
 				<i class="icon-agency-level level--3"></i>
 				<i class="icon-agency-level level--4"></i>
 				<i class="icon-agency-level level--5"></i>
 			</div>
-			<h2 class="guide-tt">老师列表</h2>
+			<h2 id="anch-teacher-list" class="guide-tt">老师列表</h2>
 			<div class="guide-bd">
 				<div class="teacher-list">
 					<div class="teacher-item">
@@ -574,10 +589,13 @@
 					</div>
 				</div>
 			</div>
-			<h2 class="guide-tt">分享</h2>
+			<h2 id="anch-share" class="guide-tt">分享</h2>
 		</div>
 	</div>
 </div>
+
+<script src="//localhost:35729/livereload.js"></script>
+<script src="js/nav.js"></script>
 
 </body>
 </html>
