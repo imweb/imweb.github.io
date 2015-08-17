@@ -226,9 +226,9 @@ pre .chunk { color: #aaa }
    8. Footer - The bottom of every page
    ========================================================================== */
 
-.site-footer { position: relative; margin: 8rem 0 0 0; padding: 4rem 0; border-top: #EBF2F6 1px solid; font-family: 'Open Sans', sans-serif; font-size: 1.3rem; line-height: 1.7em; color: #BBC7CC; text-align: center; background: #f8f8f8; }
-.site-footer a { color: #BBC7CC; text-decoration: underline; }
-.site-footer a:hover { color: #50585D; }
+.site-footer { position: relative; margin: 8rem 0 0 0; padding: 4rem 0; border-top: #EBF2F6 1px solid; font-family: 'Open Sans', sans-serif; font-size: 1.3rem; line-height: 1.7em; color: #BBC7CC; text-align: center; background: #414242; }
+.site-footer a { color: #BBC7CC; }
+.site-footer a:hover { color: #218af7; font-weight: 600;}
 .poweredby .icon-ghost { font-weight: 700; text-decoration: none; }
 .poweredby .icon-ghost:hover { text-decoration: none; }
 .poweredby .icon-ghost:before { font-size: 1rem; margin-right: 0.2em; }
@@ -357,13 +357,18 @@ pre .chunk { color: #aaa }
    .member-name{
       font-size: 1.5em;
    }
-   
+
+   .ds-thread{
+      margin: auto;
+      width: 50%;
+   }
    .comment{
       margin-left: 25%;
    }
 
    .site-head {
         display: inline-block;
+      background-color: #040308;
     }
 
    .inner {
@@ -382,17 +387,68 @@ pre .chunk { color: #aaa }
    .project-show {
       display: table;
       margin: auto;
+      width: 100%;
     }
 
   .project-section {
-      display: table-cell;
-      width: 15%;
-      border:1px solid #fff;
+      width: 25%;
+      border:2px solid #fff;
     }
 
   .fix-table {
       display: table-caption;
     }
+
+  .pro1 {
+      background:url("../img/iconfont.png");
+    }
+
+  .pro2
+   {
+      background:url("../img/qjs.png");
+    }
+
+  .pro3 {
+      background:url("../img/lego.png");
+    }
+
+  .pro4 {
+      background:url("../img/badjs.png");
+    }
+
+    .footer-logo {
+      background-color: #4d4e4e;
+      padding-top: 3em;
+    }
+
+    .site-footer {
+      padding: 0;
+    }
+
+    .copyright {
+      padding: 1em;
+      color:#818282;
+    }
+
+    hr.footer {
+      border-color: #676767;
+      margin: auto;
+      width: 40%;
+      margin-top: 2em;
+    }
+
+    ul.footer {
+      list-style: none;
+      display: -webkit-inline-box;
+      padding-left: 0;
+    }
+
+    ul.footer > li {
+      margin: 0 1em;
+    }
+
+
+
 /* ==========================================================================
    10. Media Queries - Smaller than 1300px
    ========================================================================== */
