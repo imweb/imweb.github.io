@@ -9,11 +9,12 @@
     <meta name="format-detection"content="telephone=no,email=no"/>
     <title>ui组件-腾讯课堂</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/prism.css">
+    <!-- <link rel="stylesheet" href="css/prism.css"> -->
     <style type="text/css">
     .guide-tt {
     	padding-top: 50px;
     }
+    /*
 	.title-nav {
 		width: 120px;
 		position: fixed;
@@ -28,6 +29,26 @@
 	}
 	.title-nav .active {
 		background-color: #999;
+	}
+	*/
+	.anchor-bar{
+		position: fixed;
+		right: 0;
+		top: 50%;
+		width: 120px;
+		line-height: 2;
+		padding: 20px 0;
+		transform: translate(0, -50%);
+	}
+	.anchor-bar a{
+		display: block;
+		background: #eee;
+		text-align: center;
+	}
+	.anchor-bar a:hover,
+	.anchor-bar a.active{
+		color: #eee;
+		background: #999;
 	}
     </style>
 </head>
@@ -601,8 +622,8 @@
 </div>
 
 <!-- <script src="//localhost:35729/livereload.js"></script> -->
-<script src="js/nav.js"></script>
-<script src="js/prism.js"></script>
+<script src="js/nav2.js"></script>
+<!-- <script src="js/prism.js"></script> -->
 
 </body>
 </html>
