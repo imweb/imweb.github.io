@@ -4,7 +4,7 @@
         return Array.prototype.slice.call(document.querySelectorAll(selector));
     }
 
-    var $navObjs = null;
+    var $navObjs = [];
 
     function initNavBar() {
         var output = [];
