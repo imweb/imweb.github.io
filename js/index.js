@@ -105,7 +105,7 @@
                 alert('fail');
              }
 		});
-        $(".post-content").fitVids();
+/*        $(".post-content").fitVids();
         $(".site-head").interactive_bg({
 		   strength: 25,
 		   scale: 1,
@@ -121,5 +121,5 @@
             height: $(window).outerHeight()
         });
     });
-
+*/
 }(jQuery));
