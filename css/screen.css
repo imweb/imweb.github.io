@@ -103,7 +103,7 @@ margin on the iframe, cause it breaks stuff. */
    ========================================================================== */
 
 /* Big cover image on the home page */
-.site-head { position: relative; display: table; width: 100%; height: 60%; margin-bottom: 5rem; text-align: center; color: #fff; background: #303538 no-repeat center center; background-size: cover; }
+.site-head { background-image:url("../img/banner.png"); position: relative; display: table; width: 100%; height: 60%; margin-bottom: 5rem; text-align: center; color: #fff; background: #303538 no-repeat center center; background-size: cover; }
 .blog-logo { text-decoration: none; }
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img { display: block; max-height: 100px; width: auto; margin: 0 auto; line-height: 0; }
