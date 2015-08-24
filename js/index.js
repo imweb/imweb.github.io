@@ -105,8 +105,8 @@
                 alert('fail');
              }
 		});
-/*        $(".post-content").fitVids();
-        $(".site-head").interactive_bg({
+        $(".post-content").fitVids();
+ /*       $(".site-head").interactive_bg({
 		   strength: 25,
 		   scale: 1,
 		   animationSpeed: "5ms",
@@ -120,6 +120,6 @@
             width: $(window).outerWidth(),
             height: $(window).outerHeight()
         });
-    });
-*/
+    });*/
+
 }(jQuery));
