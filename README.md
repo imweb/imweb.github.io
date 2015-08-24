@@ -25,3 +25,7 @@ https://github.com/moretwo/hexo-theme
 * 浏览器兼容
 * 多分辨率适配
 * 加入招聘页面
+
+2015年8月24日：
+
+* 代码规范
