@@ -105,17 +105,17 @@
                 alert('fail');
              }
 		});
-        $(".post-content").fitVids();
- /*       $(".site-head").interactive_bg({
+  /*      $(".post-content").fitVids();
+        $(".site-head").interactive_bg({
 		   strength: 25,
 		   scale: 1,
 		   animationSpeed: "5ms",
 		   contain: true,
 		   wrapContent: false
-		   });
+		   });*/
     });
 
-    $(window).resize(function() {
+/*    $(window).resize(function() {
         $(".site-head > .ibg-bg").css({
             width: $(window).outerWidth(),
             height: $(window).outerHeight()
