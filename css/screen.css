@@ -398,6 +398,10 @@ pre .chunk { color: #aaa }
       display: table-caption;
     }
 
+  .pro1,.pro2,.pro3,.pro4 {
+    background-position: 50%;
+  }
+
   .pro1 {
       background:url("../img/iconfont.png");
     }
