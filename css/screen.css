@@ -398,25 +398,25 @@ pre .chunk { color: #aaa }
       display: table-caption;
     }
 
-  .pro1,.pro2,.pro3,.pro4 {
-    background-position: 50%;
-  }
-
   .pro1 {
       background:url("../img/iconfont.png");
+      background-position: 50%;
     }
 
   .pro2
    {
       background:url("../img/qjs.png");
+      background-position: 50%;
     }
 
   .pro3 {
       background:url("../img/lego.png");
+      background-position: 50%;
     }
 
   .pro4 {
       background:url("../img/badjs.png");
+      background-position: 50%;
     }
 
     .footer-logo {
