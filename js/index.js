@@ -67,6 +67,11 @@
             case "js":
                 tabName = "javascript技术";
                 break;
+            case "dev":
+                tabName = "开发模式";
+                break;
+            default:
+                tabName = "";
         }
 
         var tabLink = "<a href='http://imweb.io/tab/"+ tab  + "'>" + tabName + "</a>";
