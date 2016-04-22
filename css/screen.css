@@ -31,8 +31,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url("../fonts/icons.eot");
     src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"),  url("../fonts/icons.woff") format("woff"),  url("../fonts/icons.ttf") format("truetype"),  url("../fonts/icons.svg#icons") format("svg");
+    src: url("../fonts/icons.eot");
 }
 /* Apply these base styles to all icons */
 .icon-ghost:before,
@@ -456,6 +456,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-title a {
     text-decoration: none;
+
+    color: #3372a2;
 }
 .post-excerpt p {
     margin: 1.6rem 0 0 0;
@@ -1141,7 +1143,7 @@ h3 {
 }
 
 .footer-logo {
-    padding-top: 3em;
+    padding-top: 1rem;
 
     background-color: #4d4e4e;
 }
@@ -1233,19 +1235,37 @@ ul.footer > li {
 
 @media only screen and (max-width: 583px) {
     .nav {
-        display: inline-flex;
+        display: -webkit-box;
 
         margin: 0;
         padding-left: 0;
+        width: 100%;
+    }
+    .nav li {
+        display: block;
+
+        -webkit-box-flex: 1;
+
+        margin: .5em;
+
+        text-align: center;
+    }
+    .nav li a {
+        color: #fff;
     }
     .logo {
+        display: none;
         float: none;
     }
     #header-nav {
-        display: none;
-
         margin: 0;
+        border-bottom: 1px dashed #fff;
         width: 100%;
+
+        background: #77b7fb;
+    }
+    .mobile-hide {
+        display: none;
     }
     #ds-thread {
         width: auto;
@@ -1255,6 +1275,9 @@ ul.footer > li {
         width: auto;
 
         font-size: 1.4rem;
+    }
+    .site-head .vertical {
+        margin-top: 20%;
     }
     .blog-title {
         margin: 10px;
