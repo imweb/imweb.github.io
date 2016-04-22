@@ -967,6 +967,10 @@ pre .chunk {
     text-align: right;
 }
 
+.nav .z-active a {
+    color: #3372a2;
+}
+
 .logo {
     float: left;
 }
@@ -1250,8 +1254,11 @@ ul.footer > li {
 
         text-align: center;
     }
-    .nav li a {
+    .nav a {
         color: #fff;
+    }
+    .nav .z-active a {
+        color: #3372a2;
     }
     .logo {
         display: none;
