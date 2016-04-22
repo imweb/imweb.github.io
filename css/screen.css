@@ -1264,7 +1264,7 @@ ul.footer > li {
 
         background: #77b7fb;
     }
-    .nav li .mobile-hide {
+    .nav li.mobile-hide {
         display: none;
     }
     #ds-thread {
