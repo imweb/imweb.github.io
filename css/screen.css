@@ -1043,6 +1043,8 @@ header.post-header {
     height: 8em;
 
     background-color: #e8e8e8;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .project-show {
@@ -1129,22 +1131,22 @@ h3 {
 }
 
 .pro1 {
-    background: url("../img/iconfont.png");
+    background-image: url("../img/iconfont.png");
     background-position: 50%;
 }
 
 .pro2 {
-    background: url("../img/qjs.png");
+    background-image: url("../img/qjs.png");
     background-position: 50%;
 }
 
 .pro3 {
-    background: url("../img/lego.png");
+    background-image: url("../img/lego.png");
     background-position: 50%;
 }
 
 .pro4 {
-    background: url("../img/badjs.png");
+    background-image: url("../img/badjs.png");
     background-position: 50%;
 }
 
