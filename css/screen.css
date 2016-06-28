@@ -33,7 +33,8 @@
 
     // src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"),  url("../fonts/icons.woff") format("woff"),  url("../fonts/icons.ttf") format("truetype"),  url("../fonts/icons.svg#icons") format("svg");
     // src: url("../fonts/icons.eot");
-    src: url("../fonts/icons.ttf");
+    src: url("../fonts/icons.ttf")
+        ,url("../fonts/icons.woff");
 }
 /* Apply these base styles to all icons */
 .icon-ghost:before,
