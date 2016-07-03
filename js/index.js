@@ -128,4 +128,17 @@ $('body').on('click', '.js-scroll-top-btn', function(e) {
         scrollTop: 0
     })
 })
+$(window).scroll(checkAndShowBtn);
+
+function checkAndShowBtn() {
+    if ($(window).scrollTop() > 200) {
+        $('.js-scroll-top-btn').show();
+    } else {
+        $('.js-scroll-top-btn').hide();
+    }
+}
+
+checkAndShowBtn();
+
+
 }(jQuery));

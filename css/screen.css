@@ -1194,6 +1194,7 @@ div.scroll-top-btn {
     height: 40px;
     cursor: pointer;
     background: url('../img/scroll-top.png');
+    display: none;
 }
 
 div.scroll-top-btn:hover {
