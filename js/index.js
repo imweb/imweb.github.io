@@ -122,4 +122,10 @@
         });
     });*/
 
+
+$('body').on('click', '.js-scroll-top-btn', function(e) {
+    $('body').animate({
+        scrollTop: 0
+    })
+})
 }(jQuery));

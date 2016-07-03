@@ -1185,6 +1185,22 @@ ul.footer > li {
     margin: 0 1em;
 }
 
+div.scroll-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../img/scroll-top.png');
+}
+
+div.scroll-top-btn:hover {
+    right: 20px;
+    bottom: 49px;
+}
+
 
 
 /* ==========================================================================
