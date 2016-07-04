@@ -85,43 +85,29 @@
 
 
     $(document).ready(function(){
-    	$.ajax({
-			type:"get",
-			async:false,
-		    url:"http://imweb.io/topics/latestTopics",
-		    dataType:"jsonp",
-			jsonp: "callback",
+        $.ajax({
+            type:"get",
+            async:false,
+            // 将 最新文章 改成 精华文章
+            // url:"http://imweb.io/topics/latestTopics", 
+            url:"http://imweb.io/topics/latestTopics/sort/top_good",
+            dataType:"jsonp",
+            jsonp: "callback",
             jsonpCallback:"callback",
             data:{
-            	topics: topics
+                topics: topics
             },
             success: function(callback){
-            	for(var i in callback){
-            		topics[i] = callback[i];
+                for(var i in callback){
+                    topics[i] = callback[i];
                     latestTopics(topics[i]);
-            	}
+                }
             },
             error: function(){
                 alert('fail');
              }
-		});
-  /*      $(".post-content").fitVids();
-        $(".site-head").interactive_bg({
-		   strength: 25,
-		   scale: 1,
-		   animationSpeed: "5ms",
-		   contain: true,
-		   wrapContent: false
-		   });*/
-    });
-
-/*    $(window).resize(function() {
-        $(".site-head > .ibg-bg").css({
-            width: $(window).outerWidth(),
-            height: $(window).outerHeight()
         });
-    });*/
-
+    });
 
 $('body').on('click', '.js-scroll-top-btn', function(e) {
     $('body').animate({
