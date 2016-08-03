@@ -15,14 +15,33 @@ define('external/index', function(require, exports, module) {
   var _jquery2 = _interopRequireDefault(_jquery);
   
   var $win = (0, _jquery2['default'])(window);
+  var hostname = location.hostname;
+  var pathname = location.pathname;
+  
   var M = {
     init: function init() {
       this.size();
       this.events();
       this.$iframe = (0, _jquery2['default'])('iframe:first');
-      this.$a = (0, _jquery2['default'])('ul a');
+      this.$a = (0, _jquery2['default'])('ul').find('a');
   
-      this.$iframe.prop('src', this.$a.first().addClass('active').prop('href'));
+      this.$iframe.prop('src', this.parseHref(this.$a.first().addClass('active').prop('href')));
+    },
+  
+    parseHref: function parseHref(href) {
+      var ret = href; // 默认是 dev 的时候
+  
+      if (hostname === '127.0.0.1') {
+        if (pathname.indexOf('site') > -1) {
+          // 本地 check site 目录时
+          ret = href.replace('/components', '/site/components');
+        }
+      } else {
+        // 现网站点
+        ret = href.replace('/components', '/imui/components');
+      }
+  
+      return ret;
     },
   
     events: function events() {
@@ -44,7 +63,7 @@ define('external/index', function(require, exports, module) {
         _this.$a.removeClass('active');
         $target.addClass('active');
   
-        _this.$iframe.prop('src', e.target.href);
+        _this.$iframe.prop('src', _this.parseHref(e.target.href));
       });
     },
   

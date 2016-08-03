@@ -63,7 +63,7 @@ define('components/dialog/src/util', function(require, exports, module) {
     }
   
     var extraWidth = getExtraWidth(body);
-    console.log(body.clientWidth + extraWidth, fullWindowWidth);
+  
     return body.clientWidth + extraWidth < fullWindowWidth;
   }
   
