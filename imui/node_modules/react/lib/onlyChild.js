@@ -1,0 +1,42 @@
+define('node_modules/react/lib/onlyChild', function(require, exports, module) {
+
+  /**
+   * Copyright 2013-present, Facebook, Inc.
+   * All rights reserved.
+   *
+   * This source code is licensed under the BSD-style license found in the
+   * LICENSE file in the root directory of this source tree. An additional grant
+   * of patent rights can be found in the PATENTS file in the same directory.
+   *
+   * @providesModule onlyChild
+   */
+  'use strict';
+  
+  var _prodInvariant = require('node_modules/react/lib/reactProdInvariant');
+  
+  var ReactElement = require('node_modules/react/lib/ReactElement');
+  
+  var invariant = require('node_modules/fbjs/lib/invariant');
+  
+  /**
+   * Returns the first child in a collection of children and verifies that there
+   * is only one child in the collection.
+   *
+   * See https://facebook.github.io/react/docs/top-level-api.html#react.children.only
+   *
+   * The current implementation of this function assumes that a single child gets
+   * passed without a wrapper, but the purpose of this helper function is to
+   * abstract away the particular structure of children.
+   *
+   * @param {?object} children Child collection structure.
+   * @return {ReactElement} The first and only `ReactElement` contained in the
+   * structure.
+   */
+  function onlyChild(children) {
+    !ReactElement.isValidElement(children) ? 'development' !== 'production' ? invariant(false, 'onlyChild must be passed a children with exactly one child.') : _prodInvariant('23') : void 0;
+    return children;
+  }
+  
+  module.exports = onlyChild;
+
+});

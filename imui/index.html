@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>IMWeb · UI</title>  
+    <link rel="stylesheet" href="/external/typography.css" />
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      position: relative;
+    }
+
+    ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+    }
+
+    li {
+      font: 18px Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+      margin: 10px 0;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .active {
+      color: #039ae3;
+      text-decoration: none;
+    }
+
+    .main {
+      margin-left: 200px;
+      overflow: hidden;
+    }
+
+    iframe {
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<h1>IMWeb · UI</h1>
+<div class="box">
+  <ul>
+    
+    <li><a target="_blank" href="/components/button/demo/index.html">button</a></li>
+    
+    <li><a target="_blank" href="/components/dialog/demo/index.html">dialog</a></li>
+    
+    <li><a target="_blank" href="/components/icon/demo/index.html">icon</a></li>
+    
+    <li><a target="_blank" href="/components/tab/demo/index.html">tab</a></li>
+    
+  </ul>
+  <div id="main" class="main">
+    <iframe src="http://127.0.0.1:8080/components/button/demo/index.html" frameborder="0"></iframe>
+  </div>
+</div>
+<script src="/external/nowrap/mod.js"></script>
+<script type="text/javascript" src="/external/jquery.js"></script>
+<script type="text/javascript" src="/external/index.js"></script>
+<script>'use strict';
+
+require('external/index');</script>
+</body>
+</html>
