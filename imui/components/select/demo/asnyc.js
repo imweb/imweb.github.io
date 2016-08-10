@@ -1,11 +1,5 @@
-define('components/dialog/demo/demo.jsx', function(require, exports, module) {
+define('components/select/demo/asnyc.jsx', function(require, exports, module) {
 
-  /**
-   * demo
-   * @author jero
-   * @date 2016-07-28
-   */
-  
   'use strict';
   
   var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -26,82 +20,62 @@ define('components/dialog/demo/demo.jsx', function(require, exports, module) {
   
   var _reactDom2 = _interopRequireDefault(_reactDom);
   
-  var _index = require('components/dialog/index.jsx');
+  var _index = require('components/select/index.jsx');
   
   var _index2 = _interopRequireDefault(_index);
   
-  var _buttonIndex = require('components/button/index.jsx');
+  var SelectAsnycDemo = (function (_React$Component) {
+    _inherits(SelectAsnycDemo, _React$Component);
   
-  var _buttonIndex2 = _interopRequireDefault(_buttonIndex);
+    function SelectAsnycDemo(props) {
+      _classCallCheck(this, SelectAsnycDemo);
   
-  var Demo = (function (_React$Component) {
-    _inherits(Demo, _React$Component);
-  
-    function Demo(props) {
-      _classCallCheck(this, Demo);
-  
-      _get(Object.getPrototypeOf(Demo.prototype), 'constructor', this).call(this, props);
-  
+      _get(Object.getPrototypeOf(SelectAsnycDemo.prototype), 'constructor', this).call(this, props);
+      this.loadOptions = this.loadOptions.bind(this);
       this.state = {
-        visible: false
+        options: null
       };
-  
-      this.onClose = this.onClose.bind(this);
-      this.onClick = this.onClick.bind(this);
     }
   
-    _createClass(Demo, [{
-      key: 'onClose',
-      value: function onClose() {
-        this.setState({
-          visible: false
-        });
-      }
-    }, {
-      key: 'onClick',
-      value: function onClick() {
-        this.setState({
-          visible: true
-        });
-      }
-    }, {
+    _createClass(SelectAsnycDemo, [{
       key: 'render',
       value: function render() {
+        var options = this.state.options;
+  
         return _react2['default'].createElement(
           'div',
-          null,
-          _react2['default'].createElement(
-            'h2',
-            null,
-            'Simple Demo'
-          ),
-          _react2['default'].createElement(
-            _buttonIndex2['default'],
-            {
-              onClick: this.onClick
-            },
-            '显示'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            {
-              visible: this.state.visible,
-              onClose: this.onClose,
-              title: '简单示例'
-            },
-            _react2['default'].createElement(
-              'p',
-              null,
-              '哈哈哈哈'
-            )
-          )
+          { onClick: this.loadOptions },
+          _react2['default'].createElement(_index2['default'], {
+            options: options,
+            style: { width: '200px' }
+          })
         );
+      }
+    }, {
+      key: 'loadOptions',
+      value: function loadOptions() {
+        var _this = this;
+  
+        setTimeout(function () {
+          _this.setState({
+            options: [{
+              name: 'swift',
+              value: 101
+            }, {
+              name: 'java',
+              value: 121
+            }, {
+              name: 'javascript',
+              value: 332
+            }]
+          });
+        }, 2000);
       }
     }]);
   
-    return Demo;
+    return SelectAsnycDemo;
   })(_react2['default'].Component);
   
-  _reactDom2['default'].render(_react2['default'].createElement(Demo, null), document.getElementById('demo'));
+  _reactDom2['default'].render(_react2['default'].createElement(SelectAsnycDemo, null), document.getElementById('asnyc'));
 
 });

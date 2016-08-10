@@ -63,17 +63,25 @@ define('components/button/lib/Button.jsx', function(require, exports, module) {
         var others = _objectWithoutProperties(_props, ['prefixCls', 'disabled', 'onClick', 'color', 'size', 'href', 'children']);
   
         var classes = (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, prefixCls, true), _defineProperty(_classnames, 'btn-' + color, true), _defineProperty(_classnames, 'btn-' + size, true), _defineProperty(_classnames, 'disabled', disabled), _classnames));
-        if (href) {
+        var clickHandler = undefined;
+  
+        if (disabled && onClick) {
+          clickHandler = function () {};
+        } else {
+          clickHandler = onClick;
+        }
+  
+        if (href && !disabled) {
           return _react2['default'].createElement(
             'a',
-            _extends({ className: classes, onClick: onClick, href: href }, others),
+            _extends({ className: classes, onClick: clickHandler, href: href }, others),
             children
           );
         }
   
         return _react2['default'].createElement(
           'button',
-          _extends({ className: classes, onClick: onClick }, others),
+          _extends({ className: classes, onClick: clickHandler }, others),
           children
         );
       }

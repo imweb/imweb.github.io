@@ -53,8 +53,6 @@ define('components/dialog/demo/demo2.jsx', function(require, exports, module) {
     _createClass(Demo, [{
       key: 'onClose',
       value: function onClose() {
-        console.log('onClose');
-  
         this.setState({
           visible: false
         });

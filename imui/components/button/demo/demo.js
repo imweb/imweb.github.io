@@ -45,6 +45,11 @@ define('components/button/demo/demo.jsx', function(require, exports, module) {
         window.console.log('testClick');
       }
     }, {
+      key: 'clickHandler',
+      value: function clickHandler() {
+        console.log(123);
+      }
+    }, {
       key: 'render',
       value: function render() {
         var iconStyle = {
@@ -55,108 +60,173 @@ define('components/button/demo/demo.jsx', function(require, exports, module) {
           'div',
           null,
           _react2['default'].createElement(
-            _index2['default'],
-            { href: '//ke.qq.com', target: '_blank' },
-            '腾讯课堂'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { onClick: this.testClick },
-            _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin', style: iconStyle })
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
+            'div',
             null,
-            _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin' }),
             _react2['default'].createElement(
-              'span',
+              'h2',
               null,
-              '微信'
+              '默认配色按钮'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { size: 's' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              null,
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { size: 'l' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { size: 'l', disabled: true, onClick: this.clickHandler },
+              'IMUI'
             )
           ),
           _react2['default'].createElement(
-            _index2['default'],
+            'div',
             null,
             _react2['default'].createElement(
-              'span',
+              'h2',
               null,
-              '微信'
+              'outline配色按钮'
             ),
-            _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin' })
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'outline', size: 's' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'outline' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'outline', size: 'l' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'outline', disabled: true },
+              'IMUI'
+            )
           ),
-          _react2['default'].createElement('br', null),
           _react2['default'].createElement(
-            _index2['default'],
-            { size: 's' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
+            'div',
             null,
-            'IMUI'
+            _react2['default'].createElement(
+              'h2',
+              null,
+              'primary配色按钮'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'primary', size: 's' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'primary' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'primary', size: 'l' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'primary', disabled: true },
+              'IMUI'
+            )
           ),
           _react2['default'].createElement(
-            _index2['default'],
-            { size: 'l' },
-            'IMUI'
+            'div',
+            null,
+            _react2['default'].createElement(
+              'h2',
+              null,
+              'weak配色按钮'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'weak', size: 's' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'weak' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'weak', size: 'l' },
+              'IMUI'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { color: 'weak', disabled: true },
+              'IMUI'
+            )
           ),
           _react2['default'].createElement(
-            _index2['default'],
-            { size: 'l', disabled: true },
-            'IMUI'
-          ),
-          _react2['default'].createElement('br', null),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'outline', size: 's' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'outline' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'outline', size: 'l' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'outline', disabled: true },
-            'IMUI'
-          ),
-          _react2['default'].createElement('br', null),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'primary', size: 's' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'primary' },
-            'IMUI'
+            'div',
+            null,
+            _react2['default'].createElement(
+              'h2',
+              null,
+              '包含Icon的按钮'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { onClick: this.testClick },
+              _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              null,
+              _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin' }),
+              _react2['default'].createElement(
+                'span',
+                null,
+                '微信'
+              )
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                '微信'
+              ),
+              _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin' })
+            )
           ),
           _react2['default'].createElement(
-            _index2['default'],
-            { color: 'primary', size: 'l' },
-            'IMUI'
-          ),
-          _react2['default'].createElement('br', null),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'weak', size: 's' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'weak' },
-            'IMUI'
-          ),
-          _react2['default'].createElement(
-            _index2['default'],
-            { color: 'weak', size: 'l' },
-            'IMUI'
+            'div',
+            null,
+            _react2['default'].createElement(
+              'h2',
+              null,
+              '有链接的按钮'
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { href: '//ke.qq.com', disabled: true },
+              _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              _index2['default'],
+              { href: '//ke.qq.com', target: '_blank' },
+              _react2['default'].createElement(_iconIndex2['default'], { type: 'weixin', style: iconStyle })
+            )
           )
         );
       }

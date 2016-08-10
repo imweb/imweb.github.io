@@ -49,7 +49,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
           null,
           _react2['default'].createElement(
             'ul',
-            null,
+            { className: 'icon-red' },
             _react2['default'].createElement(
               'li',
               null,
@@ -119,7 +119,85 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 'type:close'
               ),
               _react2['default'].createElement(_index2['default'], { type: 'close' })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-orange' },
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:edit'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'edit', className: 'icon-big' })
             ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:group'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'group', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:heart'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'heart', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:home'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'home', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:info'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'info', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:insert'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'insert', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:list-dot'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'list-dot', className: 'icon-big' })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-yellow' },
             _react2['default'].createElement(
               'li',
               null,
@@ -176,16 +254,6 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
               _react2['default'].createElement(
                 'span',
                 null,
-                'type:course-test'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'course-test' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
                 'type:delete'
               ),
               _react2['default'].createElement(_index2['default'], { type: 'delete' })
@@ -199,77 +267,11 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 'type:download'
               ),
               _react2['default'].createElement(_index2['default'], { type: 'download' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:edit'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'edit' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:group'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'group' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:heart'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'heart' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:home'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'home' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:info'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'info' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:insert'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'insert' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:list-dot'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'list-dot' })
-            ),
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-green' },
             _react2['default'].createElement(
               'li',
               null,
@@ -278,7 +280,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:logo'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'logo' })
+              _react2['default'].createElement(_index2['default'], { type: 'logo', className: 'icon-big' })
             ),
             _react2['default'].createElement(
               'li',
@@ -288,7 +290,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:phone'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'phone' })
+              _react2['default'].createElement(_index2['default'], { type: 'phone', className: 'icon-big' })
             ),
             _react2['default'].createElement(
               'li',
@@ -298,7 +300,17 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:play'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'play' })
+              _react2['default'].createElement(_index2['default'], { type: 'play', className: 'icon-big' })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:course-test'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'course-test', className: 'icon-big' })
             ),
             _react2['default'].createElement(
               'li',
@@ -308,7 +320,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:qq-border'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'qq-border' })
+              _react2['default'].createElement(_index2['default'], { type: 'qq-border', className: 'icon-big' })
             ),
             _react2['default'].createElement(
               'li',
@@ -318,7 +330,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:qq'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'qq' })
+              _react2['default'].createElement(_index2['default'], { type: 'qq', className: 'icon-big' })
             ),
             _react2['default'].createElement(
               'li',
@@ -328,18 +340,12 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:qr-code'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'qr-code' })
-            ),
-            _react2['default'].createElement(
-              'li',
-              null,
-              _react2['default'].createElement(
-                'span',
-                null,
-                'type:question'
-              ),
-              _react2['default'].createElement(_index2['default'], { type: 'question' })
-            ),
+              _react2['default'].createElement(_index2['default'], { type: 'qr-code', className: 'icon-big' })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-blue' },
             _react2['default'].createElement(
               'li',
               null,
@@ -348,7 +354,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:right'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'right' })
+              _react2['default'].createElement(_index2['default'], { type: 'right', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -358,7 +364,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:share'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'share' })
+              _react2['default'].createElement(_index2['default'], { type: 'share', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -368,7 +374,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:star-border'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'star-border' })
+              _react2['default'].createElement(_index2['default'], { type: 'star-border', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -378,7 +384,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:star'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'star' })
+              _react2['default'].createElement(_index2['default'], { type: 'star', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -388,7 +394,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:success'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'success' })
+              _react2['default'].createElement(_index2['default'], { type: 'success', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -398,7 +404,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:tel'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'tel' })
+              _react2['default'].createElement(_index2['default'], { type: 'tel', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -408,7 +414,21 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:time'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'time' })
+              _react2['default'].createElement(_index2['default'], { type: 'time', style: iconStyle })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-indigo' },
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:question'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'question', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -418,7 +438,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:to-top'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'to-top' })
+              _react2['default'].createElement(_index2['default'], { type: 'to-top', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -428,7 +448,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:tupu'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'tupu' })
+              _react2['default'].createElement(_index2['default'], { type: 'tupu', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -438,7 +458,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:upload'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'upload' })
+              _react2['default'].createElement(_index2['default'], { type: 'upload', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -448,7 +468,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:user-border'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'user-border' })
+              _react2['default'].createElement(_index2['default'], { type: 'user-border', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -458,7 +478,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:user-group-border'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'user-group-border' })
+              _react2['default'].createElement(_index2['default'], { type: 'user-group-border', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -468,8 +488,12 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:user-group'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'user-group' })
-            ),
+              _react2['default'].createElement(_index2['default'], { type: 'user-group', style: iconStyle })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-purple' },
             _react2['default'].createElement(
               'li',
               null,
@@ -478,7 +502,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:user'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'user' })
+              _react2['default'].createElement(_index2['default'], { type: 'user', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -488,7 +512,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:v-bottom'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'v-bottom' })
+              _react2['default'].createElement(_index2['default'], { type: 'v-bottom', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -498,7 +522,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:v-left'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'v-left' })
+              _react2['default'].createElement(_index2['default'], { type: 'v-left', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -508,7 +532,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:v-right'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'v-right' })
+              _react2['default'].createElement(_index2['default'], { type: 'v-right', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -518,7 +542,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:v-top'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'v-top' })
+              _react2['default'].createElement(_index2['default'], { type: 'v-top', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -528,7 +552,7 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 null,
                 'type:weixin-border'
               ),
-              _react2['default'].createElement(_index2['default'], { type: 'weixin-border' })
+              _react2['default'].createElement(_index2['default'], { type: 'weixin-border', style: iconStyle })
             ),
             _react2['default'].createElement(
               'li',
@@ -539,6 +563,80 @@ define('components/icon/demo/demo.jsx', function(require, exports, module) {
                 'type:weixin'
               ),
               _react2['default'].createElement(_index2['default'], { type: 'weixin', style: iconStyle })
+            )
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'icon-black' },
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:record-border'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'record-border', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:test-border'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'test-border', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:data-border'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'data-border', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:record-border'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'record-border', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:live-border'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'live-border', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:place-top'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'place-top', style: iconStyle })
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                'span',
+                null,
+                'type:calendar-2'
+              ),
+              _react2['default'].createElement(_index2['default'], { type: 'calendar-2', style: iconStyle })
             )
           )
         );

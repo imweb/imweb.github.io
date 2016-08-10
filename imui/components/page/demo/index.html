@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
-  <title>Icon demo</title>
+  <title>IMUI.Page</title>
 
-    <link rel="stylesheet" type="text/css" href="/imui/components/style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/imui/components/page/style/index.css" />
+    <link rel="stylesheet" type="text/css" href="/imui/components/button/style/index.css" />
     <link rel="stylesheet" type="text/css" href="/imui/components/icon/style/index.css" />
     <link rel="stylesheet" href="/imui/external/typography.css" />
-    <link rel="stylesheet" href="/imui/components/icon/demo/demo.css" />
 </head>
 <body>
-<div class="container">
-  <h1>IMUI.Icon</h1>
-  <section class="icon-demo" id="demo"></section>
-</div>
+<h1>IMUI.Page</h1>
+<section>
+  <h2>basic</h2>
+  <div id="basic"></div>
+</section>
 
 <script src="/imui/external/nowrap/mod.js"></script>
 <script type="text/javascript" src="/imui/node_modules/object-assign/index.js"></script>
@@ -187,10 +188,14 @@
 <script type="text/javascript" src="/imui/node_modules/react/lib/ReactDOM.js"></script>
 <script type="text/javascript" src="/imui/node_modules/react-dom/index.js"></script>
 <script type="text/javascript" src="/imui/node_modules/classnames/index.js"></script>
+<script type="text/javascript" src="/imui/components/button/lib/Button.js"></script>
+<script type="text/javascript" src="/imui/components/button/index.js"></script>
 <script type="text/javascript" src="/imui/components/icon/index.js"></script>
-<script type="text/javascript" src="/imui/components/icon/demo/demo.js"></script>
+<script type="text/javascript" src="/imui/components/page/lib/Page.js"></script>
+<script type="text/javascript" src="/imui/components/page/index.js"></script>
+<script type="text/javascript" src="/imui/components/page/demo/basic.js"></script>
 <script>'use strict';
 
-require('components/icon/demo/demo.jsx');</script>
+require('components/page/demo/basic.jsx');</script>
 </body>
 </html>

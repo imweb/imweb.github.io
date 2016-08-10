@@ -55,10 +55,11 @@ define('components/icon/index.jsx', function(require, exports, module) {
         var _props = this.props;
         var prefixCls = _props.prefixCls;
         var type = _props.type;
+        var className = _props.className;
   
-        var other = _objectWithoutProperties(_props, ['prefixCls', 'type']);
+        var other = _objectWithoutProperties(_props, ['prefixCls', 'type', 'className']);
   
-        var cls = (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, prefixCls, true), _defineProperty(_classnames, 'icon-font', true), _defineProperty(_classnames, 'i-' + type, true), _classnames));
+        var cls = (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, prefixCls, true), _defineProperty(_classnames, 'icon-font', true), _defineProperty(_classnames, 'i-' + type, true), _defineProperty(_classnames, className, true), _classnames));
   
         return _react2['default'].createElement('i', _extends({}, other, { className: cls }));
       }
@@ -69,12 +70,14 @@ define('components/icon/index.jsx', function(require, exports, module) {
   
   Icon.propTypes = {
     prefixCls: _react.PropTypes.string,
-    type: _react.PropTypes.string
+    type: _react.PropTypes.string,
+    className: _react.PropTypes.string
   };
   
   Icon.defaultProps = {
     prefixCls: 'im-icon',
-    type: ''
+    type: '',
+    className: ''
   };
   
   exports['default'] = Icon;

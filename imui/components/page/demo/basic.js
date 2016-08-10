@@ -1,11 +1,5 @@
-define('components/dialog/demo/demo.jsx', function(require, exports, module) {
+define('components/page/demo/basic.jsx', function(require, exports, module) {
 
-  /**
-   * demo
-   * @author jero
-   * @date 2016-07-28
-   */
-  
   'use strict';
   
   var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -26,82 +20,88 @@ define('components/dialog/demo/demo.jsx', function(require, exports, module) {
   
   var _reactDom2 = _interopRequireDefault(_reactDom);
   
-  var _index = require('components/dialog/index.jsx');
+  var _index = require('components/page/index.jsx');
   
   var _index2 = _interopRequireDefault(_index);
   
-  var _buttonIndex = require('components/button/index.jsx');
+  var PageBasicDemo = (function (_React$Component) {
+    _inherits(PageBasicDemo, _React$Component);
   
-  var _buttonIndex2 = _interopRequireDefault(_buttonIndex);
+    function PageBasicDemo() {
+      _classCallCheck(this, PageBasicDemo);
   
-  var Demo = (function (_React$Component) {
-    _inherits(Demo, _React$Component);
-  
-    function Demo(props) {
-      _classCallCheck(this, Demo);
-  
-      _get(Object.getPrototypeOf(Demo.prototype), 'constructor', this).call(this, props);
-  
-      this.state = {
-        visible: false
-      };
-  
-      this.onClose = this.onClose.bind(this);
-      this.onClick = this.onClick.bind(this);
+      _get(Object.getPrototypeOf(PageBasicDemo.prototype), 'constructor', this).apply(this, arguments);
     }
   
-    _createClass(Demo, [{
-      key: 'onClose',
-      value: function onClose() {
-        this.setState({
-          visible: false
-        });
-      }
-    }, {
-      key: 'onClick',
-      value: function onClick() {
-        this.setState({
-          visible: true
-        });
-      }
-    }, {
+    _createClass(PageBasicDemo, [{
       key: 'render',
       value: function render() {
         return _react2['default'].createElement(
           'div',
           null,
           _react2['default'].createElement(
-            'h2',
+            'h3',
             null,
-            'Simple Demo'
+            'size'
           ),
           _react2['default'].createElement(
-            _buttonIndex2['default'],
-            {
-              onClick: this.onClick
-            },
-            '显示'
+            'h4',
+            null,
+            'size="s"'
           ),
+          _react2['default'].createElement(_index2['default'], {
+            totalPage: 4,
+            defaultPage: 3,
+            size: 's'
+          }),
           _react2['default'].createElement(
-            _index2['default'],
-            {
-              visible: this.state.visible,
-              onClose: this.onClose,
-              title: '简单示例'
-            },
-            _react2['default'].createElement(
-              'p',
-              null,
-              '哈哈哈哈'
-            )
-          )
+            'h4',
+            null,
+            'size="m" default size'
+          ),
+          _react2['default'].createElement(_index2['default'], {
+            totalPage: 4,
+            defaultPage: 4,
+            size: 'm'
+          }),
+          _react2['default'].createElement(
+            'h4',
+            null,
+            'size="l"'
+          ),
+          _react2['default'].createElement(_index2['default'], {
+            totalPage: 3,
+            size: 'l'
+          }),
+          _react2['default'].createElement(
+            'h3',
+            null,
+            'event'
+          ),
+          _react2['default'].createElement(_index2['default'], {
+            totalPage: 3,
+            onChange: this.onChange
+          }),
+          _react2['default'].createElement(
+            'h3',
+            null,
+            'huge number'
+          ),
+          _react2['default'].createElement(_index2['default'], {
+            totalPage: 30
+          })
         );
+      }
+    }, {
+      key: 'onChange',
+      value: function onChange(goPage, prevPage) {
+        window.console.log(goPage, prevPage);
       }
     }]);
   
-    return Demo;
+    return PageBasicDemo;
   })(_react2['default'].Component);
   
-  _reactDom2['default'].render(_react2['default'].createElement(Demo, null), document.getElementById('demo'));
+  _reactDom2['default'].render(_react2['default'].createElement(PageBasicDemo, null), window.document.getElementById('basic'));
 
 });

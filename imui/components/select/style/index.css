@@ -1,0 +1,76 @@
+.im-select {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #fff;
+}
+
+.im-select--wrap {
+  border: 1px solid #e5e5e5;
+  position: relative;
+  padding: 4px 30px 4px 4px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.im-select--wrap:hover {
+  border-color: #b2b2b2;
+}
+
+.im-select--wrap--text {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.im-select--wrap--icon {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  top: 50%;
+  margin-top: -15px;
+  text-align: center;
+  color: #999;
+  background-color: #fff;
+}
+
+.im-select--dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -1px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.im-select--dropdown--list {
+  overflow-y: auto;
+  max-height: 299px;
+}
+
+.im-select--dropdown--list--one {
+  position: relative;
+  background: #fff;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.im-select--dropdown--list--one:hover {
+  background: #eee;
+}

@@ -21,198 +21,282 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-add:before {
-  content: "\f000";
-}
-
-.i-alert:before {
-  content: "\f001";
-}
-
-.i-arrow-bottom:before {
-  content: "\f002";
-}
-
-.i-arrow-top:before {
-  content: "\f003";
-}
-
-.i-calendar:before {
-  content: "\f004";
-}
-
-.i-clone:before {
-  content: "\f005";
-}
-
-.i-close:before {
-  content: "\f006";
-}
-
-.i-comment:before {
-  content: "\f007";
-}
-
-.i-course-data:before {
-  content: "\f008";
-}
-
-.i-course-live:before {
-  content: "\f009";
-}
-
-.i-course-q-a:before {
-  content: "\f00a";
-}
-
-.i-course-record:before {
-  content: "\f00b";
-}
-
-.i-course-test:before {
-  content: "\f00c";
-}
-
-.i-delete:before {
-  content: "\f00d";
-}
-
-.i-download:before {
-  content: "\f00e";
-}
-
-.i-edit:before {
-  content: "\f00f";
-}
-
 .i-group:before {
-  content: "\f010";
-}
-
-.i-heart:before {
-  content: "\f011";
-}
-
-.i-home:before {
-  content: "\f012";
-}
-
-.i-info:before {
-  content: "\f013";
-}
-
-.i-insert:before {
-  content: "\f014";
-}
-
-.i-list-dot:before {
-  content: "\f015";
+  content: "\f100";
 }
 
 .i-logo:before {
-  content: "\f016";
+  content: "\f101";
 }
 
-.i-phone:before {
-  content: "\f017";
+.i-heart:before {
+  content: "\f102";
 }
 
 .i-play:before {
-  content: "\f018";
+  content: "\f103";
+}
+
+.i-calendar:before {
+  content: "\f104";
 }
 
 .i-qq-border:before {
-  content: "\f019";
+  content: "\f105";
 }
 
-.i-qq:before {
-  content: "\f01a";
-}
-
-.i-qr-code:before {
-  content: "\f01b";
-}
-
-.i-question:before {
-  content: "\f01c";
-}
-
-.i-right:before {
-  content: "\f01d";
-}
-
-.i-share:before {
-  content: "\f01e";
-}
-
-.i-star-border:before {
-  content: "\f01f";
-}
-
-.i-star:before {
-  content: "\f020";
-}
-
-.i-success:before {
-  content: "\f021";
-}
-
-.i-tel:before {
-  content: "\f022";
-}
-
-.i-time:before {
-  content: "\f023";
-}
-
-.i-to-top:before {
-  content: "\f024";
-}
-
-.i-tupu:before {
-  content: "\f025";
-}
-
-.i-upload:before {
-  content: "\f026";
-}
-
-.i-user-border:before {
-  content: "\f027";
-}
-
-.i-user-group-border:before {
-  content: "\f028";
-}
-
-.i-user-group:before {
-  content: "\f029";
-}
-
-.i-user:before {
-  content: "\f02a";
-}
-
-.i-v-bottom:before {
-  content: "\f02b";
-}
-
-.i-v-left:before {
-  content: "\f02c";
-}
-
-.i-v-right:before {
-  content: "\f02d";
+.i-edit:before {
+  content: "\f106";
 }
 
 .i-v-top:before {
-  content: "\f02e";
+  content: "\f107";
 }
 
-.i-weixin-border:before {
-  content: "\f02f";
+.i-alert:before {
+  content: "\f108";
+}
+
+.i-home:before {
+  content: "\f109";
+}
+
+.i-success:before {
+  content: "\f10a";
+}
+
+.i-user-border:before {
+  content: "\f10f";
+}
+
+.i-tel:before {
+  content: "\f110";
 }
 
 .i-weixin:before {
-  content: "\f030";
+  content: "\f111";
+}
+
+.i-info:before {
+  content: "\f113";
+}
+
+.i-question:before {
+  content: "\f114";
+}
+
+.i-star:before {
+  content: "\f115";
+}
+
+.i-to-top:before {
+  content: "\f116";
+}
+
+.i-v-bottom:before {
+  content: "\f117";
+}
+
+.i-v-left:before {
+  content: "\f118";
+}
+
+.i-phone:before {
+  content: "\f119";
+}
+
+.i-weixin-border:before {
+  content: "\f11a";
+}
+
+.i-user-group-border:before {
+  content: "\f11b";
+}
+
+.i-star-border:before {
+  content: "\f11c";
+}
+
+.i-close:before {
+  content: "\f11d";
+}
+
+.i-user-group:before {
+  content: "\f11e";
+}
+
+.i-v-right:before {
+  content: "\f11f";
+}
+
+.i-user:before {
+  content: "\f120";
+}
+
+.i-course-data:before {
+  content: "\f121";
+}
+
+.i-course-live:before {
+  content: "\f122";
+}
+
+.i-course-q-a:before {
+  content: "\f123";
+}
+
+.i-course-record:before {
+  content: "\f124";
+}
+
+.i-list-dot:before {
+  content: "\f125";
+}
+
+.i-delete:before {
+  content: "\f126";
+}
+
+.i-share:before {
+  content: "\f127";
+}
+
+.i-download:before {
+  content: "\f128";
+}
+
+.i-comment:before {
+  content: "\f129";
+}
+
+.i-course-test:before {
+  content: "\f12a";
+}
+
+.i-clone:before {
+  content: "\f12b";
+}
+
+.i-upload:before {
+  content: "\f12c";
+}
+
+.i-tupu:before {
+  content: "\f12d";
+}
+
+.i-view:before {
+  content: "\f12e";
+}
+
+.i-praise:before {
+  content: "\f12f";
+}
+
+.i-vip-v:before {
+  content: "\f130";
+}
+
+.i-image-pc:before {
+  content: "\f131";
+}
+
+.i-right:before {
+  content: "\f132";
+}
+
+.i-add:before {
+  content: "\f133";
+}
+
+.i-arrow-top:before {
+  content: "\f134";
+}
+
+.i-arrow-bottom:before {
+  content: "\f135";
+}
+
+.i-qr-code:before {
+  content: "\f136";
+}
+
+.i-insert:before {
+  content: "\f137";
+}
+
+.i-time:before {
+  content: "\f138";
+}
+
+.i-qq:before {
+  content: "\f179";
+}
+
+.i-d-bottom:before {
+  content: "\f17a";
+}
+
+.i-d-top:before {
+  content: "\f17b";
+}
+
+.i-volume:before {
+  content: "\f17c";
+}
+
+.i-schedule:before {
+  content: "\f17d";
+}
+
+.i-course-replay:before {
+  content: "\f17e";
+}
+
+.i-installment:before {
+  content: "\f17f";
+}
+
+.i-smile:before {
+  content: "\f180";
+}
+
+.i-cry:before {
+  content: "\f181";
+}
+
+.i-data-border:before {
+  content: "\f1a5";
+}
+
+.i-calendar-2:before {
+  content: "\f1a6";
+}
+
+.i-test-border:before {
+  content: "\f1a7";
+}
+
+.i-record-border:before {
+  content: "\f1a8";
+}
+
+.i-cancel-top:before {
+  content: "\f1a9";
+}
+
+.i-replay-border:before {
+  content: "\f1aa";
+}
+
+.i-live-border:before {
+  content: "\f1ab";
+}
+
+.i-more:before {
+  content: "\f1ac";
+}
+
+.i-place-top:before {
+  content: "\f1ad";
 }
