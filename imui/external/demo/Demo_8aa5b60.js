@@ -1,1 +1,0 @@
-define("external/demo/Demo.jsx",function(e,t){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}function l(e){return r.default.createElement("div",null,r.default.createElement("h1",null,e.name||"组件名呢？"),e.children)}Object.defineProperty(t,"__esModule",{value:!0}),t.Demo=l;var u=e("node_modules/react/react"),r=n(u)});

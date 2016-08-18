@@ -1,0 +1,1 @@
+define("components/tab/lib/TabPanel.jsx",function(e,t){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}function a(e){return u.default.createElement("div",{className:"im-tab-panel"},e.children)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=a;var l=e("node_modules/react/react"),u=n(l)});

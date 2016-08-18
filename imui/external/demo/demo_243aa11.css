@@ -1,0 +1,43 @@
+.imui-demo > .im-tab {
+  margin-top: 20px;
+}
+
+.imui-demo > .im-tab > .im-tab-hd--border a:hover {
+  color: #f39a3d;
+}
+
+.imui-demo > .im-tab > .im-tab-hd--border a.active {
+  color: #f39a3d;
+}
+
+.imui-demo > .im-tab > .im-tab-hd--border a.active:after {
+  background-color: #f39a3d;
+}
+
+.imui-demo-panel {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #dadada;
+}
+
+.imui-demo-panel h2 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.imui-demo-panel > .im-tab > .im-tab-hd {
+  opacity: 0.5;
+}
+
+.imui-demo-panel > .im-tab > .im-tab-hd--top a:hover {
+  color: #f39a3d;
+}
+
+.imui-demo-panel > .im-tab > .im-tab-hd--top a.active {
+  color: #f39a3d;
+  border-top-color: #f39a3d;
+}
+
+.imui-demo-panel > .im-tab > .im-tab-bd {
+  padding-top: 20px;
+}

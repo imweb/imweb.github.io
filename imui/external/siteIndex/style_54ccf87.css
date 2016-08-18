@@ -61,8 +61,7 @@ aside .blank {
 }
 
 .main {
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px 20px;
   margin-left: 200px;
   background-color: #fff;
   min-height: 600px;
