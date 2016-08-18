@@ -1,0 +1,1 @@
+{"version":3,"sources":["require.jsx"],"names":[],"mappings":";;;;AAAA;;AAEA,QAAQ,GAAR;AACA","file":"require.jsx","sourcesContent":["import { Tab, TabPanel } from '../../../index';\n\nconsole.log(TabPanel);\n// console.log(Tab, TabPanel);\n"]}

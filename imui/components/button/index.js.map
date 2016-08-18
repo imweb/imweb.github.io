@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.jsx"],"names":[],"mappings":";;;;;;;;AAEA;;;;;;oCAFA","file":"index.jsx","sourcesContent":["// @require './style/index.scss'\r\n\r\nimport Button from './lib/Button';\r\n\r\nexport default Button;\r\n\r\n"]}

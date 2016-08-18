@@ -1,0 +1,19 @@
+.im-demo > .im-tab > .im-tab-hd {
+  opacity: 0.5;
+}
+
+.im-demo > .im-tab > .im-tab-hd--border a:hover {
+  color: #f39a3d;
+}
+
+.im-demo > .im-tab > .im-tab-hd--border a.active {
+  color: #f39a3d;
+}
+
+.im-demo > .im-tab > .im-tab-hd--border a.active:after {
+  background-color: #f39a3d;
+}
+
+.im-demo > .im-tab > .im-tab-bd {
+  padding-top: 20px;
+}

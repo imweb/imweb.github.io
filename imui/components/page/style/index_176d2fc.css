@@ -1,0 +1,7 @@
+.im-page {
+  text-align: center;
+}
+
+.im-page button, .im-page span {
+  margin: 0 3px 0 3px;
+}

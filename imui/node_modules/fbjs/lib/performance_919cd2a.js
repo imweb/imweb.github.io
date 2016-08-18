@@ -1,0 +1,1 @@
+define("node_modules/fbjs/lib/performance",function(e,n,o){"use strict";var r,i=e("node_modules/fbjs/lib/ExecutionEnvironment");i.canUseDOM&&(r=window.performance||window.msPerformance||window.webkitPerformance),o.exports=r||{}});

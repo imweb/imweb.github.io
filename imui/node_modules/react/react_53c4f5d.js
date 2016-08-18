@@ -1,0 +1,1 @@
+define("node_modules/react/react",function(e,t,c){"use strict";c.exports=e("node_modules/react/lib/React")});

@@ -1,0 +1,1 @@
+define("node_modules/fbjs/lib/ExecutionEnvironment",function(e,n,o){"use strict";var t=!("undefined"==typeof window||!window.document||!window.document.createElement),i={canUseDOM:t,canUseWorkers:"undefined"!=typeof Worker,canUseEventListeners:t&&!(!window.addEventListener&&!window.attachEvent),canUseViewport:t&&!!window.screen,isInWorker:!t};o.exports=i});

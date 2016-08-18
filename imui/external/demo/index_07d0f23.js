@@ -1,0 +1,1 @@
+define("external/demo/index",function(e,o){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.DemoPanel=o.Demo=void 0;var n=e("external/demo/Demo.jsx"),m=e("external/demo/DemoPanel.jsx");o.Demo=n.Demo,o.DemoPanel=m.DemoPanel});

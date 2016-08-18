@@ -1,0 +1,1 @@
+define("components/page/index.jsx",function(e,n){"use strict";function t(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var u=e("components/page/lib/Page.jsx"),o=t(u);n.default=o.default});

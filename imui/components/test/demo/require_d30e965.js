@@ -1,0 +1,1 @@
+define("components/test/demo/require.jsx",function(e){"use strict";var n=e("../../../index");console.log(n.TabPanel)});

@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.jsx"],"names":[],"mappings":";;;;;;;;AAIA;;;;;;kCAJA;;;AAGA","file":"index.jsx","sourcesContent":["/**\r\n * @author Halwu\r\n */\r\n// @require './style/index.scss'\r\nimport Page from './lib/Page';\r\n\r\nexport default Page;\r\n"]}

@@ -1,0 +1,1 @@
+define("node_modules/react/lib/getIteratorFn",function(t,o,e){"use strict";function r(t){var o=t&&(n&&t[n]||t[i]);return"function"==typeof o?o:void 0}var n="function"==typeof Symbol&&Symbol.iterator,i="@@iterator";e.exports=r});

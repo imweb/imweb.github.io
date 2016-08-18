@@ -1,0 +1,65 @@
+.icon-big {
+  font-size: 22px;
+}
+
+.icon-demo ul {
+  display: block;
+}
+
+.icon-demo ul:after {
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  content: ' ';
+}
+
+.icon-demo ul.icon-red {
+  color: red;
+}
+
+.icon-demo ul.icon-orange {
+  color: orange;
+}
+
+.icon-demo ul.icon-yellow {
+  color: yellow;
+}
+
+.icon-demo ul.icon-green {
+  color: green;
+}
+
+.icon-demo ul.icon-blue {
+  color: blue;
+}
+
+.icon-demo ul.icon-indigo {
+  color: #0ff;
+}
+
+.icon-demo ul.icon-purple {
+  color: purple;
+}
+
+.icon-demo ul.icon-black {
+  color: #000;
+}
+
+.icon-demo li {
+  display: block;
+  width: 200px;
+  height: 80px;
+  float: left;
+}
+
+.icon-demo li .im-icon {
+  text-align: center;
+  display: inherit;
+  line-height: 40px;
+}
+
+.icon-demo li span {
+  text-align: center;
+  display: inherit;
+}
