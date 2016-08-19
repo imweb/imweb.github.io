@@ -1,1 +1,0 @@
-define("components/dialog/index.jsx",function(e,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var t=e("components/dialog/src/DialogWrap.jsx"),d=o(t);n.default=d.default});

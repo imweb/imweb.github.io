@@ -1,0 +1,1 @@
+define("components/dialog/index.jsx",function(require,exports){"use strict";function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}Object.defineProperty(exports,"__esModule",{value:!0});var _DialogWrap=require("components/dialog/src/DialogWrap.jsx"),_DialogWrap2=_interopRequireDefault(_DialogWrap);exports.default=_DialogWrap2.default});

@@ -1,1 +1,0 @@
-define("components/tab/index.jsx",function(e,a){"use strict";function t(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(a,"__esModule",{value:!0}),a.TabPanel=void 0;var n=e("components/tab/lib/Tab.jsx"),l=t(n),u=e("components/tab/lib/TabPanel.jsx"),d=t(u);l.default.TabPanel=d.default,a.default=l.default,a.TabPanel=d.default});

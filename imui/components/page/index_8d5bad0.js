@@ -1,0 +1,1 @@
+define("components/page/index.jsx",function(require,exports){"use strict";function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}Object.defineProperty(exports,"__esModule",{value:!0});var _Page=require("components/page/lib/Page.jsx"),_Page2=_interopRequireDefault(_Page);exports.default=_Page2.default});

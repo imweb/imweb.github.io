@@ -1,1 +1,0 @@
-define("components/button/index.jsx",function(e,t){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0});var u=e("components/button/lib/Button.jsx"),o=n(u);t.default=o.default});

@@ -1,0 +1,1 @@
+define("external/demo/index",function(require,exports){"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.DemoPanel=exports.Demo=void 0;var _Demo=require("external/demo/Demo.jsx"),_DemoPanel=require("external/demo/DemoPanel.jsx");exports.Demo=_Demo.Demo,exports.DemoPanel=_DemoPanel.DemoPanel});
