@@ -1,0 +1,27 @@
+.im-form {
+  margin-bottom: 20px;
+}
+
+.im-form .im-label,
+.im-form .im-prefix,
+.im-form .im-suffix {
+  line-height: 30px;
+}
+
+.im-form .im-gray {
+  color: #999;
+}
+
+.im-form .im-inline {
+  margin-right: 10px;
+}
+
+.im-form--h .im-label {
+  float: left;
+  text-align: right;
+  width: 100px;
+}
+
+.im-form--h .im-field {
+  margin-left: 120px;
+}

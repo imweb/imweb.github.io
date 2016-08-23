@@ -1,0 +1,74 @@
+.f-radio,
+.f-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.icon-radio,
+.icon-checkbox {
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: url("../img/bg/icon-form.png#unsprite") no-repeat;
+  margin-right: 5px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.f-radio:hover .icon-radio {
+  background-position: 0 -20px;
+}
+
+.f-radio.checked .icon-radio {
+  background-position: 0 -40px;
+}
+
+.f-radio.checked.disabled .icon-radio {
+  background-position: 0 -60px;
+}
+
+.f-radio.disabled .icon-radio {
+  background-position: 0 -80px;
+}
+
+.f-radio.disabled .f-rc-label {
+  color: #999;
+}
+
+.f-checkbox .icon-checkbox {
+  background-position: 0 -100px;
+}
+
+.f-checkbox:hover .icon-checkbox {
+  background-position: 0 -120px;
+}
+
+.f-checkbox.checked .icon-checkbox {
+  background-position: 0 -140px;
+}
+
+.f-checkbox.checked.disabled .icon-checkbox {
+  background-position: 0 -160px;
+}
+
+.f-checkbox.disabled .icon-checkbox {
+  background-position: 0 -180px;
+}
+
+.f-checkbox.disabled .f-rc-label {
+  color: #999;
+}
+
+.list--block .f-radio,
+.list--block .f-checkbox {
+  display: block;
+  padding-left: 25px;
+}
+
+.list--block .icon-radio,
+.list--block .icon-checkbox {
+  margin-left: -25px;
+}

@@ -1,0 +1,19 @@
+.im-text {
+  padding: 4px;
+  transition: 0.2s;
+  border: 1px solid #e5e5e5;
+}
+
+.im-text:hover {
+  border-color: #b2b2b2;
+}
+
+.im-text {
+  height: 20px;
+  width: 370px;
+  vertical-align: middle;
+}
+
+.im-text.im-ele-error {
+  border-color: #e80808;
+}

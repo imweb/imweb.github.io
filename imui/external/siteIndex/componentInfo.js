@@ -15,6 +15,12 @@ define('external/siteIndex/componentInfo.tpl', function(require, exports, module
       demo: require('components/button/demo/demo.jsx').default // babel 编过后必须加个 default
     },
   
+    datepicker: {
+      name: 'Datepicker',
+      path: '/components/datepicker',
+      demo: require('components/datepicker/demo/demo.jsx').default // babel 编过后必须加个 default
+    },
+  
     dialog: {
       name: 'Dialog',
       path: '/components/dialog',
@@ -25,6 +31,12 @@ define('external/siteIndex/componentInfo.tpl', function(require, exports, module
       name: 'Dropdown',
       path: '/components/dropdown',
       demo: require('components/dropdown/demo/demo.jsx').default // babel 编过后必须加个 default
+    },
+  
+    form: {
+      name: 'Form',
+      path: '/components/form',
+      demo: require('components/form/demo/demo.jsx').default // babel 编过后必须加个 default
     },
   
     icon: {
