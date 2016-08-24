@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.jsx"],"names":[],"mappings":";;;;;;;;;AAEA;;;;AACA;;;;;;AAHA;;AAKA,cAAI,QAAJ;;;QAGS,Q","file":"index.jsx","sourcesContent":["// @require './style/index.scss'\n\nimport Tab from './lib/Tab';\nimport TabPanel from './lib/TabPanel';\n\nTab.TabPanel = TabPanel;\n\nexport default Tab;\nexport { TabPanel };\n"]}

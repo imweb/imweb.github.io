@@ -1,1 +1,0 @@
-define("components/button/index.jsx",function(require,exports){"use strict";function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}Object.defineProperty(exports,"__esModule",{value:!0});var _Button=require("components/button/lib/Button.jsx"),_Button2=_interopRequireDefault(_Button);exports.default=_Button2.default});

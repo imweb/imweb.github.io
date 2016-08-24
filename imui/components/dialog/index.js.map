@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.jsx"],"names":[],"mappings":";;;;;;;;AAEA;;;;;;wCAFA","file":"index.jsx","sourcesContent":["// @require './style/index.scss'\n\nimport Dialog from './src/DialogWrap';\nexport default Dialog;\n"]}
