@@ -1,305 +1,46 @@
-@font-face {
-  font-family: "webfont";
-  src: url("/imui/components/style/fonts/webfont.eot");
-  src: url("/imui/components/style/fonts/webfont.eot?") format("embedded-opentype"), url("/imui/components/style/fonts/webfont.woff") format("woff"), url("/imui/components/style/fonts/webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+.im-text,
+.im-textarea {
+  padding: 4px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border: 1px solid #e5e5e5;
 }
 
-.icon-font {
-  font-family: "webfont";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 16px;
-  position: relative;
-  vertical-align: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.im-text:hover,
+.im-textarea:hover {
+  border-color: #b2b2b2;
 }
 
-.i-group:before {
-  content: "\f100";
+.im-text,
+.im-textarea {
+  width: 370px;
 }
 
-.i-logo:before {
-  content: "\f101";
+.im-text--error,
+.im-textarea--error {
+  border-color: #e80808;
 }
 
-.i-heart:before {
-  content: "\f102";
+.im-text--disabled,
+.im-textarea--disabled {
+  background-color: #e3e3e3 !important;
+  color: #999 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  border-color: #e5e5e5;
 }
 
-.i-play:before {
-  content: "\f103";
+.im-textarea {
+  height: 60px;
+  resize: none;
+  vertical-align: top;
 }
 
-.i-calendar:before {
-  content: "\f104";
+.im-text {
+  height: 20px;
+  vertical-align: middle;
 }
 
-.i-qq-border:before {
-  content: "\f105";
-}
-
-.i-edit:before {
-  content: "\f106";
-}
-
-.i-v-top:before {
-  content: "\f107";
-}
-
-.i-alert:before {
-  content: "\f108";
-}
-
-.i-home:before {
-  content: "\f109";
-}
-
-.i-success:before {
-  content: "\f10a";
-}
-
-.i-user-border:before {
-  content: "\f10f";
-}
-
-.i-tel:before {
-  content: "\f110";
-}
-
-.i-weixin:before {
-  content: "\f111";
-}
-
-.i-info:before {
-  content: "\f113";
-}
-
-.i-question:before {
-  content: "\f114";
-}
-
-.i-star:before {
-  content: "\f115";
-}
-
-.i-to-top:before {
-  content: "\f116";
-}
-
-.i-v-bottom:before {
-  content: "\f117";
-}
-
-.i-v-left:before {
-  content: "\f118";
-}
-
-.i-phone:before {
-  content: "\f119";
-}
-
-.i-weixin-border:before {
-  content: "\f11a";
-}
-
-.i-user-group-border:before {
-  content: "\f11b";
-}
-
-.i-star-border:before {
-  content: "\f11c";
-}
-
-.i-close:before {
-  content: "\f11d";
-}
-
-.i-user-group:before {
-  content: "\f11e";
-}
-
-.i-v-right:before {
-  content: "\f11f";
-}
-
-.i-user:before {
-  content: "\f120";
-}
-
-.i-course-data:before {
-  content: "\f121";
-}
-
-.i-course-live:before {
-  content: "\f122";
-}
-
-.i-course-q-a:before {
-  content: "\f123";
-}
-
-.i-course-record:before {
-  content: "\f124";
-}
-
-.i-list-dot:before {
-  content: "\f125";
-}
-
-.i-delete:before {
-  content: "\f126";
-}
-
-.i-share:before {
-  content: "\f127";
-}
-
-.i-download:before {
-  content: "\f128";
-}
-
-.i-comment:before {
-  content: "\f129";
-}
-
-.i-course-test:before {
-  content: "\f12a";
-}
-
-.i-clone:before {
-  content: "\f12b";
-}
-
-.i-upload:before {
-  content: "\f12c";
-}
-
-.i-tupu:before {
-  content: "\f12d";
-}
-
-.i-view:before {
-  content: "\f12e";
-}
-
-.i-praise:before {
-  content: "\f12f";
-}
-
-.i-vip-v:before {
-  content: "\f130";
-}
-
-.i-image-pc:before {
-  content: "\f131";
-}
-
-.i-right:before {
-  content: "\f132";
-}
-
-.i-add:before {
-  content: "\f133";
-}
-
-.i-arrow-top:before {
-  content: "\f134";
-}
-
-.i-arrow-bottom:before {
-  content: "\f135";
-}
-
-.i-qr-code:before {
-  content: "\f136";
-}
-
-.i-insert:before {
-  content: "\f137";
-}
-
-.i-time:before {
-  content: "\f138";
-}
-
-.i-qq:before {
-  content: "\f179";
-}
-
-.i-d-bottom:before {
-  content: "\f17a";
-}
-
-.i-d-top:before {
-  content: "\f17b";
-}
-
-.i-volume:before {
-  content: "\f17c";
-}
-
-.i-schedule:before {
-  content: "\f17d";
-}
-
-.i-course-replay:before {
-  content: "\f17e";
-}
-
-.i-installment:before {
-  content: "\f17f";
-}
-
-.i-smile:before {
-  content: "\f180";
-}
-
-.i-cry:before {
-  content: "\f181";
-}
-
-.i-data-border:before {
-  content: "\f1a5";
-}
-
-.i-calendar-2:before {
-  content: "\f1a6";
-}
-
-.i-test-border:before {
-  content: "\f1a7";
-}
-
-.i-record-border:before {
-  content: "\f1a8";
-}
-
-.i-cancel-top:before {
-  content: "\f1a9";
-}
-
-.i-replay-border:before {
-  content: "\f1aa";
-}
-
-.i-live-border:before {
-  content: "\f1ab";
-}
-
-.i-more:before {
-  content: "\f1ac";
-}
-
-.i-place-top:before {
-  content: "\f1ad";
-}
 
 .im-tab-hd:before, .im-tab-hd:after {
   content: "";
@@ -419,6 +160,7 @@
   display: none;
 }
 
+
 .imui-demo > .im-tab {
   margin-top: 20px;
 }
@@ -445,6 +187,7 @@
   padding: 0;
   margin-bottom: 30px;
 }
+
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -1282,290 +1025,6 @@ pre[class*="language-"] {
   border-bottom-color: #eee;
 }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  height: 100%;
-  font-size: 62.5%;
-  font-family: "Hiragino Sans GB", "Microsoft Yahei", arial, \5b8b\4f53, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-}
-
-body {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff;
-  overflow-y: scroll;
-  min-height: 100%;
-  box-sizing: border-box;
-  min-width: 1200px;
-}
-
-h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
-  margin: 0;
-}
-
-ol, ul {
-  list-style: none outside none;
-}
-
-ul, ol, li, dl, dd {
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  box-sizing: border-box;
-}
-
-td, th {
-  padding: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
-  background: transparent;
-  color: #188eee;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active, a:hover {
-  outline: 0;
-}
-
-img {
-  border: 0;
-  vertical-align: middle;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-nav:active {
-  outline: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-q, blockquote {
-  quotes: none;
-}
-
-q:before, q:after, blockquote:before, blockquote:after {
-  content: none;
-}
-
-i, em {
-  font-style: normal;
-}
-
-address, caption, cite, code, dfn, th, var, i, s {
-  font-style: normal;
-  font-weight: normal;
-}
-
-div[contenteditable=true] {
-  -webkit-line-break: after-white-space;
-  -webkit-nbsp-mode: space;
-  -webkit-user-modify: read-write;
-  word-wrap: break-word;
-}
-
-fieldset {
-  border: 0;
-}
-
-button {
-  white-space: nowrap;
-  overflow: visible;
-}
-
-button, input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input {
-  line-height: normal;
-}
-
-input:focus {
-  outline: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-  vertical-align: middle;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: border-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-input::-ms-clear,
-input::-ms-reveal {
-  display: none;
-}
-
-textarea, input {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-user-modify: read-write-plaintext-only;
-  outline: none !important;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #a6a6a6;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #a6a6a6;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #a6a6a6;
-}
-
-.placeholder {
-  color: #a6a6a6;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.icon-demo .icon-big {
-  font-size: 22px;
-}
-
-.icon-demo ul {
-  display: block;
-}
-
-.icon-demo ul::after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  width: 0;
-}
-
-.icon-demo ul.icon-red {
-  color: #f00;
-}
-
-.icon-demo ul.icon-orange {
-  color: #ffa500;
-}
-
-.icon-demo ul.icon-yellow {
-  color: #ba8b00;
-}
-
-.icon-demo ul.icon-green {
-  color: #008000;
-}
-
-.icon-demo ul.icon-blue {
-  color: #00f;
-}
-
-.icon-demo ul.icon-indigo {
-  color: #0ff;
-}
-
-.icon-demo ul.icon-purple {
-  color: #800080;
-}
-
-.icon-demo ul.icon-black {
-  color: #000;
-}
-
-.icon-demo li {
-  display: block;
-  float: left;
-  height: 80px;
-  width: 200px;
-}
-
-.icon-demo li .im-icon {
-  display: inherit;
-  line-height: 40px;
-  text-align: center;
-}
-
-.icon-demo li span {
-  display: inherit;
-  text-align: center;
-}
-
 body {
   min-width: inherit !important;
 }
@@ -1602,4 +1061,5 @@ h4 {
 code {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 }
+
 

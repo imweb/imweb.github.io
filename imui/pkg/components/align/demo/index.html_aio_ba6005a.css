@@ -116,6 +116,7 @@
   display: none;
 }
 
+
 .imui-demo > .im-tab {
   margin-top: 20px;
 }
@@ -142,6 +143,7 @@
   padding: 0;
   margin-bottom: 30px;
 }
+
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -979,80 +981,6 @@ pre[class*="language-"] {
   border-bottom-color: #eee;
 }
 
-:root .im-dialog-mask {
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
-}
-
-.im-dialog {
-  position: relative;
-  background: #fff;
-  top: 100px;
-  border-top: 4px solid #039ae3;
-  border-radius: 2px;
-  min-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px;
-}
-
-.im-dialog-mask {
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99373737', endColorstr='#99373737');
-  background-color: rgba(55, 55, 55, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 4000;
-}
-
-.im-dialog-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  z-index: 4001;
-}
-
-.im-dialog-hd {
-  line-height: 45px;
-  height: 45px;
-  color: #999;
-}
-
-.im-dialog-hd-text {
-  line-height: 45px;
-  font-size: 16px;
-  padding-left: 15px;
-}
-
-.im-dialog-hd-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 45px;
-  font-size: 26px;
-  line-height: 38px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.im-dialog-hd-close:hover {
-  color: #039ae3;
-}
-
-.im-dialog-bd {
-  padding: 15px;
-}
-
-.im-dialog-ft {
-  padding: 15px;
-  text-align: right;
-}
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -1271,6 +1199,40 @@ textarea::-webkit-input-placeholder {
   clear: both;
 }
 
+
+.align-demo-source {
+  background: #e85308;
+  color: #f3f3f3;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+}
+
+.align-demo-source--border {
+  background: none;
+  border: 1px dashed #e85308;
+  color: #e85308;
+}
+
+.align-demo-source--large {
+  width: 100px;
+}
+
+.align-demo-target {
+  border: 1px solid #5fb41b;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  margin: 60px;
+}
+
+.align-demo-target--large {
+  width: 600px;
+}
+
+
 body {
   min-width: inherit !important;
 }
@@ -1307,4 +1269,5 @@ h4 {
 code {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 }
+
 
