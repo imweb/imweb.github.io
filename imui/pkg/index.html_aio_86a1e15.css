@@ -1816,11 +1816,6 @@ a {
   width: 370px;
 }
 
-.im-text--error,
-.im-textarea--error {
-  border-color: #e80808;
-}
-
 .im-text--disabled,
 .im-textarea--disabled {
   background-color: #e3e3e3 !important;
@@ -2192,6 +2187,16 @@ a {
   margin: 0;
   outline: none;
   padding: 0;
+  text-align: center;
+}
+
+.im-dropdown-wrap-loading-icon {
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("/imui/components/statusbox/style/img/loading.gif");
+  background-size: 100%;
 }
 
 .im-dropdown-wrap .im-icon {
@@ -2266,17 +2271,33 @@ a {
 
 
 .im-validator {
-  display: inline-block;
   position: relative;
   vertical-align: top;
   padding-bottom: 16px;
 }
 
+.im-validator--error input,
+.im-validator--error textarea {
+  border-color: #e80808;
+}
+
+.im-validator--disabled input,
+.im-validator--disabled textarea {
+  border-color: transparent;
+}
+
+.im-validator--inline-msg .im-msg {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 10px;
+}
+
 .im-msg {
   display: block;
-  vertical-align: middle;
-  position: absolute;
   line-height: 16px;
+  position: absolute;
+  min-height: 16px;
 }
 
 .im-msg--error .im-msg-text {
@@ -2303,9 +2324,8 @@ a {
 
 .im-label {
   margin-right: 5px;
-  text-align: right;
   width: 100px;
-  display: inline-block;
+  display: block;
   word-break: normal;
 }
 
@@ -2438,6 +2458,7 @@ a {
   display: inline-block;
   box-sizing: border-box;
   width: 210px;
+  vertical-align: top;
 }
 
 .im-picker-left .im-picker-select {
@@ -2463,9 +2484,6 @@ a {
   cursor: pointer;
   line-height: 20px;
   padding: 5px 10px;
-  margin: 0;
-  display: list-item;
-  background: transparent;
 }
 
 .im-picker-left .im-picker-select ul li:hover {
@@ -2508,6 +2526,7 @@ a {
   display: inline-block;
   box-sizing: border-box;
   width: 210px;
+  vertical-align: top;
 }
 
 .im-picker-right .im-picker-select {
@@ -2533,9 +2552,6 @@ a {
   cursor: pointer;
   line-height: 20px;
   padding: 5px 10px;
-  margin: 0;
-  display: list-item;
-  background: transparent;
 }
 
 .im-picker-right .im-picker-select ul li:hover {
@@ -2546,7 +2562,7 @@ a {
   height: 378px;
 }
 
-.im-picker h3 {
+.im-picker h4 {
   font-size: 14px;
   margin: 0 0 10px;
 }
@@ -2557,6 +2573,203 @@ a {
 
 .im-picker-warn {
   color: #e85308;
+}
+
+.im-picker-loading {
+  text-align: center;
+}
+
+.im-picker-loading-icon {
+  display: inline-block;
+  margin: auto;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: url("/imui/components/statusbox/style/img/loading.gif") no-repeat center center;
+  background-size: 100%;
+}
+
+
+.im-radio,
+.im-checkbox {
+  display: block;
+  vertical-align: middle;
+  margin-right: 10px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.im-radio-icon,
+.im-checkbox-icon {
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: url("/imui/components/radio/style/form-icon.png#unsprite") no-repeat;
+  margin-right: 5px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.im-radio:hover .im-radio-icon {
+  background-position: 0 -20px;
+}
+
+.im-radio.im-radio--checked .im-radio-icon {
+  background-position: 0 -40px;
+}
+
+.im-radio.im-radio--checked.im-radio--disabled .im-radio-icon {
+  background-position: 0 -60px;
+}
+
+.im-radio.im-radio--disabled .im-radio-icon {
+  background-position: 0 -80px;
+}
+
+.im-radio.im-radio--disabled .im-radio-text {
+  color: #999;
+}
+
+.im-checkbox .icon-checkbox {
+  background-position: 0 -100px;
+}
+
+.im-checkbox:hover .icon-checkbox {
+  background-position: 0 -120px;
+}
+
+.im-checkbox.checked .icon-checkbox {
+  background-position: 0 -140px;
+}
+
+.im-checkbox.checked.disabled .icon-checkbox {
+  background-position: 0 -160px;
+}
+
+.im-checkbox.disabled .icon-checkbox {
+  background-position: 0 -180px;
+}
+
+.im-checkbox.disabled .im-rc-label {
+  color: #999;
+}
+
+.im-radio-group--inline .im-radio,
+.im-radio-group--inline .im-checkbox {
+  display: inline-block;
+}
+
+
+
+
+.im-statusbox {
+  position: relative;
+}
+
+.im-statusbox-inner {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.im-statusbox-inner .i-info {
+  color: #4da9e8;
+}
+
+.im-statusbox-inner .i-question {
+  color: #4ca9e6;
+  cursor: help;
+}
+
+.im-statusbox-inner .i-alert {
+  color: #e86730;
+}
+
+.im-statusbox-inner .i-success {
+  color: #5fb41b;
+}
+
+.im-statusbox-inner--small {
+  z-index: 1000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-left: 30px;
+}
+
+.im-statusbox-inner--small .im-statusbox-loading {
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.im-statusbox-inner--small .im-statusbox-icon {
+  top: 50%;
+  line-height: 24px;
+  font-size: 24px;
+  height: 24px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.im-statusbox-inner--large {
+  left: 50%;
+  top: 50%;
+  padding-left: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.im-statusbox-inner--large .im-statusbox-inner-text {
+  line-height: 36px;
+  font-size: 18px;
+  color: #999;
+  text-align: left;
+}
+
+.im-statusbox-inner--nomsg .im-statusbox-loading {
+  position: relative;
+  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.im-statusbox-inner--nomsg .im-statusbox-icon {
+  position: relative;
+  top: 0;
+}
+
+.im-statusbox-inner--right {
+  padding-right: 50px;
+  padding-left: 0;
+}
+
+.im-statusbox-inner--right .im-statusbox-loading {
+  right: 0;
+  left: auto;
+}
+
+.im-statusbox-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+}
+
+.im-statusbox-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  background: url("/imui/components/statusbox/style/img/loading.gif") no-repeat;
 }
 
 
