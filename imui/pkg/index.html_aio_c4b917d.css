@@ -1798,6 +1798,58 @@ a {
 }
 
 
+.im-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.im-checkbox-icon {
+  float: left;
+  width: 18px;
+  height: 18px;
+  background: url("/imui/components/style/image/form-icon.png#unsprite") no-repeat;
+  margin-right: 5px;
+  margin-top: 1px;
+  cursor: pointer;
+  background-position: 0 -100px;
+}
+
+.im-checkbox:hover .im-checkbox-icon {
+  background-position: 0 -120px;
+}
+
+.im-checkbox.checked .im-checkbox-icon {
+  background-position: 0 -140px;
+}
+
+.im-checkbox.checked.disabled .im-checkbox-icon {
+  background-position: 0 -160px;
+}
+
+.im-checkbox.disabled {
+  cursor: default;
+}
+
+.im-checkbox.disabled .im-checkbox-icon {
+  background-position: 0 -180px;
+  cursor: not-allowed;
+}
+
+.im-checkbox.disabled .im-checkbox-label {
+  color: #999;
+}
+
+.im-checkgroup-item--inline {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+
+
 .im-text,
 .im-textarea {
   padding: 4px;
@@ -2590,8 +2642,7 @@ a {
 }
 
 
-.im-radio,
-.im-checkbox {
+.im-radio {
   display: block;
   vertical-align: middle;
   margin-right: 10px;
@@ -2599,12 +2650,11 @@ a {
   cursor: pointer;
 }
 
-.im-radio-icon,
-.im-checkbox-icon {
+.im-radio-icon {
   float: left;
   width: 18px;
   height: 18px;
-  background: url("/imui/components/radio/style/form-icon.png#unsprite") no-repeat;
+  background: url("/imui/components/style/image/form-icon.png#unsprite") no-repeat;
   margin-right: 5px;
   margin-top: 1px;
   cursor: pointer;
@@ -2622,40 +2672,20 @@ a {
   background-position: 0 -60px;
 }
 
+.im-radio.im-radio--disabled {
+  cursor: default;
+}
+
 .im-radio.im-radio--disabled .im-radio-icon {
   background-position: 0 -80px;
+  cursor: not-allowed;
 }
 
 .im-radio.im-radio--disabled .im-radio-text {
   color: #999;
 }
 
-.im-checkbox .icon-checkbox {
-  background-position: 0 -100px;
-}
-
-.im-checkbox:hover .icon-checkbox {
-  background-position: 0 -120px;
-}
-
-.im-checkbox.checked .icon-checkbox {
-  background-position: 0 -140px;
-}
-
-.im-checkbox.checked.disabled .icon-checkbox {
-  background-position: 0 -160px;
-}
-
-.im-checkbox.disabled .icon-checkbox {
-  background-position: 0 -180px;
-}
-
-.im-checkbox.disabled .im-rc-label {
-  color: #999;
-}
-
-.im-radio-group--inline .im-radio,
-.im-radio-group--inline .im-checkbox {
+.im-radio-group--inline .im-radio {
   display: inline-block;
 }
 
