@@ -1,53 +1,3 @@
-.im-checkbox {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  line-height: 20px;
-  cursor: pointer;
-}
-
-.im-checkbox-icon {
-  float: left;
-  width: 18px;
-  height: 18px;
-  background: url("/imui/components/style/image/form-icon.png#unsprite") no-repeat;
-  margin-right: 5px;
-  margin-top: 1px;
-  cursor: pointer;
-  background-position: 0 -100px;
-}
-
-.im-checkbox:hover .im-checkbox-icon {
-  background-position: 0 -120px;
-}
-
-.im-checkbox.checked .im-checkbox-icon {
-  background-position: 0 -140px;
-}
-
-.im-checkbox.checked.disabled .im-checkbox-icon {
-  background-position: 0 -160px;
-}
-
-.im-checkbox.disabled {
-  cursor: default;
-}
-
-.im-checkbox.disabled .im-checkbox-icon {
-  background-position: 0 -180px;
-  cursor: not-allowed;
-}
-
-.im-checkbox.disabled .im-checkbox-label {
-  color: #999;
-}
-
-.im-checkgroup-item--inline {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-
 @font-face {
   font-family: "webfont";
   src: url("/imui/components/style/fonts/webfont.eot");
@@ -1353,7 +1303,6 @@ body {
   overflow-y: scroll;
   min-height: 100%;
   box-sizing: border-box;
-  min-width: 1200px;
 }
 
 h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
@@ -1554,6 +1503,71 @@ textarea::-webkit-input-placeholder {
 }
 
 
+.icon-demo .icon-big {
+  font-size: 22px;
+}
+
+.icon-demo ul {
+  display: block;
+}
+
+.icon-demo ul::after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.icon-demo ul.icon-red {
+  color: #f00;
+}
+
+.icon-demo ul.icon-orange {
+  color: #ffa500;
+}
+
+.icon-demo ul.icon-yellow {
+  color: #ba8b00;
+}
+
+.icon-demo ul.icon-green {
+  color: #008000;
+}
+
+.icon-demo ul.icon-blue {
+  color: #00f;
+}
+
+.icon-demo ul.icon-indigo {
+  color: #0ff;
+}
+
+.icon-demo ul.icon-purple {
+  color: #800080;
+}
+
+.icon-demo ul.icon-black {
+  color: #000;
+}
+
+.icon-demo li {
+  display: block;
+  float: left;
+  height: 80px;
+  width: 200px;
+}
+
+.icon-demo li .im-icon {
+  display: inherit;
+  line-height: 40px;
+  text-align: center;
+}
+
+.icon-demo li span {
+  display: inherit;
+  text-align: center;
+}
 
 
 body {
