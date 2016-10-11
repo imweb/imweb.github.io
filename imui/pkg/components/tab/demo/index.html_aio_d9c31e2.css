@@ -1071,7 +1071,6 @@ body {
   line-height: 1.5;
   color: #333;
   background-color: #fff;
-  overflow-y: scroll;
   min-height: 100%;
   box-sizing: border-box;
 }

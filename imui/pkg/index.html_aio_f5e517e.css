@@ -996,7 +996,6 @@ body {
   line-height: 1.5;
   color: #333;
   background-color: #fff;
-  overflow-y: scroll;
   min-height: 100%;
   box-sizing: border-box;
 }
@@ -2645,6 +2644,217 @@ a {
   height: 20px;
   background: url("/imui/components/statusbox/style/img/loading.gif") no-repeat center center;
   background-size: 100%;
+}
+
+
+.im-popconfirm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: normal;
+  cursor: auto;
+}
+
+.im-popconfirm-inline {
+  position: relative;
+}
+
+.im-popconfirm-wrap {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  min-width: 177px;
+  background: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 1px 6px rgba(153, 153, 153, 0.2);
+}
+
+.im-popconfirm-title {
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 16px;
+  line-height: 32px;
+  color: #666;
+}
+
+.im-popconfirm-content {
+  padding: 8px 16px;
+  color: #666;
+}
+
+.im-popconfirm-ft {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px;
+  text-align: right;
+}
+
+.im-popconfirm-arrow, .im-popconfirm-arrow:after {
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  width: 0;
+  height: 0;
+}
+
+.im-popconfirm-arrow {
+  border-width: 5px;
+}
+
+.im-popconfirm-arrow:after {
+  border-width: 4px;
+  content: "";
+}
+
+.im-popconfirm-top,
+.im-popconfirm-topright,
+.im-popconfirm-topleft {
+  padding-bottom: 4px;
+}
+
+.im-popconfirm-top .im-popconfirm-arrow,
+.im-popconfirm-topright .im-popconfirm-arrow,
+.im-popconfirm-topleft .im-popconfirm-arrow {
+  bottom: 0;
+  border-top-color: #e5e5e5;
+  border-bottom-width: 0;
+}
+
+.im-popconfirm-top .im-popconfirm-arrow:after,
+.im-popconfirm-topright .im-popconfirm-arrow:after,
+.im-popconfirm-topleft .im-popconfirm-arrow:after {
+  bottom: 1px;
+  margin-left: -4px;
+  border-top-color: #fff;
+  border-bottom-width: 0;
+}
+
+.im-popconfirm-top .im-popconfirm-arrow {
+  margin-left: -5px;
+  left: 50%;
+}
+
+.im-popconfirm-topright .im-popconfirm-arrow {
+  right: 16px;
+}
+
+.im-popconfirm-topleft .im-popconfirm-arrow {
+  left: 16px;
+}
+
+.im-popconfirm-right,
+.im-popconfirm-righttop,
+.im-popconfirm-rightbottom {
+  padding-left: 4px;
+}
+
+.im-popconfirm-right .im-popconfirm-arrow,
+.im-popconfirm-righttop .im-popconfirm-arrow,
+.im-popconfirm-rightbottom .im-popconfirm-arrow {
+  left: 0;
+  border-right-color: #e5e5e5;
+  border-left-width: 0;
+}
+
+.im-popconfirm-right .im-popconfirm-arrow:after,
+.im-popconfirm-righttop .im-popconfirm-arrow:after,
+.im-popconfirm-rightbottom .im-popconfirm-arrow:after {
+  bottom: -4px;
+  left: 1px;
+  border-right-color: #fff;
+  border-left-width: 0;
+}
+
+.im-popconfirm-right .im-popconfirm-arrow {
+  margin-top: -5px;
+  top: 50%;
+}
+
+.im-popconfirm-righttop .im-popconfirm-arrow {
+  top: 12px;
+}
+
+.im-popconfirm-rightbottom .im-popconfirm-arrow {
+  bottom: 12px;
+}
+
+.im-popconfirm-bottom,
+.im-popconfirm-bottomright,
+.im-popconfirm-bottomleft {
+  padding-top: 4px;
+}
+
+.im-popconfirm-bottom .im-popconfirm-arrow,
+.im-popconfirm-bottomright .im-popconfirm-arrow,
+.im-popconfirm-bottomleft .im-popconfirm-arrow {
+  top: 0;
+  border-top-width: 0;
+  border-bottom-color: #e5e5e5;
+}
+
+.im-popconfirm-bottom .im-popconfirm-arrow:after,
+.im-popconfirm-bottomright .im-popconfirm-arrow:after,
+.im-popconfirm-bottomleft .im-popconfirm-arrow:after {
+  top: 1px;
+  margin-left: -4px;
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+
+.im-popconfirm-bottom .im-popconfirm-arrow {
+  margin-left: -5px;
+  left: 50%;
+}
+
+.im-popconfirm-bottomright .im-popconfirm-arrow {
+  right: 16px;
+}
+
+.im-popconfirm-bottomleft .im-popconfirm-arrow {
+  left: 16px;
+}
+
+.im-popconfirm-left,
+.im-popconfirm-leftbottom,
+.im-popconfirm-lefttop {
+  padding-right: 4px;
+}
+
+.im-popconfirm-left .im-popconfirm-arrow,
+.im-popconfirm-leftbottom .im-popconfirm-arrow,
+.im-popconfirm-lefttop .im-popconfirm-arrow {
+  right: 0;
+  border-right-width: 0;
+  border-left-color: #e5e5e5;
+}
+
+.im-popconfirm-left .im-popconfirm-arrow:after,
+.im-popconfirm-leftbottom .im-popconfirm-arrow:after,
+.im-popconfirm-lefttop .im-popconfirm-arrow:after {
+  right: 1px;
+  bottom: -4px;
+  border-right-width: 0;
+  border-left-color: #fff;
+}
+
+.im-popconfirm-left .im-popconfirm-arrow {
+  margin-top: -5px;
+  top: 50%;
+}
+
+.im-popconfirm-leftbottom .im-popconfirm-arrow {
+  bottom: 12px;
+}
+
+.im-popconfirm-lefttop .im-popconfirm-arrow {
+  top: 12px;
+}
+
+
+.pop-demo-button {
+  margin: 100px;
 }
 
 
