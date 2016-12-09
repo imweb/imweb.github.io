@@ -1066,6 +1066,8 @@ pre[class*="language-"] {
 
 .im-form--inline .im-label {
   text-align: left;
+  width: auto;
+  margin-right: 5px;
 }
 
 

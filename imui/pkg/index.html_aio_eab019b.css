@@ -2644,6 +2644,8 @@ a {
 
 .im-form--inline .im-label {
   text-align: left;
+  width: auto;
+  margin-right: 5px;
 }
 
 
@@ -3402,6 +3404,7 @@ a {
 .im-table td {
   line-height: 150%;
   padding: 15px 5px;
+  position: relative;
 }
 
 .im-table td:first-child {
@@ -3421,10 +3424,6 @@ a {
 
 .im-table tbody tr {
   border-bottom: 1px solid #dddddd;
-}
-
-.im-table tbody tr:nth-child(even) {
-  background-color: #fcfcfc;
 }
 
 .im-table tbody tr:hover {
@@ -3542,6 +3541,43 @@ a {
 .im-table-sort-icon-bottom-selected {
   border-top-color: #188eee;
   cursor: default;
+}
+
+
+.im-collapse-table-triangle {
+  width: 0;
+  height: 0;
+  border: 9px dashed transparent;
+  border-bottom: 9px solid #dddddd;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -9px;
+}
+
+.im-collapse-table-triangle-inner {
+  width: 0;
+  height: 0;
+  border: 8px dashed transparent;
+  border-bottom: 8px solid #F8F8F8;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -8px;
+}
+
+.im-collapse-table-collapse-row {
+  background-color: #F8F8F8;
+  border-color: #ebebeb;
+}
+
+.im-collapse-table-collapse-row td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.im-collapse-table-toggle-row {
+  border: 1px solid #dddddd;
 }
 
 

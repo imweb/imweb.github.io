@@ -657,6 +657,7 @@
 .im-table td {
   line-height: 150%;
   padding: 15px 5px;
+  position: relative;
 }
 
 .im-table td:first-child {
@@ -676,10 +677,6 @@
 
 .im-table tbody tr {
   border-bottom: 1px solid #dddddd;
-}
-
-.im-table tbody tr:nth-child(even) {
-  background-color: #fcfcfc;
 }
 
 .im-table tbody tr:hover {
