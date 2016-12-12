@@ -544,6 +544,14 @@
   content: "\f1ad";
 }
 
+.i-loading {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("/imui/components/style/image/loading.gif") no-repeat;
+  background-size: 100%;
+}
+
 
 .im-tab-hd::before, .im-tab-hd::after {
   content: "";

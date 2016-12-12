@@ -628,6 +628,14 @@
   content: "\f1ad";
 }
 
+.i-loading {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("/imui/components/style/image/loading.gif") no-repeat;
+  background-size: 100%;
+}
+
 
 .im-picker {
   display: inline-block;
@@ -767,7 +775,7 @@
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  background: url("/imui/components/statusbox/style/img/loading.gif") no-repeat center center;
+  background: url("../../statusbox/style/img/loading.gif") no-repeat center center;
   background-size: 100%;
 }
 
