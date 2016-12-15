@@ -2528,6 +2528,9 @@ a {
   line-height: 30px;
   padding: 0 10px;
   position: relative;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
 }
 
 .im-dropdown-dropdown ul li:hover {
@@ -2624,7 +2627,8 @@ a {
 .im-form .im-radio,
 .im-form .im-radio-group,
 .im-form .im-checkbox,
-.im-form .im-checkgroup {
+.im-form .im-checkgroup,
+.im-form .im-validator-enhancer {
   line-height: 30px;
 }
 
@@ -2650,6 +2654,7 @@ a {
 .im-form--inline .im-form-row {
   float: left;
   margin-right: 20px;
+  margin-bottom: 0;
 }
 
 .im-form--inline .im-label {

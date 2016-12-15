@@ -442,6 +442,9 @@
   line-height: 30px;
   padding: 0 10px;
   position: relative;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
 }
 
 .im-dropdown-dropdown ul li:hover {
