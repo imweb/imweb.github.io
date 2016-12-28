@@ -2014,16 +2014,15 @@ a {
 }
 
 .im-dialog {
-  position: relative;
-  background: #fff;
+  position: absolute;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
   border-top: 4px solid #188eee;
   border-radius: 2px;
   min-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .im-dialog-mask {
