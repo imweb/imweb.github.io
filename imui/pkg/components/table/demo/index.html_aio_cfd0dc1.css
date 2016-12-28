@@ -24,7 +24,7 @@
 }
 
 .im-tab-hd--border {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   height: 45px;
 }
 
@@ -41,7 +41,7 @@
 
 .im-tab-hd--border a.active {
   color: #188eee;
-  border-color: #dbdbdb;
+  border-color: #dedede;
   line-height: 41px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .im-tab-hd--bottom {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   line-height: 45px;
 }
 
@@ -1445,7 +1445,7 @@ pre[class*="language-"] {
 
 .im-table-wrap {
   position: relative;
-  border: 1px solid #dddddd;
+  border: 1px solid #dedede;
 }
 
 .im-table-wrap .im-table {
@@ -1475,6 +1475,14 @@ pre[class*="language-"] {
 
 .im-table-wrap .im-table th .im-checkbox .im-checkbox-icon {
   margin: 0;
+}
+
+.im-table-wrap .im-table th .im-icon {
+  color: #bbb;
+}
+
+.im-table-wrap .im-table th .im-icon:hover {
+  color: #999;
 }
 
 .im-table-wrap .im-table th:first-child {
@@ -1542,7 +1550,7 @@ pre[class*="language-"] {
   border-bottom: 9px solid #EEEEEE;
   position: absolute;
   bottom: -1px;
-  left: 50%;
+  left: 30px;
   margin-left: -9px;
 }
 
@@ -1553,7 +1561,7 @@ pre[class*="language-"] {
   border-bottom: 8px solid #F8F8F8;
   position: absolute;
   bottom: -1px;
-  left: 50%;
+  left: 30px;
   margin-left: -8px;
 }
 
@@ -1581,7 +1589,7 @@ pre[class*="language-"] {
 .im-btn.btn-disabled,
 .im-btn .btn-disabled:hover,
 .im-btn .btn-disabled:active {
-  background-color: #e3e3e3 !important;
+  background-color: #f8f8f8 !important;
   color: #999 !important;
   cursor: default !important;
   pointer-events: none !important;
@@ -1864,18 +1872,18 @@ pre[class*="language-"] {
 }
 
 .im-dropdown-wrap {
-  border: 1px solid #dbdbdb;
+  border: 1px solid #dedede;
   display: block;
   box-sizing: content-box;
   height: 20px;
   overflow: hidden;
-  padding: 4px;
+  padding: 4px 9px;
   position: relative;
   white-space: nowrap;
 }
 
 .im-dropdown-wrap:hover {
-  border-color: #ccc;
+  border-color: #999;
 }
 
 .im-dropdown-wrap-text {
@@ -1886,13 +1894,12 @@ pre[class*="language-"] {
   border: 0;
   box-sizing: border-box;
   font-size: 14px;
-  margin: 0 0 0 7px;
   outline: none;
   padding: 0;
 }
 
 .im-dropdown-wrap-text-placeholder {
-  color: #a6a6a6;
+  color: #999;
 }
 
 .im-dropdown-wrap-loading {
@@ -1920,7 +1927,7 @@ pre[class*="language-"] {
   top: 12px;
   right: 10px;
   font-size: 0;
-  border-top: 6px solid #dbdbdb;
+  border-top: 6px solid #999;
   border-left: 6px dashed transparent;
   border-right: 6px dashed transparent;
 }
@@ -1931,27 +1938,27 @@ pre[class*="language-"] {
   position: absolute;
   top: 5px;
   right: 10px;
-  color: #a7a7a7;
+  color: #999;
   font-size: 14px;
   margin: 3px;
 }
 
 .im-dropdown-wrap .clean-icon:hover {
-  color: #000;
+  color: #333;
 }
 
 .im-dropdown-wrap--disabled {
-  color: #a6a6a6;
+  color: #999;
   cursor: default;
 }
 
 .im-dropdown-wrap--disabled .im-icon {
-  color: #a6a6a6;
+  color: #999;
 }
 
 .im-dropdown-dropdown {
   background: #fff;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #dedede;
   border-top: 0;
   box-sizing: border-box;
   display: none;
@@ -1974,11 +1981,11 @@ pre[class*="language-"] {
 
 .im-dropdown-dropdown ul li {
   background: #fff;
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid #dedede;
   cursor: pointer;
   min-height: 30px;
   line-height: 30px;
-  padding: 0 10px;
+  padding: 0 9px;
   position: relative;
   overflow: hidden;
   word-break: break-all;
@@ -1990,7 +1997,7 @@ pre[class*="language-"] {
 }
 
 .im-dropdown-dropdown ul li.disabled {
-  color: #a7a7a7;
+  color: #999;
   cursor: default;
   background-color: #fff;
 }
@@ -2049,9 +2056,8 @@ pre[class*="language-"] {
 .im-table-sort-text {
   line-height: 42px;
   height: 100%;
-  width: 100%;
-  font-size: inherit;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .im-table-sort-icon {
@@ -2066,11 +2072,15 @@ pre[class*="language-"] {
 
 .im-table-sort-icon-wrap {
   display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 100%;
+  position: relative;
 }
 
 .im-table-sort-icon-top {
   top: 13px;
-  border-bottom: 6px solid #dbdbdb;
+  border-bottom: 6px solid #dedede;
   border-left: 6px dashed transparent;
   border-right: 6px dashed transparent;
 }
@@ -2086,7 +2096,7 @@ pre[class*="language-"] {
 
 .im-table-sort-icon-bottom {
   bottom: 13px;
-  border-top: 6px solid #dbdbdb;
+  border-top: 6px solid #dedede;
   border-left: 6px dashed transparent;
   border-right: 6px dashed transparent;
 }

@@ -1,3 +1,54 @@
+.im-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.im-checkbox-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  background: url("/imui/components/style/image/form-icon.png#unsprite") no-repeat;
+  margin-right: 5px;
+  margin-top: -2px;
+  cursor: pointer;
+  background-position: 0 -100px;
+}
+
+.im-checkbox:hover .im-checkbox-icon {
+  background-position: 0 -120px;
+}
+
+.im-checkbox.checked .im-checkbox-icon {
+  background-position: 0 -140px;
+}
+
+.im-checkbox.checked.disabled .im-checkbox-icon {
+  background-position: 0 -160px;
+}
+
+.im-checkbox.disabled {
+  cursor: default;
+}
+
+.im-checkbox.disabled .im-checkbox-icon {
+  background-position: 0 -180px;
+  cursor: not-allowed;
+}
+
+.im-checkbox.disabled .im-checkbox-label {
+  color: text #999;
+}
+
+.im-checkgroup-item--inline {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
 @font-face {
   font-family: "webfont";
   src: url("/imui/components/style/fonts/webfont.eot");
@@ -310,116 +361,10 @@
 }
 
 
-.im-message {
-  position: relative;
-  font-size: 14px;
-  color: #333;
-}
-
-.im-message-item {
-  position: fixed;
-  z-index: 4000;
-  border: 1px solid #ddd;
-  padding: 8px 30px;
-  box-shadow: 0 1px 3px rgba(99, 99, 99, 0.2);
-  background: #fff;
-}
-
-.im-message-item-default i {
-  font-size: 24px;
-  margin-right: 8px;
-}
-
-.im-message-item-default i,
-.im-message-item-default span {
-  vertical-align: middle;
-}
-
-.im-message-item-default .i-info {
-  color: #188eee;
-}
-
-.im-message-item-default .i-success {
-  color: #5fb41b;
-}
-
-.im-message-item-default .i-question {
-  color: #188eee;
-}
-
-.im-message-item-default .i-alert {
-  color: #e80808;
-}
-
-.im-message-item-default .icon-loading {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  vertical-align: bottom;
-  background: url("/imui/components/style/image/loading.gif") no-repeat;
-  background-size: cover;
-}
-
-.im-message-item-center {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.im-message-item-top {
-  left: 50%;
-  top: 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.im-message-item-left {
-  left: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.im-message-item-right {
-  right: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.im-message-item-bottom {
-  bottom: 20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.im-message-close {
-  position: absolute;
-  height: 14px;
-  right: 10px;
-  top: 50%;
-  color: #999;
-  line-height: 14px;
-  margin-top: -7px;
-  cursor: pointer;
-}
-
-.im-message-close .i-close {
-  font-size: 14px;
-}
-
-.im-message-close:hover {
-  color: #666;
-}
-
-
 .im-btn.btn-disabled,
 .im-btn .btn-disabled:hover,
 .im-btn .btn-disabled:active {
-  background-color: #e3e3e3 !important;
+  background-color: #f8f8f8 !important;
   color: #999 !important;
   cursor: default !important;
   pointer-events: none !important;
@@ -685,7 +630,7 @@
 }
 
 .im-tab-hd--border {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   height: 45px;
 }
 
@@ -702,7 +647,7 @@
 
 .im-tab-hd--border a.active {
   color: #188eee;
-  border-color: #dbdbdb;
+  border-color: #dedede;
   line-height: 41px;
 }
 
@@ -721,7 +666,7 @@
 }
 
 .im-tab-hd--bottom {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   line-height: 45px;
 }
 
@@ -1908,21 +1853,21 @@ input::-ms-reveal {
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #a6a6a6;
+  color: #999;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #a6a6a6;
+  color: #999;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #a6a6a6;
+  color: #999;
 }
 
 .placeholder {
-  color: #a6a6a6;
+  color: #999;
 }
 
 table {

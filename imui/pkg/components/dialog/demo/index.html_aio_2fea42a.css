@@ -1,7 +1,92 @@
+:root .im-dialog-mask {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+}
+
+.im-dialog {
+  position: relative;
+  background: #fff;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-top: 4px solid #188eee;
+  border-radius: 2px;
+  min-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.im-dialog-mask {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99373737', endColorstr='#99373737');
+  background-color: rgba(55, 55, 55, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4000;
+}
+
+.im-dialog-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 4001;
+}
+
+.im-dialog-hd {
+  color: #999;
+  position: relative;
+}
+
+.im-dialog-hd-text {
+  line-height: 1;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.im-dialog-hd-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  font-size: 26px;
+  line-height: 0.5;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.im-dialog-hd-close:hover {
+  color: #999;
+}
+
+.im-dialog-hd-close:hover {
+  color: #666;
+}
+
+.im-dialog-bd {
+  padding: 15px;
+}
+
+.im-dialog-ft {
+  padding: 30px;
+  text-align: right;
+}
+
+.im-dialog-ft .im-btn {
+  margin-left: 15px !important;
+}
+
+
 .im-btn.btn-disabled,
 .im-btn .btn-disabled:hover,
 .im-btn .btn-disabled:active {
-  background-color: #e3e3e3 !important;
+  background-color: #f8f8f8 !important;
   color: #999 !important;
   cursor: default !important;
   pointer-events: none !important;
@@ -241,340 +326,6 @@
 }
 
 
-@font-face {
-  font-family: "webfont";
-  src: url("/imui/components/style/fonts/webfont.eot");
-  src: url("/imui/components/style/fonts/webfont.eot?") format("embedded-opentype"), url("/imui/components/style/fonts/webfont.woff") format("woff"), url("/imui/components/style/fonts/webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.icon-font {
-  font-family: "webfont";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 16px;
-  position: relative;
-  vertical-align: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.i-group:before {
-  content: "\f100";
-}
-
-.i-logo:before {
-  content: "\f101";
-}
-
-.i-heart:before {
-  content: "\f102";
-}
-
-.i-play:before {
-  content: "\f103";
-}
-
-.i-calendar:before {
-  content: "\f104";
-}
-
-.i-qq-border:before {
-  content: "\f105";
-}
-
-.i-edit:before {
-  content: "\f106";
-}
-
-.i-v-top:before {
-  content: "\f107";
-}
-
-.i-alert:before {
-  content: "\f108";
-}
-
-.i-home:before {
-  content: "\f109";
-}
-
-.i-success:before {
-  content: "\f10a";
-}
-
-.i-user-border:before {
-  content: "\f10f";
-}
-
-.i-tel:before {
-  content: "\f110";
-}
-
-.i-weixin:before {
-  content: "\f111";
-}
-
-.i-info:before {
-  content: "\f113";
-}
-
-.i-question:before {
-  content: "\f114";
-}
-
-.i-star:before {
-  content: "\f115";
-}
-
-.i-to-top:before {
-  content: "\f116";
-}
-
-.i-v-bottom:before {
-  content: "\f117";
-}
-
-.i-v-left:before {
-  content: "\f118";
-}
-
-.i-phone:before {
-  content: "\f119";
-}
-
-.i-weixin-border:before {
-  content: "\f11a";
-}
-
-.i-user-group-border:before {
-  content: "\f11b";
-}
-
-.i-star-border:before {
-  content: "\f11c";
-}
-
-.i-close:before {
-  content: "\f11d";
-}
-
-.i-user-group:before {
-  content: "\f11e";
-}
-
-.i-v-right:before {
-  content: "\f11f";
-}
-
-.i-user:before {
-  content: "\f120";
-}
-
-.i-course-data:before {
-  content: "\f121";
-}
-
-.i-course-live:before {
-  content: "\f122";
-}
-
-.i-course-q-a:before {
-  content: "\f123";
-}
-
-.i-course-record:before {
-  content: "\f124";
-}
-
-.i-list-dot:before {
-  content: "\f125";
-}
-
-.i-delete:before {
-  content: "\f126";
-}
-
-.i-share:before {
-  content: "\f127";
-}
-
-.i-download:before {
-  content: "\f128";
-}
-
-.i-comment:before {
-  content: "\f129";
-}
-
-.i-course-test:before {
-  content: "\f12a";
-}
-
-.i-clone:before {
-  content: "\f12b";
-}
-
-.i-upload:before {
-  content: "\f12c";
-}
-
-.i-tupu:before {
-  content: "\f12d";
-}
-
-.i-view:before {
-  content: "\f12e";
-}
-
-.i-praise:before {
-  content: "\f12f";
-}
-
-.i-vip-v:before {
-  content: "\f130";
-}
-
-.i-image-pc:before {
-  content: "\f131";
-}
-
-.i-right:before {
-  content: "\f132";
-}
-
-.i-add:before {
-  content: "\f133";
-}
-
-.i-arrow-top:before {
-  content: "\f134";
-}
-
-.i-arrow-bottom:before {
-  content: "\f135";
-}
-
-.i-qr-code:before {
-  content: "\f136";
-}
-
-.i-insert:before {
-  content: "\f137";
-}
-
-.i-time:before {
-  content: "\f138";
-}
-
-.i-qq:before {
-  content: "\f179";
-}
-
-.i-d-bottom:before {
-  content: "\f17a";
-}
-
-.i-d-top:before {
-  content: "\f17b";
-}
-
-.i-volume:before {
-  content: "\f17c";
-}
-
-.i-schedule:before {
-  content: "\f17d";
-}
-
-.i-course-replay:before {
-  content: "\f17e";
-}
-
-.i-installment:before {
-  content: "\f17f";
-}
-
-.i-smile:before {
-  content: "\f180";
-}
-
-.i-cry:before {
-  content: "\f181";
-}
-
-.i-data-border:before {
-  content: "\f1a5";
-}
-
-.i-calendar-2:before {
-  content: "\f1a6";
-}
-
-.i-test-border:before {
-  content: "\f1a7";
-}
-
-.i-record-border:before {
-  content: "\f1a8";
-}
-
-.i-cancel-top:before {
-  content: "\f1a9";
-}
-
-.i-replay-border:before {
-  content: "\f1aa";
-}
-
-.i-live-border:before {
-  content: "\f1ab";
-}
-
-.i-more:before {
-  content: "\f1ac";
-}
-
-.i-place-top:before {
-  content: "\f1ad";
-}
-
-.i-loading {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background: url("/imui/components/style/image/loading.gif") no-repeat;
-  background-size: 100%;
-}
-
-
-.im-page {
-  text-align: center;
-}
-
-.im-page button,
-.im-page span {
-  margin: 0 2px;
-}
-
-.im-page .im-btn {
-  min-width: 0;
-}
-
-.im-page .im-btn.btn-s {
-  height: 30px;
-}
-
-.im-page .im-btn.btn-m {
-  height: 40px;
-}
-
-
 .im-tab-hd::before, .im-tab-hd::after {
   content: "";
   display: table;
@@ -601,7 +352,7 @@
 }
 
 .im-tab-hd--border {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   height: 45px;
 }
 
@@ -618,7 +369,7 @@
 
 .im-tab-hd--border a.active {
   color: #188eee;
-  border-color: #dbdbdb;
+  border-color: #dedede;
   line-height: 41px;
 }
 
@@ -637,7 +388,7 @@
 }
 
 .im-tab-hd--bottom {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dedede;
   line-height: 45px;
 }
 
