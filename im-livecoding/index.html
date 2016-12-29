@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ACE Emmet demo</title>
+  <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+    .container {
+        margin: 20px auto;
+        width: 1000px;
+    }
+    #editor { 
+
+        height: 400px;
+    }
+    .operation {
+        text-align: right;
+    }
+    .btn {
+        border: 1px solid #999;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 12px 18px;
+        min-width: 112px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    .btn-primary {
+        background-color: #02b3e4 !important;
+        border-color: #02b3e4 !important;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h3 style="text-align:center;">习题-创建image图形</h3>
+        <pre id="editor">
+        </pre>
+        <div class="operation">
+            <input type="button" class="btn-primary btn" onClick="submitAnswer();" value="提交答案"/>
+        </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- load emmet code and snippets compiled for browser -->
+<script src="https://cloud9ide.github.io/emmet-core/emmet.js"></script>
+
+<!-- load ace -->
+<script src="./src/ace.js"></script>
+<!-- load ace emmet extension -->
+<script src="./src/ext-emmet.js"></script>
+<script>
+    var editor = ace.edit("editor");
+    var question = '<!--\nSample image element:\n<img src="http://somewebsite.com/image.jpg" alt="short description">\nHow to complete this quiz:\n* Create an image element at the designated spot in the paragraph below.\n* Set the source to: http://test.png\n* Set the alt description to a quick description of the image (maybe something like, "test").\n* Play around with the URL! See if you can make a different image appear.-->\n\n\n<div>\n\tThis is a big paragraph of text about Udacity. Cool. Cool. And here is an image!\n\t<!-- put the image element here! -->\n</div>'
+    editor.session.setMode("ace/mode/html");
+    
+    editor.setValue(question); 
+    // enable emmet on the current editor
+    editor.setOption("enableEmmet", true);
+
+    function submitAnswer() {
+        var currentValue = editor.getValue(); 
+        console.log(currentValue);
+        var valueDom = $(currentValue)[2];
+        checkAnswer($(valueDom));
+        if(!checkAnswer($(valueDom))) {
+            alert('哎呦，还差一点点，请再次看看题目要求~')
+        } else {
+            alert("真棒！你做对了！");
+        }
+    }
+
+
+    function checkAnswer($dom) {
+        var $target = $dom.find('img');
+        if(!$target[0]) {
+            return false;
+        }
+        var alt = $target.attr('alt');
+        var src = $target.attr('src');
+        // 如果没有alt
+        if(!alt || alt !== 'test') {
+            return false;
+        }
+        if(!src || src !== 'http://test.png') {
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>
