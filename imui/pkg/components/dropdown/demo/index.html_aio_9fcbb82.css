@@ -391,7 +391,7 @@
   height: 14px;
   position: absolute;
   top: 5px;
-  right: 10px;
+  right: 20px;
   color: #999;
   font-size: 14px;
   margin: 3px;
@@ -703,57 +703,6 @@
 .im-btn .btn-disabled:hover,
 .im-btn .btn-disabled:active {
   outline: none;
-}
-
-
-.im-validator--right .im-validator-msg {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-.im-validator--bottom .im-validator-enhancer {
-  position: relative;
-  padding-bottom: 19px;
-}
-
-.im-validator--bottom .im-validator-msg {
-  position: absolute;
-  margin-top: 3px;
-}
-
-.im-validator--bottom .im-form-row {
-  height: 50px;
-}
-
-.im-validator-enhancer--error input,
-.im-validator-enhancer--error textarea {
-  border-color: #e85308;
-}
-
-.im-validator-msg {
-  line-height: 16px;
-}
-
-.im-validator-msg--error .im-validator-msg-text {
-  color: #e85308;
-}
-
-.im-validator-msg-icon {
-  width: 14px;
-  height: 14px;
-}
-
-.im-validator-msg .i-alert {
-  color: #e85308;
-}
-
-.im-validator-msg .i-success {
-  color: #5fb41b;
-}
-
-.im-validator-msg .i-info {
-  color: #188eee;
 }
 
 
