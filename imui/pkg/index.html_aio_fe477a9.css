@@ -3280,6 +3280,7 @@ a {
 
 .im-statusbox {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   color: #999;
 }
@@ -3312,13 +3313,9 @@ a {
   top: 3px;
 }
 
-.im-statusbox-text {
+.im-statusbox-bd {
   display: inline-block;
   vertical-align: middle;
-}
-
-.im-statusbox-l {
-  font-size: 18px;
 }
 
 .im-statusbox-l .im-statusbox-icon {
@@ -3332,6 +3329,16 @@ a {
 .im-statusbox-l .i-loading {
   width: 36px;
   height: 36px;
+}
+
+.im-statusbox-l.im-statusbox--simple .im-statusbox-bd {
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.im-statusbox-l.im-statusbox--custom .im-statusbox-bd .im-statusbox-tt {
+  font-size: 18px;
+  line-height: 36px;
 }
 
 .im-statusbox-m {
