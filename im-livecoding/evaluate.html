@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <style type="text/css">
+    body {
+      background: white !important;
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+    .featured {background-color: #66c}
+</style>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="./js/iframe.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+ function performSubmission() {
+  var comment, isCorrect;
+  comment = "";
+
+  // string _comment. adds new comment for grade results w/proper formatting
+  function commentizer (_comment) {
+    comment = comment + _comment + "\n";
+  }
+  // string variable. returns true if the variable exists. modifies comment string and returns false otherwise.
+  function varStillExists (variable) {
+    if (typeof variable !== undefined) return true;
+    commentizer(variable + " doesn't exist. Did you accidentally change its name?");
+    return false;
+  }
+  // jquery elem. returns true if elem is a jquery elem. modifies comment string and returns false otherwise.
+  function isjQuery (elem) {
+    // could use obj.jquery, which will only return true if it is a jquery object
+    if (elem instanceof $) return true;
+    commentizer("Looks like you don't have a jQuery selector. Did you start your selector with the jQuery object, the $?");
+    return false;
+  }
+  // jQuery elem, string tag. returns true if elem collection contains one instance of a tag. modifies comment string and returns false otherwise.
+  function hasCorrectTag (elem, tag) {
+    if (elem.is(tag)) return true;
+    commentizer("Expected to find an element with a tag of type: " + tag);
+    return false;
+  }
+  // jquery elem. string className. returns true if elem includes an elem w/className. modifies comment and returns false otherwise.
+  function hasCorrectClass (elem, className) {
+    // if (elem.is('.' + className)) return true;
+    if (elem.hasClass(className)) return true;
+    commentizer("Expected to find an element with class of type: " + className + ". Remember, class selectors start with '.'");
+    return false;
+  }
+  // jquery elem. string id. returns true if elem includes an element w/id. modifies comment and returns false otherwise.
+  function hasCorrectId (elem, id) {
+    if (elem.is('#' + id)) return true;
+    commentizer("Expected to find an element with an id of " + id + ". Remember, id selectors start with '#'");
+    return false;
+  }
+  // jquery elem. string text. returns true if elem has the right text. modifies comment and returns false otherwise
+  function hasCorrectText (elem, text) {
+    // modify to point out specific changes?
+    if (elem.text() === text) return true;
+    commentizer("Incorrect text. This error could result from modifying the wrong element or changing the text.");
+    return false;
+  }
+  // jquery elem. string attrName, string correctAttr. returns true if elem has attrName equal to correctAttr.
+  function hasCorrectAttr (elem, attrName, correctAttr) {
+    if (elem.attr(attrName) === correctAttr) return true;
+    commentizer("Expected attribute " + attrName + " to equal " + correctAttr);
+    return false;
+  }
+  // jquery collection. int _length
+  function hasCorrectLength (collection, _length) {
+    var cLength = collection.length;
+    if (cLength === _length) return true;
+    commentizer("Expected the collection to have a length of " + _length + ". Had " + cLength + " instead.");
+    return false;
+  }
+  // jquery elem. jquery correctElem
+  function isCorrectElem (elem, correctElem) {
+    if (elem.is(correctElem)) return true;
+    commentizer("Selected the wrong element. Expected: " + correctElem + ". Instead saw: " + elem);
+    return false;
+  }
+  // jquery collection. jquery correctCollection
+  function isCorrectCollection (collection, correctCollection) {
+    if (collection.is(correctCollection)) return true;
+    commentizer("Selected the wrong collection. Expected: " + correctCollection + ". Instead saw: " + collection);
+    return false;
+  }
+  // jquery elem. string style. string _correctStyle. _style is the css class. _correctStyle is the expected value of _style.
+  function hasCorrectStyle (elem, _style, _correctStyle) {
+    var currentStyle = elem.css(_style);
+    if (currentStyle  === _correctStyle) return true;
+    commentizer("Expected " + _style + " to be " + _correctStyle + ". Instead saw " + currentStyle);
+    return false;
+  }
+  // TODO: jquery elem. jquery dom child
+  function hasChild (elem, child) {  
+  }
+  
+  try {
+
+    isCorrect = true;
+
+    var image = document.getElementsByTagName('img')[0];
+    var $image = $(image);
+    if(!image) {
+        isCorrect = false;
+        comment = '你需要创建一个img标签';
+    } else {
+        isCorrect = hasCorrectAttr($image, 'src', 'http://imweb.io/public/images/logo-white.png');
+        isCorrect = hasCorrectAttr($image, 'alt', 'test');
+        isCorrect = hasCorrectAttr($image, 'id', 'image');
+        isCorrect = hasCorrectClass($image, 'test-image');
+    }
+   
+
+  } catch (e) {
+
+    return {
+      "isCorrect": "false",
+      "comment": "Can't evaluate. Please post on the forums if you see this error."
+    }
+
+  }
+
+  return {
+    "isCorrect": isCorrect.toString(),
+    "comment": comment
+  }
+}
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function () {
+    postReady();
+  })
+  </script>
+</body>
+</html>
