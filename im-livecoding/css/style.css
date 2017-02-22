@@ -30,7 +30,6 @@ ol, ul {
     border-color: #02b3e4 !important;
 }
 #evaluate {
-    display: none;
     border: 1px solid #ddd;
     padding: 10px;
     margin-top: 40px;
@@ -46,7 +45,17 @@ ol, ul {
     position: relative;
 }
 
-.file-selector-description{
+.js-delete-tab {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.file-selector-tabs{
     color: #525c65;
     display: flex;
     margin: 0;
@@ -54,6 +63,7 @@ ol, ul {
     white-space: nowrap;
 }
 .tab{
+    position: relative;
     background-color: #fafbfc;
     border: 1px solid #dbe2e8;
     border-bottom: none;

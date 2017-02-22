@@ -7,122 +7,270 @@
 </head>
 <body>
     <div class="container">
-        <h3 style="text-align:center;">习题-创建image图形</h3>
+        <div class="operation">
+            <input type="text" name="" id="add-file-name">
+            <input type="button" class="js-add-tab btn-primary  btn" value="增加基础代码"/>
+            <input type="button" class="btn-primary btn" onClick="testAnswer();" value="测试页面"/>
+            <input type="button" class="btn-primary btn" onClick="returnData();" value="保存题目"/>
+        </div>
         <div id="files-selector">
-            <ul class="file-selector-description">
-                <li class="tab z-selected">index.html</li>
-                <li class="tab">app.js</li> 
+            <ul class="file-selector-tabs">
+                <li class="unittest tab z-selected">测试用例</li>
             </ul>
-           
         </div>
         <pre id="editor">
         </pre>
+
         <div id="evaluate">
             <h5>效果</h5>
             <iframe frameborder="0"></iframe>
         </div>
-        <div class="operation">
-            <input type="button" class="btn" onClick="testAnswer();" value="测试答案"/>
-            <input type="button" class="btn-primary btn" onClick="submitAnswer();" value="提交答案"/>
-        </div>
+        
     </div>
 
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!-- load emmet code and snippets compiled for browser -->
-<script src="https://cloud9ide.github.io/emmet-core/emmet.js"></script>
 
 <!-- load ace -->
 <script src="./js/ace/ace.js"></script>
-<!-- load ace emmet extension -->
-<script src="./js/ace/ext-emmet.js"></script>
 <script>
     var doc = document;
     var $evaluate = $('#evaluate');
+    var $tabs = $('.file-selector-tabs');
+    // 编辑器对象
     var editor = ace.edit("editor");
+    // 设置编辑器滚动
     editor.$blockScrolling = Infinity;
-    var sources = [
-        {
-            name: 'index.html',
-            mode: 'ace/mode/html',
-            text: '<!--\n简单的image标签创建如下:\n<img src="http://somewebsite.com/image.jpg" alt="short description">\n那么如何完成本次练习:\n* 在段落标签的下面创建指定的img标签.\n* 设置img的图片来源为: http://imweb.io/public/images/logo-white.png\n* 设置图片的描述alt属性为"test").\n* 设置img的id为#image.\n-->\n\n\n<div>\n\t这里是一个大段落关于我们coding学院的. Cool. Cool. 这里需要一个img!\n\t<!-- put the image element here! -->\n</div>'
-                    
-        },
-        {
-            name: 'app.js',
+
+    // 整体数据
+    var data = {
+        files: [],
+        test: {
+            name: 'test.js',
             mode: 'ace/mode/javascript',
-            text: "/*本习题，需要你帮生成的img标签加上\"test-image\"的class名称\n*/\nvar image = $();",
-                    
+            value: `/**
+ * 测试用例编写步骤
+ * 1、 编写判断方法， 如下面的hasCorrectClass，hasCorrectId等
+ * 2、 编写执行主函数performSubmission
+ */
+
+var comment, isCorrect;
+comment = "";
+
+// 基础方法
+// 生成结果字符串
+function commentizer (_comment) {
+  comment = comment + _comment + '\\n';
+}
+// 判断是否有正确的class
+function hasCorrectClass (elem, className) {
+  // if (elem.is('.' + className)) return true;
+  if (elem.hasClass(className)) return true;
+  commentizer("Expected to find an element with class of type: " + className + ". Remember, class selectors start with '.'");
+  return false;
+}
+
+/**
+ * 主函数performSubmission
+ * 需返回对象如下所示
+ * return {
+ *   "isCorrect": [string], // true 和false字符串
+ *   "comment": [string] // 结果描述， 如下面的： "Can't evaluate. Please post on the forums if you see this error."
+ * }
+ */
+function performSubmission() {
+  try {
+    isCorrect = true;
+    var image = document.getElementsByTagName('img')[0];
+    var $image = $(image);
+    if(!image) {
+        isCorrect = false;
+        comment = '你需要创建一个img标签';
+    } else {
+        isCorrect = hasCorrectClass($image, 'test-image');
+    }
+  } catch (e) {
+    return {
+      "isCorrect": "false",
+      "comment": "Can't evaluate. Please post on the forums if you see this error."
+    }
+  }
+
+  return {
+    "isCorrect": isCorrect.toString(),
+    "comment": comment
+  }
+}`, 
         }
-    ]; 
+    }; 
 
-
+    /**
+     * 设置编辑器展示的内容
+     * @param {[type]} source [description]
+     */
     function setEditor(source) {
         editor.session.setMode(source.mode);
-        editor.setValue(source.text); 
-        // enable emmet on the current editor
-        if (source.mode.indexOf('html') !== -1) {
-            editor.setOption("enableEmmet", true);
+        editor.setValue(source.value); 
+    }
+    /**
+     * 保存编辑器内容
+     */
+    function saveValue() {
+        var currentValue = editor.getValue(); 
+        var $activeTab = $('.tab.z-selected');
+        // 如果不是删除，则还能获取到$activeTab
+        if ($activeTab.length) {
+            // 如果是测试用例文件
+            if ($activeTab.hasClass('unittest')) {
+                data.test.value = currentValue;
+            } else {
+                var fileIndex = $activeTab.attr('data-findex');
+                if (data.files[fileIndex]) {
+                    data.files[fileIndex].value = currentValue;
+                }
+            }
         }
     }
 
 
-    function submitAnswer() {
-        testAnswer();
+
+    /**
+     * 增加tab
+     */
+    function addTab() {
+        // 获取文件名称
+        var filename = $('#add-file-name').val().trim();
+        if (filename) {
+            filenameArr = filename.split('.');
+            // 获取后缀
+            var extension = filenameArr[filenameArr.length -1];
+            var mode;
+            switch (extension) {
+                case 'js':
+                    mode = 'ace/mode/javascript';
+                    break;
+                case 'css':
+                    mode = 'ace/mode/css';
+                    break;
+                case 'html':
+                    mode = 'ace/mode/html';
+                    break;    
+            }
+            // 创建内容
+            data.files.push({
+                mode: mode,
+                name: filename,
+                value: '',
+            });
+            let index = data.files.length - 1;
+            var $tab = $('<li class="tab" data-findex="' + index + '" data-name="'+ filename +' ">' + 
+                            '<span>' + filename + '</span>' +
+                            '<div class="js-delete-tab">X</div>' +
+                        '</li>');
+            $tabs.append($tab);
+            $tab.trigger('click');
+        }
+        // 清空输入框
+        var value = $('#add-file-name').val('');
+        
     }
 
+     /**
+     * 删除Tab
+     */
+    function removeTab(filename, fileIndex) {
+        var $removeTab = $('.tab[data-name="' + filename +'"]');
+        if ($removeTab.length) {
+            $removeTab.remove();
+            // 删除
+            data.files.splice(fileIndex, 1);
+            // 设置当前内容
+            $('.tab.unittest').trigger('click');
+        }
+    }
+
+    function bindEvent() {
+        $(document).on('click', '.js-add-tab',  function() {
+           addTab();
+        });
+        $(document).on('click', '.js-delete-tab',  function(e) {
+            $parent = $(this).parent();
+            var filename = $parent.attr('data-name');
+            // 文件数据位置坐标
+            var fileIndex = $parent.attr('data-findex');
+           removeTab(filename, fileIndex);
+           // 不让冒泡  
+           e.stopPropagation();
+        });
+        // 切换tab
+        $(document).on('click', '.tab',  function() {
+            saveValue();
+            $(this).addClass('z-selected').siblings().removeClass('z-selected');
+            // 如果是测试用例文件
+            if ($(this).hasClass('unittest')) {
+                setEditor(data.test);
+            } else {
+                var curIndex = $(this).index() - 1;
+                setEditor(data.files[curIndex]);
+            }
+
+        });
+        // Do the things we need to do to initialize state
+        window.addEventListener('message', function(e) {
+            var message = JSON.parse(e.data);
+            switch (message.messageType) {
+                case 'ready': 
+                    sendCode();
+                    break;
+                case 'evaluate':
+                    var result = '';
+                    result += message.isCorrect === 'true' ? '答对了' : '答错了';
+                    result += ( '\n' +message.comment );
+                    alert(result);
+                default:
+                    //
+            }
+
+        });
+
+    }
+
+    /**
+     * 发送当前代码过去data
+     */
+    function sendCode() {
+        var messageValue = JSON.stringify(data);
+        iframe.contentWindow.postMessage(messageValue, '*');
+    }
+
+
     function testAnswer() {
-        $evaluate.show();
         saveValue();
         $evaluate.find('iframe').attr('src', './evaluate.html');
     }
 
-
-    function saveValue() {
-        var currentValue = editor.getValue(); 
-        var index = $('.tab.z-selected').index();
-        sources[index].text = currentValue;
+    // 返回数据
+    function returnData() {
+        saveValue();
+        console.log(data);
     }
 
-    $(document).on('click', '.tab',  function() {
-        saveValue();
-        $(this).addClass('z-selected').siblings().removeClass('z-selected');
-        var curIndex = $(this).index();
-        setEditor(sources[curIndex]);
-
-    });
 
 
     var iframe = document.getElementsByTagName('iframe')[0];
 
-    function sendCode() {
-        var messageValue = JSON.stringify({
-            parts: sources
-        });
-        iframe.contentWindow.postMessage(messageValue, '*');
+   
+
+   
+
+    function init() {
+        // 初始话第一个
+        setEditor(data.test);
+        bindEvent();
     }
 
-    // Do the things we need to do to initialize state
-    window.addEventListener('message', function(e) {
-        var message = JSON.parse(e.data);
-        switch (message.messageType) {
-            case 'ready': 
-                sendCode();
-                break;
-            case 'evaluate':
-                var result = '';
-                console.log(message);
-                result += message.isCorrect === 'true' ? '答对了' : '答错了';
-                result += ( '\n' +message.comment );
-                alert(result);
-            default:
-                //
-        }
-
-    });
-
-    // 初始话第一个
-    setEditor(sources[0])
+    init();
+    
 </script>
 </body>
 </html>
