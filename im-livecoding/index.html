@@ -88,14 +88,14 @@ function hasCorrectClass (elem, className) {
 function performSubmission() {
   try {
     isCorrect = true;
-    var image = document.getElementsByTagName('img')[0];
+    /*var image = document.getElementsByTagName('img')[0];
     var $image = $(image);
     if(!image) {
         isCorrect = false;
         comment = '你需要创建一个img标签';
     } else {
         isCorrect = hasCorrectClass($image, 'test-image');
-    }
+    }*/
   } catch (e) {
     return {
       "isCorrect": "false",
@@ -229,6 +229,10 @@ function performSubmission() {
                 case 'ready': 
                     sendCode();
                     break;
+                case 'init': 
+                    data = message.data;
+                    init();
+                    break;
                 case 'evaluate':
                     var result = '';
                     result += message.isCorrect === 'true' ? '答对了' : '答错了';
@@ -274,11 +278,11 @@ function performSubmission() {
     function init() {
         // 初始话第一个
         setEditor(data.test);
-        bindEvent();
+        
     }
 
     init();
-    
+    bindEvent();
 </script>
 </body>
 </html>
