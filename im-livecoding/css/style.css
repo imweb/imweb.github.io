@@ -1,7 +1,9 @@
 
 .container {
     margin: 20px auto;
-    width: 1000px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 ol, ul {
