@@ -12,7 +12,7 @@ ol, ul {
     height: 400px;
 }
 .operation {
-    text-align: right;
+    margin-top: 20px;
 }
 .btn {
     border: 1px solid #999;
@@ -35,6 +35,7 @@ ol, ul {
     margin-top: 40px;
     height: 300px;
     margin-bottom: 40px;
+    overflow: scroll;
 }
 #evaluate iframe {
     width: 100%;
@@ -64,11 +65,12 @@ ol, ul {
 }
 .tab{
     position: relative;
-    background-color: #fafbfc;
+    background-color: #fff;
     border: 1px solid #dbe2e8;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
     list-style: none;
+    line-height: 32px;
     margin-right: 2px;
     padding: 8px 12px;
     cursor: pointer;

@@ -8,10 +8,10 @@
 <body>
     <div class="container">
         <div class="operation">
-            <input type="text" name="" id="add-file-name">
-            <input type="button" class="js-add-tab btn-primary  btn" value="增加基础代码"/>
-            <input type="button" class="btn-primary btn" onClick="testAnswer();" value="测试页面"/>
-            <input type="button" class="btn-primary btn" onClick="returnData();" value="保存题目"/>
+            <h4>步骤一：创建基础代码格式为（名称.文件后缀）和编写测试用例文件</h4>
+            <input type="text" name="" id="add-file-name" placeholder="">
+            <input type="button" class="js-add-tab btn-primary" value="增加基础代码"/>
+            <span>(如index.html)</span>
         </div>
         <div id="files-selector">
             <ul class="file-selector-tabs">
@@ -20,10 +20,17 @@
         </div>
         <pre id="editor">
         </pre>
-
+        <div class="operation">
+            <h4>步骤二：预览和执行测试用例</h4>
+            <input type="button" class="btn-primary" onClick="testAnswer();" value="测试页面"/>
+        </div>
         <div id="evaluate">
             <h5>效果</h5>
             <iframe frameborder="0"></iframe>
+        </div>
+        <div class="operation">
+            <h4>步骤三：保存题目</h4>
+            <input type="button" class="btn-primary" onClick="returnData();" value="保存题目"/>
         </div>
         
     </div>
