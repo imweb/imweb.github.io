@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>在线代码题demo</title>
-  <link rel="stylesheet" href="./css/style.css?v=2">
+  <link rel="stylesheet" href="./css/style.css?v=3">
 </head>
 <body>
     <div class="container">
@@ -147,6 +147,13 @@ function performSubmission() {
     function addTab() {
         // 获取文件名称
         var filename = $('#add-file-name').val().trim();
+        var $addTab = $('.tab[data-name="' + filename +'"]');
+        // 如果有重复的则不增加
+        if ($addTab.length) {
+            // 清空输入框
+            $('#add-file-name').val('');
+            return;
+        }
         if (filename) {
             filenameArr = filename.split('.');
             // 获取后缀
@@ -170,7 +177,7 @@ function performSubmission() {
                 value: '',
             });
             let index = data.files.length - 1;
-            var $tab = $('<li class="tab" data-findex="' + index + '" data-name="'+ filename +' ">' + 
+            var $tab = $('<li class="tab" data-findex="' + index + '" data-name="'+ filename +'">' + 
                             '<span>' + filename + '</span>' +
                             '<div class="js-delete-tab">X</div>' +
                         '</li>');
@@ -178,7 +185,7 @@ function performSubmission() {
             $tab.trigger('click');
         }
         // 清空输入框
-        var value = $('#add-file-name').val('');
+        $('#add-file-name').val('');
         
     }
 

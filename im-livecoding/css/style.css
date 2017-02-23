@@ -79,7 +79,7 @@ ol, ul {
 }
 
 .tab.z-selected {
-    background-color: #fff;
+    background-color: #ddd;
     bottom: -1px;
     padding-bottom: 1px;
     position: relative;
