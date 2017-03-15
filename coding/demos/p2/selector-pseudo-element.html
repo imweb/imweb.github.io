@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>伪元素</title>
+	<style type="text/css">
+		p {
+			width: 300px;
+			line-height: 1.5;
+		}
+		p::first-letter {
+			color: red;
+		}
+		p::first-line {
+			text-decoration: underline;
+		}
+		p::before {
+			content: "::before伪元素";
+		}
+		p::after {
+			content: "::after伪元素";
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<p>我是一段话，用来测试伪元素，可以有很多行，可以有很多行，可以有很多行，可以有很多行，可以有很多行，可以有很多行，可以有很多行，可以有很多行，可以有很多行</p>
+</body>
+</html>
+

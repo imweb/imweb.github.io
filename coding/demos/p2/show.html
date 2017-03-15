@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>元素的显示隐藏</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			height: 100px;
+			position: relative;
+			z-index: 2;
+			background: #000;
+			margin: 10px;
+			display: block;
+		}
+		.box1 {
+			/*display: none;*/
+		}
+		.box2 {
+			/*visibility: hidden;*/
+		}
+		.demo {
+			width: 200px;
+			height: 100px;
+			background: #f00;
+			color: #fff;
+		}
+		.box3 {
+			/*overflow: auto;*/
+		}
+		.box3 .demo {
+			height: 300px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box box1">
+		<div class="demo">我是display控制</div>
+	</div>
+	<div class="box box2">
+		<div class="demo">我是visibility控制</div>
+	</div>
+	<div class="box box3">
+		<div class="demo">我是overflow控制</div>
+	</div>
+</body>
+</html>
+

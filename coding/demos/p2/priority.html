@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>样式优先级测试</title>
+	<style type="text/css">
+		#first {
+			color: orange;
+		}
+		/*[class]{
+			color: pink;
+		}*/
+
+		/*p:nth-child(1){
+			color: gray;
+		}*/
+
+		.text {
+			color: green;
+		}
+		body p {
+			color: chocolate;
+		}
+
+		p {
+			color: red;
+		}
+		* {
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<p class="text" id="first" style="color: blue;">我到底是什么颜色？</p>
+</body>
+</html>
+

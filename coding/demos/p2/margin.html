@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>margin</title>
+	<style type="text/css">
+		.box {
+			background: #f00;
+			color: #fff;
+			line-height: 50px;
+		}
+		.box1 {
+			margin-bottom: 30px;
+		}
+		.box2 {
+			margin-top: 20px;
+		}
+		.empty {
+			margin: 40px;
+		}
+		.box-parent {
+			background: #f00;
+		}
+		.box-child {
+			margin: 20px;
+			line-height: 50px;
+			background: #ccc;
+		}
+		.box-parent--no-collapse {
+			border-top: 1px solid transparent;
+			padding-bottom: 1px;
+		}
+		.box3 {
+			float: left;
+			margin-bottom: 30px;
+		}
+		.box4 {
+			margin-top: 50px;
+			background-color: blue;
+		}
+		.cb {
+			clear: both;
+		}
+		.float-parent{
+			background-color: green;
+		}
+		.clearfix::after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+		.box--float{
+			float: left;
+			width: 100%;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h2>兄弟元素上下margin合并</h2>
+	<p>如两个值同为正或负，取绝对值最大的；如一个为正一个为负则相加</p>
+	<div class="box box1">margin-bottom: 30px</div>
+	<div class="box box2">margin-top: 20px</div>
+	<h2>父子元素margin合并</h2>
+	<p>无border-top，padding-top，顶部inline-content，border-bottom，padding-bottom，底部inline-content</p>
+	<div class="box-parent">
+		<div class="box-child">我是子元素</div>
+		<div class="box-child">我是子元素</div>
+	</div>
+	<p>前后inline-content则不会合并</p>
+	<div class="box-parent">
+		前面加点文字，则margin-top就不会合并
+		<div class="box-child">我是子元素</div>
+		<div class="box-child">我是子元素</div>
+		后面加点文字，则margin-bottom也不会合并
+	</div>
+	<p>父元素设置了对应的top或bottom方向的padding或border也不会合并</p>
+	<div class="box-parent box-parent--no-collapse">
+		<div class="box-child">我是子元素</div>
+		<div class="box-child">我是子元素</div>
+	</div>
+	<h2>空元素合并</h2>
+	<p>如果存在一个空的块级元素，其 border、padding、inline content、height、min-height 都不存在。那么此时它的上下边距中间将没有任何阻隔，它的上下外边距将会合并。</p>
+	<div class="box box1">margin-bottom: 30px，我下面是一个空元素，margin为40px</div>
+	<div class="empty"></div>
+	<div class="box box2">margin-top: 20px</div>
+	<h2>float</h2>
+	<p>两个连续的float元素，margin不合并</p>
+	<div class="clearfix float-parent">
+		<div class="box box--float">float & margin</div>
+		<div class="box box--float">float & margin</div>
+	</div>
+	
+	<p class="cb">浮动元素之后的元素</p>
+	<div class="box box3">margin-bottom: 30px</div>
+	<div class="box box4">margin-top: 50px</div>
+	<p>浮动元素之后，使用clear清除上面的浮动，</p>
+	<div class="box box3">margin-bottom: 30px</div>
+	<div class="box box4 cb">margin-top: 50px; clear: both; 该元素的margin-top不管用</div>
+	<p>闭合浮动</p>
+	<div class="clearfix float-parent"><div class="box box3">margin-bottom: 30px</div></div>
+	<div class="box box4 cb">margin-top: 50px</div>
+</body>
+</html>
+
