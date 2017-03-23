@@ -1,0 +1,86 @@
+
+.container {
+    margin: 20px auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+#editor { 
+    margin: 0;
+    height: 400px;
+}
+.operation {
+    margin-top: 20px;
+}
+.btn {
+    border: 1px solid #999;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 12px 18px;
+    min-width: 112px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #02b3e4 !important;
+    border-color: #02b3e4 !important;
+}
+#evaluate {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 40px;
+    height: 300px;
+    margin-bottom: 40px;
+    overflow: scroll;
+}
+#evaluate iframe {
+    width: 100%;
+    height: 400px;
+}
+
+#fileTab {
+    position: relative;
+}
+
+.js-delete-tab {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.file-selector-tabs{
+    color: #525c65;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.tab{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dbe2e8;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    list-style: none;
+    line-height: 32px;
+    margin-right: 2px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.tab.z-selected {
+    background-color: #ddd;
+    bottom: -1px;
+    padding-bottom: 1px;
+    position: relative;
+}
