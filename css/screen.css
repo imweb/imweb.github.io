@@ -197,7 +197,7 @@ dl dd {
 hr {
     display: block;
 
-    margin: 3.2em 0;
+    margin: 1.5em 0;
     border: 0;
     border-top: 1px solid #efefef;
     padding: 0;
@@ -409,10 +409,16 @@ margin on the iframe, cause it breaks stuff. */
 
     font-family: "Open Sans", sans-serif;
     font-size: 5rem;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: -1px;
+}
+.blog-sub-title {
+    margin: 10px 0 10px 0;
 
-    text-shadow: 0 1px 6px rgba(0,0,0,.1);
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: -1px;
 }
 .blog-description {
     margin: 0;
@@ -993,8 +999,6 @@ header {
     font-size: 3.2em;
 
     color: rgb( 255, 255, 255 );
-
-    text-shadow: 0 0 5px rgb( 0, 0, 0 );
 }
 
 .blog-description {
@@ -1006,10 +1010,13 @@ header {
     text-shadow: 0 0 4px rgb( 0, 0, 0 );
 }
 
+.team-subtitle {
+    padding-left: 28px;
+}
 .team-description {
     margin: auto;
     width: 60%;
-
+    margin-bottom: 15px;
     line-height: 2.4rem;
 }
 
@@ -1212,6 +1219,9 @@ div.scroll-top-btn:hover {
     .team-description {
         width: 85%;
     }
+    .team-description a {
+        color: #2196f3;
+    }
     .latest-article {
         width: 100%;
     }
@@ -1327,7 +1337,8 @@ div.scroll-top-btn:hover {
         text-align: center;
     }
     .container .site-head {
-        min-height: 320px;
+        min-height: 240px;
+        margin-bottom: 30px;
     }
     .site-footer {
         font-size: 1.1rem;
@@ -1341,3 +1352,34 @@ div.scroll-top-btn:hover {
 /* ==========================================================================
    End of file.
    ========================================================================== */
+.header-top {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+    z-index: 1;
+}
+.header-top .logo {
+  width: 52px;
+  height: 52px;
+  background: #6181ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-top .logo-icon {
+  background: url('../img/logo-white.png');
+  width: 43px;
+  height: 25px;
+}
+.header-top .nav {
+  color: #333;
+  padding-right: 20px;
+    width: 55px;
+}
+.header-top .nav a {
+  color: #6581ad;
+}
