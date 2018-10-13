@@ -413,7 +413,7 @@ margin on the iframe, cause it breaks stuff. */
     letter-spacing: -1px;
 }
 .blog-sub-title {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
 
     font-family: "Open Sans", sans-serif;
     font-size: 3rem;
@@ -1337,11 +1337,12 @@ div.scroll-top-btn:hover {
         text-align: center;
     }
     .container .site-head {
-        min-height: 240px;
+        min-height: 270px;
         margin-bottom: 30px;
     }
     .site-footer {
         font-size: 1.1rem;
+        margin-top: 30px;
     }
     .project-section {
         display: block;
@@ -1352,6 +1353,16 @@ div.scroll-top-btn:hover {
 /* ==========================================================================
    End of file.
    ========================================================================== */
+.video {
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.video:visited {
+    color: #fff;
+}
 .header-top {
   margin: 0 auto;
   display: flex;
