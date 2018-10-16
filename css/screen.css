@@ -837,9 +837,17 @@ pre .chunk {
 /* ==========================================================================
    8. Footer - The bottom of every page
    ========================================================================== */
-
+.container .wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
 .site-footer {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 
     margin: 8rem 0 0 0;
     border-top: #ebf2f6 1px solid;
@@ -1011,7 +1019,8 @@ header {
 }
 
 .team-subtitle {
-    padding-left: 28px;
+    width: 60%;
+    margin: 0 auto 30px;
 }
 .team-description {
     margin: auto;
@@ -1217,6 +1226,9 @@ div.scroll-top-btn:hover {
 
 @media only screen and (max-width: 1300px) {
     .team-description {
+        width: 85%;
+    }
+    .team-subtitle {
         width: 85%;
     }
     .team-description a {
