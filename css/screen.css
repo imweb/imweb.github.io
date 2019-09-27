@@ -844,10 +844,21 @@ pre .chunk {
     bottom: 0;
     width: 100%;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    margin-bottom: 50px;
+}
+
 .site-footer {
-    position: absolute;
+    /* position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 0; */
 
     margin: 8rem 0 0 0;
     border-top: #ebf2f6 1px solid;
