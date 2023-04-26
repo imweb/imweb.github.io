@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cf52a2c5.chunk.css",
+    "main.js": "/static/js/main.a923d18e.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.0a745301.js",
+    "static/css/2.24bf1742.chunk.css": "/static/css/2.24bf1742.chunk.css",
+    "static/js/2.2eae657d.chunk.js": "/static/js/2.2eae657d.chunk.js",
+    "index.html": "/index.html",
+    "precache-manifest.aaa48acfdc5b9a7915cac469513cdbfa.js": "/precache-manifest.aaa48acfdc5b9a7915cac469513cdbfa.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/banner.scss": "/static/media/shape-top.d18e1f73.svg",
+    "static/media/conf-imweb-2016.jpg": "/static/media/conf-imweb-2016.300295eb.jpg",
+    "static/media/conf-imweb-2017.jpg": "/static/media/conf-imweb-2017.b022d3ed.jpg",
+    "static/media/conf-imweb-2018.jpg": "/static/media/conf-imweb-2018.64cde4fa.jpg",
+    "static/media/header.css": "/static/media/icon-article.49c5cb28.svg",
+    "static/media/icon-iconfont.svg": "/static/media/icon-iconfont.0b623da0.svg",
+    "static/media/icon-sheral.svg": "/static/media/icon-sheral.26a09a12.svg",
+    "static/media/join-us-boy-qrcode.png": "/static/media/join-us-boy-qrcode.e96a932d.png",
+    "static/media/qr-wx.png": "/static/media/qr-wx.3dfb4776.png",
+    "static/media/qr-wx.jpg": "/static/media/qr-wx.a9199cc0.jpg",
+    "static/media/App.css": "/static/media/shape-influence.a68760af.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a745301.js",
+    "static/css/2.24bf1742.chunk.css",
+    "static/js/2.2eae657d.chunk.js",
+    "static/css/main.cf52a2c5.chunk.css",
+    "static/js/main.a923d18e.chunk.js"
+  ]
+}

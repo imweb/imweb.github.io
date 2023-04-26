@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="桌面端-HD" transform="translate(-1342.000000, -27.000000)" fill="#F18559" fill-rule="nonzero">
+            <g id="header" transform="translate(-2.000000, 0.000000)">
+                <path d="M1361,47 L1345,47 C1344.44772,47 1344,46.5522847 1344,46 L1344,28 C1344,27.4477153 1344.44772,27 1345,27 L1361,27 C1361.55228,27 1362,27.4477153 1362,28 L1362,46 C1362,46.5522847 1361.55228,47 1361,47 Z M1360,45 L1360,29 L1346,29 L1346,45 L1360,45 Z M1348,31 L1352,31 L1352,35 L1348,35 L1348,31 Z M1348,37 L1358,37 L1358,39 L1348,39 L1348,37 Z M1348,41 L1358,41 L1358,43 L1348,43 L1348,41 Z M1354,32 L1358,32 L1358,34 L1354,34 L1354,32 L1354,32 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

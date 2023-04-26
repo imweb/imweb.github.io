@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="481px" viewBox="0 0 375 481" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>编组 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="25.9920694%" x2="23.233808%" y2="56.9323888%" id="linearGradient-1">
+            <stop stop-color="#3129D2" offset="0%"></stop>
+            <stop stop-color="#7739C3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="18.0543986%" x2="23.233808%" y2="59.2244239%" id="linearGradient-2">
+            <stop stop-color="#3129D2" offset="0%"></stop>
+            <stop stop-color="#7739C3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="30.8028153%" x2="101.999998%" y2="69.581128%" id="linearGradient-3">
+            <stop stop-color="#F27121" offset="0%"></stop>
+            <stop stop-color="#E94057" offset="48.4695243%"></stop>
+            <stop stop-color="#8A2387" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-4" points="0 0 138 0 138 59 0 59"></polygon>
+        <polygon id="path-6" points="-8 0 138 0 138 63 -8 63"></polygon>
+        <polygon id="path-8" points="-16 0 138 0 138 67 -16 67"></polygon>
+        <polygon id="path-10" points="-23 0 138 0 138 71 -23 71"></polygon>
+        <polygon id="path-12" points="-29 0 138 0 138 77 -29 77"></polygon>
+        <polygon id="path-14" points="-36 0 138 0 138 81 -36 81"></polygon>
+        <polygon id="path-16" points="-43 0 138 0 138 84 -43 84"></polygon>
+        <polygon id="path-18" points="-50 0 138 0 138 84 -50 84"></polygon>
+        <polygon id="path-20" points="-58 0 138 0 138 84 -58 84"></polygon>
+        <polygon id="path-22" points="-67 0 131 0 131 84 -67 84"></polygon>
+        <polygon id="path-24" points="-72 0 126 0 126 84 -72 84"></polygon>
+        <polygon id="path-26" points="-80 0 118 0 118 84 -80 84"></polygon>
+        <polygon id="path-28" points="-89 0 109 0 109 84 -89 84"></polygon>
+        <polygon id="path-30" points="-88 0 104 0 104 84 -88 84"></polygon>
+        <polygon id="path-32" points="5 0 138 0 138 54 5 54"></polygon>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(0.000000, -144.000000)">
+            <g id="编组-5" transform="translate(-96.000000, 144.000000)">
+                <rect id="矩形备份-14" fill="url(#linearGradient-1)" transform="translate(184.000000, 198.500000) scale(-1, -1) translate(-184.000000, -198.500000) " x="0" y="71" width="368" height="255"></rect>
+                <rect id="矩形备份-14" fill="url(#linearGradient-2)" transform="translate(297.000000, 363.500000) scale(-1, -1) translate(-297.000000, -363.500000) " x="150" y="246" width="294" height="235"></rect>
+                <g id="编组-6" transform="translate(173.000000, 0.000000)">
+                    <g id="编组">
+                        <rect id="矩形" fill="url(#linearGradient-3)" transform="translate(163.000000, 102.000000) scale(-1, 1) translate(-163.000000, -102.000000) " x="0" y="1" width="326" height="202"></rect>
+                        <path d="M326.657407,33.4584197 C305.278687,33.2916678 288.106063,18.3999354 288.30249,0.197339505 L263.002753,0 C262.678272,30.099208 291.073913,54.7237247 326.425635,55 L326.657407,33.4584197 Z" id="Fill-243" fill="#97F9FF"></path>
+                    </g>
+                    <text id="IMWEB" font-family="LucidaGrande-Bold, Lucida Grande" font-size="48" font-weight="bold" letter-spacing="7.59452426" fill="#FFFFFF">
+                        <tspan x="29" y="106">IMWEB</tspan>
+                    </text>
+                    <text id="Tencent" font-family="FontName" font-size="29" font-weight="normal" letter-spacing="3.08600534" fill="#FFFFFF">
+                        <tspan x="34.0505438" y="50">Tencent</tspan>
+                    </text>
+                    <text id="TEAM" font-family="LucidaGrande-Bold, Lucida Grande" font-size="24" font-weight="bold" letter-spacing="3.79726213" fill="#FFFFFF">
+                        <tspan x="33" y="145">TEAM</tspan>
+                    </text>
+                </g>
+                <g id="编组" transform="translate(0.000000, 42.000000)">
+                    <mask id="mask-5" fill="white">
+                        <use xlink:href="#path-4"></use>
+                    </mask>
+                    <g id="Clip-385"></g>
+                    <line x1="-1" y1="-61" x2="197" y2="59" id="Stroke-384" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-5)"></line>
+                    <mask id="mask-7" fill="white">
+                        <use xlink:href="#path-6"></use>
+                    </mask>
+                    <g id="Clip-387"></g>
+                    <line x1="-8" y1="-56" x2="190" y2="64" id="Stroke-386" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-7)"></line>
+                    <mask id="mask-9" fill="white">
+                        <use xlink:href="#path-8"></use>
+                    </mask>
+                    <g id="Clip-389"></g>
+                    <line x1="-14" y1="-52" x2="184" y2="68" id="Stroke-388" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-9)"></line>
+                    <mask id="mask-11" fill="white">
+                        <use xlink:href="#path-10"></use>
+                    </mask>
+                    <g id="Clip-391"></g>
+                    <line x1="-23" y1="-48" x2="175" y2="72" id="Stroke-390" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-11)"></line>
+                    <mask id="mask-13" fill="white">
+                        <use xlink:href="#path-12"></use>
+                    </mask>
+                    <g id="Clip-393"></g>
+                    <line x1="-30" y1="-43" x2="168" y2="77" id="Stroke-392" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-13)"></line>
+                    <mask id="mask-15" fill="white">
+                        <use xlink:href="#path-14"></use>
+                    </mask>
+                    <g id="Clip-395"></g>
+                    <line x1="-36" y1="-40" x2="162" y2="80" id="Stroke-394" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-15)"></line>
+                    <mask id="mask-17" fill="white">
+                        <use xlink:href="#path-16"></use>
+                    </mask>
+                    <g id="Clip-397"></g>
+                    <line x1="-43" y1="-35" x2="155" y2="85" id="Stroke-396" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-17)"></line>
+                    <mask id="mask-19" fill="white">
+                        <use xlink:href="#path-18"></use>
+                    </mask>
+                    <g id="Clip-399"></g>
+                    <line x1="-52" y1="-30" x2="146" y2="90" id="Stroke-398" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-19)"></line>
+                    <mask id="mask-21" fill="white">
+                        <use xlink:href="#path-20"></use>
+                    </mask>
+                    <g id="Clip-401"></g>
+                    <line x1="-59" y1="-26" x2="139" y2="94" id="Stroke-400" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-21)"></line>
+                    <mask id="mask-23" fill="white">
+                        <use xlink:href="#path-22"></use>
+                    </mask>
+                    <g id="Clip-403"></g>
+                    <line x1="-67" y1="-21" x2="131" y2="99" id="Stroke-402" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-23)"></line>
+                    <mask id="mask-25" fill="white">
+                        <use xlink:href="#path-24"></use>
+                    </mask>
+                    <g id="Clip-405"></g>
+                    <line x1="-72" y1="-17" x2="126" y2="103" id="Stroke-404" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-25)"></line>
+                    <mask id="mask-27" fill="white">
+                        <use xlink:href="#path-26"></use>
+                    </mask>
+                    <g id="Clip-407"></g>
+                    <line x1="-80" y1="-13" x2="118" y2="107" id="Stroke-406" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-27)"></line>
+                    <mask id="mask-29" fill="white">
+                        <use xlink:href="#path-28"></use>
+                    </mask>
+                    <g id="Clip-409"></g>
+                    <line x1="-89" y1="-9" x2="109" y2="111" id="Stroke-408" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-29)"></line>
+                    <mask id="mask-31" fill="white">
+                        <use xlink:href="#path-30"></use>
+                    </mask>
+                    <g id="Clip-411"></g>
+                    <line x1="-94" y1="-5" x2="104" y2="115" id="Stroke-410" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-31)"></line>
+                    <mask id="mask-33" fill="white">
+                        <use xlink:href="#path-32"></use>
+                    </mask>
+                    <g id="Clip-429"></g>
+                    <line x1="5" y1="-67" x2="203" y2="53" id="Stroke-428" stroke="#F98B57" stroke-width="3.844" mask="url(#mask-33)"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
